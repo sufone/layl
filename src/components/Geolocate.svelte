@@ -1,5 +1,5 @@
 <div>
-
+  
 
   {#if lat !== null}
     <p>Lat: {lat}, Lon: {lon}</p>
@@ -8,12 +8,16 @@
   {#if !freshGeo}
     <button on:click|once={geolocate}>Locate me</button>
   {/if}
+
+  <Times lat={lat} lon={lon}/>
   
 </div>
 
 <script>
-  let lat = null
-  let lon = null
+  import Times from './Times.svelte'
+
+  let lat = parseInt(localStorage.getItem('lat')) || null
+  let lon = parseInt(localStorage.getItem('lon')) || null
   let freshGeo = false
 
   function geolocate() {
