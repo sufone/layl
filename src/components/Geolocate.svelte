@@ -9,7 +9,9 @@
     <button on:click|once={geolocate}>Locate me</button>
   {/if}
 
+  {#if lat}
   <Times lat={lat} lon={lon}/>
+  {/if}
   
 </div>
 
