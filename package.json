@@ -6,7 +6,8 @@
     "watch": "pwa watch"
   },
   "dependencies": {
-    "ganalytics": "^3.0.0",
+    "adhan": "^4.0.0",
+    "dayjs": "^1.8.28",
     "sirv-cli": "^0.4.0"
   },
   "devDependencies": {
@@ -14,7 +15,7 @@
     "@pwa/plugin-brotli": "latest",
     "@pwa/plugin-offline": "latest",
     "@pwa/preset-svelte": "latest",
-    "svelte": "^3.1.0"
+    "svelte": "^3.23.0"
   },
   "browserslist": [
     ">0.25%",
