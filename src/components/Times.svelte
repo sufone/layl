@@ -9,14 +9,15 @@
   import customParseFormat from 'dayjs/plugin/customParseFormat';
   dayjs.extend(customParseFormat)
 
+  let prayerTimes = []
   let today = new Date()
   let tomorrow = new Date()
 
-  if (lat && lon) {
+  $: if (lat && lon) {
     console.log("true")
     calcTimes(lat, lon)
   }
-  function calcTimes (latVar, lonVar) {
+  function calcTimes (lat, lon) {
     let params = adhan.CalculationMethod.MoonsightingCommittee()
     let coordinates = new adhan.Coordinates(lat, lon)
 
@@ -42,17 +43,25 @@
 
     let interval = fajr.diff(maghrib, 'millisecond') / 6
     console.log(interval)
+    
     let times = []
     for (let i = 0; i < 7; i++) {
       times.push(maghrib.add(interval * i, 'millisecond'))
     }
 
-    console.log(times)
     let timeFormat = "h:mm a"
-    let prayerTimes = times.map(time => time.format(timeFormat))
+    prayerTimes = times.map(time => time.format(timeFormat))
     console.log(prayerTimes)
   }
 
 </script>
 
-times: {lat}, {lon}
+<ul>
+  <li className="zero">Maghrib starts the night: <strong>{prayerTimes[0]}</strong></li>
+  <li className="one">One-sixth of the night: <strong>{prayerTimes[1]}</strong> </li>
+  <li className="two">One-third of the night: <strong>{prayerTimes[2]}</strong></li>
+  <li className="three">Half of the night: <strong>{prayerTimes[3]}</strong></li>
+  <li className="four">Last-third of the night: <strong>{prayerTimes[4]}</strong></li>
+  <li className="five">Last-sixth of the night: <strong>{prayerTimes[5]}</strong></li>
+  <li className="six">Fajr ends the night: <strong>{prayerTimes[6]}</strong></li>
+</ul>
