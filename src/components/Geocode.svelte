@@ -27,7 +27,9 @@
         localStorage.setItem('country', country)
       })
       .catch(err => {
-        city = "not found"
+        street = null
+        city = null
+        country = null
         alert(`I am very sorry: Layl cannot connect to GPS provider. Please email me (navedcoded@gmail.com) with this error code: ${err}. `)
       })
   }

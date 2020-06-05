@@ -1,7 +1,7 @@
 <div>
   
 
-  {#if lat } <!-- don't show on first visit --> 
+  {#if lat && lon} <!-- don't show on first visit --> 
     <Times lat={lat} lon={lon}/>
     <Geocode lat={lat} lon={lon} />
 
