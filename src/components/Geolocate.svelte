@@ -6,12 +6,12 @@
     <Geocode lat={lat} lon={lon} />
 
     {#if !freshGeo} <!-- don't show if user just used it --> 
-      <button on:click|once={geolocate}>Update location</button>
+      <button class="minor" on:click|once={geolocate}>Update location</button>
     {/if} 
 
   {:else} 
     <img src="/assets/load.svg" alt="Telescope gazing at the stars">
-    <button on:click|once={geolocate}>Locate me</button>
+    <button class="major" on:click|once={geolocate}>Locate me</button>
   {/if}
 
   
@@ -22,19 +22,42 @@
   img {
     width: 400px
   }
-  
-	button {
-    /* all: unset; */
+  button {
+    font-size: 1.1em;
+    cursor: pointer;
     padding: 10px;
+    margin: 20px;
+    border-radius: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  button.minor {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    color: #000;
+    text-decoration: underline solid #67B6FF;
+    cursor: pointer;
+
+    transition-property: background;
+    transition-property: all;
+    transition-duration: .2s;
     
-    background: #FFD9D9;
-    border: 2px solid #FF6767;
-    box-sizing: border-box;
+    border: none;
     border-radius: 4px;
 
-    display: flex;
-    align-items: center;
-    text-align: center;
+    display: block;
+		margin-left: auto;
+    margin-right: auto;
+
+    color: rgb(51, 51, 51);
+  }
+	button.major {
+    /* all: unset; */
+    
+    background: #FFE9E9;
+    border: 1.5px solid #FF6767;
+    box-sizing: border-box;
+
     font-weight: bold;
     color: #FF6767;
 

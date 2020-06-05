@@ -35,5 +35,11 @@
   }
 </script>
 
-<p>{street}, {city}, {country}</p>
-<p>Lat: {lat}, Lon: {lon}</p>
+<p>Near {street}, {city}, {country}</p>
+<!-- <p>Lat: {lat}, Lon: {lon}</p> -->
+
+<style>
+p {
+  text-align: center;
+}
+</style>

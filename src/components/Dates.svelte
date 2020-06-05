@@ -8,4 +8,8 @@
 
 </script>
 
-      <p>{dayjs(today).format("D MMM")} – {dayjs(tomorrow).format("D MMM")}</p>
+<p>{dayjs(today).format("D MMM")} – {dayjs(tomorrow).format("D MMM")}</p>
+
+<style>
+p {text-align: center;}
+</style>
