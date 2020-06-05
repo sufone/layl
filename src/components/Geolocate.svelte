@@ -2,13 +2,13 @@
   
 
   {#if lat } <!-- don't show on first visit --> 
-    <p>Lat: {lat}, Lon: {lon}</p>
+    <Times lat={lat} lon={lon}/>
+    <Geocode lat={lat} lon={lon} />
 
     {#if !freshGeo} <!-- don't show if user just used it --> 
-      <button on:click|once={geolocate}>Updates location</button>
+      <button on:click|once={geolocate}>Update location</button>
     {/if} 
 
-    <Times lat={lat} lon={lon}/>
   {:else} 
     <button on:click|once={geolocate}>Locate me</button>
   {/if}
@@ -18,6 +18,7 @@
 
 <script>
   import Times from './Times.svelte'
+  import Geocode from './Geocode.svelte'
 
   let lat = parseFloat(localStorage.getItem('lat')) || null
   let lon = parseFloat(localStorage.getItem('lon')) || null

@@ -3,7 +3,6 @@
 	<h3>night worship, planned</h3>
 
 	<Geolocate />
-	<Geocode />
 
 </div>
 
