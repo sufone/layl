@@ -1,21 +1,18 @@
 <div>
   
 
-  {#if lat }
+  {#if lat } <!-- don't show on first visit --> 
     <p>Lat: {lat}, Lon: {lon}</p>
-  {/if}
 
-  {#if !freshGeo} <!-- don't show if user just used it --> 
-    {#if lat} <!-- so first visit and returning have different button text --> 
+    {#if !freshGeo} <!-- don't show if user just used it --> 
       <button on:click|once={geolocate}>Updates location</button>
-    {:else}
-      <button on:click|once={geolocate}>Locate me</button>
-    {/if}
+    {/if} 
+
+    <Times lat={lat} lon={lon}/>
+  {:else} 
+    <button on:click|once={geolocate}>Locate me</button>
   {/if}
 
-  {#if lat}<!-- don't show on first visit --> 
-  <Times lat={lat} lon={lon}/>
-  {/if}
   
 </div>
 
