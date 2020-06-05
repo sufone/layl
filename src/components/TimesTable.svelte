@@ -6,13 +6,13 @@
 
 
 <ul>
-  <li class="zero">Maghrib starts the night: <strong>{prayerTimes[0]}</strong></li>
-  <li class="one">One-sixth of the night: <strong>{prayerTimes[1]}</strong> </li>
-  <li class="two">One-third of the night: <strong>{prayerTimes[2]}</strong></li>
-  <li class="three">Half of the night: <strong>{prayerTimes[3]}</strong></li>
-  <li class="four">Last-third of the night: <strong>{prayerTimes[4]}</strong></li>
-  <li class="five">Last-sixth of the night: <strong>{prayerTimes[5]}</strong></li>
-  <li class="six">Fajr ends the night: <strong>{prayerTimes[6]}</strong></li>
+  <li class="zero">Maghrib <strong>{prayerTimes[0]}</strong></li>
+  <li class="one">One-sixth <strong>{prayerTimes[1]}</strong> </li>
+  <li class="two">One-third <strong>{prayerTimes[2]}</strong></li>
+  <li class="three">Half <strong>{prayerTimes[3]}</strong></li>
+  <li class="four">Last-third <strong>{prayerTimes[4]}</strong></li>
+  <li class="five">Last-sixth <strong>{prayerTimes[5]}</strong></li>
+  <li class="six">Fajr <strong>{prayerTimes[6]}</strong></li>
 </ul>
 
 <style>
