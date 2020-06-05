@@ -3,7 +3,7 @@
 
   {#if lat && lon} <!-- don't show on first visit --> 
     <Times lat={lat} lon={lon}/>
-    <Geocode lat={lat} lon={lon} />
+    <Geocode lat={lat} lon={lon} freshGeo={freshGeo} />
 
     {#if !freshGeo} <!-- don't show if user just used it --> 
       <button class="minor" on:click|once={geolocate}>Update location</button>

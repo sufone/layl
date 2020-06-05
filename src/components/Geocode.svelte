@@ -1,12 +1,13 @@
 <script>
   export let lat
   export let lon
+  export let freshGeo
   let street = localStorage.getItem('street')
   let city = localStorage.getItem('city')
   let country = localStorage.getItem('country')
 
-  $: if (lat && lon) {
-        geocode(lat, lon)
+  $: if (freshGeo) { //runs only when geolocate is called
+    geocode(lat, lon)
   }
 
   async function geocode(lat, lon) {
