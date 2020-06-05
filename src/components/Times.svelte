@@ -6,9 +6,8 @@
   import adhan from 'adhan'
   import dayjs from 'dayjs'
   import TimesTable from './TimesTable.svelte'
+  import Dates from './Dates.svelte'
   
-  import customParseFormat from 'dayjs/plugin/customParseFormat';
-  dayjs.extend(customParseFormat)
 
   let prayerTimes = []
   let today = new Date()
@@ -57,4 +56,5 @@
 
 </script>
 
+<Dates today={today} tomorrow={tomorrow} />
 <TimesTable prayerTimes={prayerTimes} />
