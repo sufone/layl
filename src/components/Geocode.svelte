@@ -35,8 +35,13 @@
   }
 </script>
 
-<p>Near {street}, {city}, {country}</p>
-<!-- <p>Lat: {lat}, Lon: {lon}</p> -->
+{#if street && city && country}
+  <p>Near {street}, {city}, {country}</p>
+{:else if city && country}
+  <p>In {city}, {country}</p>
+{:else}
+  <p>Your location co-ods: {lat}, {lon}</p>
+{/if}
 
 <style>
 p {
