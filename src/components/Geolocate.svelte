@@ -1,15 +1,19 @@
 <div>
   
 
-  {#if lat !== null}
+  {#if lat }
     <p>Lat: {lat}, Lon: {lon}</p>
   {/if}
 
-  {#if !freshGeo}
-    <button on:click|once={geolocate}>Locate me</button>
+  {#if !freshGeo} <!-- don't show if user just used it --> 
+    {#if lat} <!-- so first visit and returning have different button text --> 
+      <button on:click|once={geolocate}>Updates location</button>
+    {:else}
+      <button on:click|once={geolocate}>Locate me</button>
+    {/if}
   {/if}
 
-  {#if lat}
+  {#if lat}<!-- don't show on first visit --> 
   <Times lat={lat} lon={lon}/>
   {/if}
   
@@ -18,13 +22,14 @@
 <script>
   import Times from './Times.svelte'
 
-  let lat = parseInt(localStorage.getItem('lat')) || null
-  let lon = parseInt(localStorage.getItem('lon')) || null
+  let lat = parseFloat(localStorage.getItem('lat')) || null
+  let lon = parseFloat(localStorage.getItem('lon')) || null
+  console.log("from local: "+lat+lon)
   let freshGeo = false
 
   function geolocate() {
   if ("geolocation" in navigator) {
-    // lat = null
+    // lat = null // forced remount of times to force new calc, but unnecessary with reactive statement in timesfile
     // lon = null
     navigator.geolocation.getCurrentPosition((position) => {
       lat = position.coords.latitude
