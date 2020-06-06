@@ -10,8 +10,9 @@
     {/if} 
 
   {:else} 
-    <img src="/assets/load.svg" alt="Telescope gazing at the stars">
-    <button class="major" on:click|once={geolocate}>Locate me</button>
+    <img class="landing" src="/assets/load.svg" alt="Telescope gazing at the stars">
+    <Explanation />
+    <button class="major" on:click|once={geolocate}><img src="/assets/pin.svg" alt="GPS pin"> Share location</button>
   {/if}
 
   
@@ -19,7 +20,7 @@
 
 
 <style>
-  img {
+  img.landing {
     width: 400px
   }
   button {
@@ -70,6 +71,7 @@
 <script>
   import Times from './Times.svelte'
   import Geocode from './Geocode.svelte'
+  import Explanation from './Explanation.svelte'
 
   let lat = parseFloat(localStorage.getItem('lat')) || null
   let lon = parseFloat(localStorage.getItem('lon')) || null

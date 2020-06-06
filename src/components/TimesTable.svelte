@@ -24,6 +24,7 @@ ul {
   padding-left: 1.2em;
   font-size: 1.15em;
   line-height: 2em;
+  min-width: 20vw;
 }
 li {
   display: flex;
@@ -31,10 +32,12 @@ li {
 }
 li:before {
   position: absolute;
-	left: 0;
+	left: -2px;
 }
 .zero:before {
-  content: "🌙"
+  content: url(/assets/moon.svg);
+  width: 2em;
+  height: 2em;
 }
 .one:before {
 	content: "¹⁄₆";
@@ -52,7 +55,9 @@ li:before {
   content: "⁵⁄₆";
 }
 .six:before {
-  content: "🔆";
+  content: url(/assets/sun.svg);
+  width: 2em;
+  height: 2em;
 }
 
 </style>

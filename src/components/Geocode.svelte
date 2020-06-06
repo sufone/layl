@@ -37,7 +37,7 @@
 </script>
 
 {#if street && city && country}
-  <p>Near {street}, {city}, {country}</p>
+  <p>Near {street}, <br>{city}, {country}</p>
 {:else if city && country}
   <p>In {city}, {country}</p>
 {:else}
@@ -47,5 +47,8 @@
 <style>
 p {
   text-align: center;
+  /* width: 80%; */
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

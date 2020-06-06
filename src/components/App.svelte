@@ -1,8 +1,11 @@
 <div class="app">
 	<div class="layl-container">
 		<img src="/assets/logo.svg" alt="Layl logo">
-		<h3>night worship, planned</h3>
+		<h3>night divided, worship planned<sup>v2</sup></h3>
 		<Geolocate />
+	</div>
+	<div class="layl-container">
+		<Info />
 	</div>
 	
 
@@ -10,18 +13,18 @@
 
 <script>
 	import Geolocate from './Geolocate.svelte'
-	import Geocode from './Geocode.svelte'
-
+	import Info from './Info.svelte'
 </script>
 
 <style lang="css">
 	img {
-		width: 250px;
+		width: 200px;
 	}
 	h3 {
 		font-weight: lighter;
+		text-align: center;
 	}
-	.layl-container {
+	:global(.layl-container) {
 		height: 100vh;
     display: flex;
     flex-direction: column;
