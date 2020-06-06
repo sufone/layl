@@ -8,7 +8,8 @@
     {#if !freshGeo} <!-- don't show if user just used it --> 
       <button class="minor" on:click|once={geolocate}>Update location</button>
     {/if} 
-
+  {:else if lowAcc}
+    <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
   {:else} 
     <img class="landing" src="/assets/load.svg" alt="Telescope gazing at the stars">
     <Explanation />
@@ -74,6 +75,7 @@
   import Geocode from './Geocode.svelte'
   import Explanation from './Explanation.svelte'
 
+  let lowAcc
   let lat = parseFloat(localStorage.getItem('lat')) || null
   let lon = parseFloat(localStorage.getItem('lon')) || null
   console.log("from local: "+lat+lon)
@@ -84,10 +86,15 @@
     // lat = null // forced remount of times to force new calc, but unnecessary with reactive statement in timesfile
     // lon = null
     navigator.geolocation.getCurrentPosition((position) => {
+      let accuracy = position.coords.accuracy
+      if (accuracy > 300000) { //arbitrary value
+        lowAcc = true
+        return
+      }
       lat = position.coords.latitude
       lon = position.coords.longitude
       freshGeo = true
-      console.log(lat, lon);
+      console.log(lat, lon, accuracy);
       localStorage.setItem('lat', lat)
       localStorage.setItem('lon', lon)
       console.log(`localstorage works: ${localStorage.getItem('lat')}`)
