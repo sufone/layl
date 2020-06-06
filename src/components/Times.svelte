@@ -56,5 +56,5 @@
 
 </script>
 
-<Dates today={today} tomorrow={tomorrow} />
 <TimesTable prayerTimes={prayerTimes} />
+<Dates today={today} tomorrow={tomorrow} />

@@ -32,25 +32,26 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
   button.minor {
-    background: none!important;
-    border: none;
-    padding: 0!important;
-    color: #000;
-    text-decoration: underline solid #67B6FF;
+    padding: 5px;
+    margin: 10px;
+    font-size: 0.6em;
+    /* background: none!important; */
+    background: #EDF6FF;
+    border: 1px solid #67B6FF;
+    /* border: none; */
+    color: #67B6FF;
+    /* text-decoration: underline solid #67B6FF; */
     cursor: pointer;
 
     transition-property: background;
     transition-property: all;
     transition-duration: .2s;
     
-    border: none;
     border-radius: 4px;
 
     display: block;
 		margin-left: auto;
     margin-right: auto;
-
-    color: rgb(51, 51, 51);
   }
 	button.major {
     /* all: unset; */

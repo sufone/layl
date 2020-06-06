@@ -2,6 +2,7 @@
 	<div class="layl-container">
 		<img src="/assets/logo.svg" alt="Layl logo">
 		<h3>night divided, worship planned<sup>v2</sup></h3>
+		<br>
 		<Geolocate />
 	</div>
 	<div class="layl-container">
@@ -18,7 +19,7 @@
 
 <style lang="css">
 	img {
-		width: 200px;
+		width: 150px;
 	}
 	h3 {
 		font-weight: lighter;
