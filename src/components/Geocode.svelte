@@ -20,10 +20,10 @@
         // let location = result.Response.View[0].Result[0].Location.Address
         let location = result.items[0].address
         console.dir(location)
-        street = location.street
+        // street = location.street // not doing city because 1. creepy 2. unnecessary precision 3. people don't expect prayer times to differ based on location within the city.
         city = location.city
         country = location.countryName
-        localStorage.setItem('street', street)
+        // localStorage.setItem('street', street)
         localStorage.setItem('city', city)
         localStorage.setItem('country', country)
       })
@@ -39,7 +39,7 @@
 {#if street && city && country}
   <p>Near {street}, <br>{city}, {country}</p>
 {:else if city && country}
-  <p>In {city}, {country}</p>
+  <p>{city}, {country}</p>
 {:else}
   <p>Your location co-ods: {lat}, {lon}</p>
 {/if}
