@@ -1,6 +1,9 @@
 
-<p>Location is needed to find accurate prayer Times. </p>
-<p>Layl will never track you or share your location information. </p>
+<p>Layl needs to know where you are to find the most accurate times for you 😌 </p>
+<ol>
+  <li>Your data never leaves your device</li>
+  <li>Next time, Layl will remember you and work automatically</li>
+</ol>
 
 <style>
 
