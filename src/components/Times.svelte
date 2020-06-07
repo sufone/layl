@@ -9,9 +9,10 @@
   import Dates from './Dates.svelte'
   
 
-  let prayerTimes = []
   let today = new Date()
   let tomorrow = new Date()
+  let times = []
+
 
   $: if (lat && lon) {
     console.log("true")
@@ -44,18 +45,14 @@
     let interval = fajr.diff(maghrib, 'millisecond') / 6
     console.log(interval)
     
-    let times = []
     for (let i = 0; i < 7; i++) {
       times.push(maghrib.add(interval * i, 'millisecond'))
     }
 
-    let timeFormat = "h:mm a"
-    prayerTimes = times.map(time => time.format(timeFormat))
-    console.log(prayerTimes)
   }
 
 </script>
 
-<TimesTable prayerTimes={prayerTimes} />
+<TimesTable times={times} />
 <br>
 <Dates today={today} tomorrow={tomorrow} />
