@@ -32,6 +32,13 @@
     border-radius: 4px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
+  button:hover {
+    transform: translateY(-2px)
+  }
+  button:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+  }
   button.minor {
     padding: 5px;
     margin: 10px;
@@ -44,7 +51,6 @@
     /* text-decoration: underline solid #67B6FF; */
     cursor: pointer;
 
-    transition-property: background;
     transition-property: all;
     transition-duration: .2s;
     
@@ -57,6 +63,8 @@
 	button.major {
     /* all: unset; */
     
+    transition-property: all;
+    transition-duration: .2s;
     background: #FFE9E9;
     border: 1.5px solid #FF6767;
     box-sizing: border-box;
