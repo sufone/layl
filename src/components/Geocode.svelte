@@ -2,7 +2,7 @@
   export let lat
   export let lon
   export let freshGeo
-  let street = localStorage.getItem('street')
+  let district = localStorage.getItem('district')
   let city = localStorage.getItem('city')
   let country = localStorage.getItem('country')
 
@@ -18,18 +18,19 @@
     
     fetch(geoApi).then(response => response.json())
       .then(result => {
-        // let location = result.Response.View[0].Result[0].Location.Address
         let location = result.Response.View[0].Result[0].Location.Address
         console.dir(location)
-        // street = location.street // not doing city because 1. creepy 2. unnecessary precision 3. people don't expect prayer times to differ based on location within the city.
+
+        district = location.District
         city = location.City
         country = location.Country
-        // localStorage.setItem('street', street)
+
+        localStorage.setItem('district', district)
         localStorage.setItem('city', city)
         localStorage.setItem('country', country)
       })
       .catch(err => {
-        street = null
+        district = null
         city = null
         country = null
         alert(`I am very sorry: Layl cannot connect to GPS provider. Please email me (navedcoded@gmail.com) with this error code: ${err}. `)
@@ -37,8 +38,8 @@
   }
 </script>
 
-{#if street && city && country}
-  <p>Near {street}, <br>{city}, {country}</p>
+{#if district && city && country}
+  <p>{district}, {city} <br> {country}</p>
 {:else if city && country}
   <p>{city}, {country}</p>
 {:else}
