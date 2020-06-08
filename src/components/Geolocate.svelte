@@ -2,7 +2,7 @@
   
 
   {#if lat && lon} <!-- don't show on first visit --> 
-    <Times lat={lat} lon={lon}/>
+    <Times lat={lat} lon={lon} freshGeo={freshGeo}/>
     <Geocode lat={lat} lon={lon} freshGeo={freshGeo} />
 
     {#if !freshGeo} <!-- don't show if user just used it --> 

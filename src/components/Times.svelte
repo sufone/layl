@@ -3,21 +3,34 @@
 <script>
   export let lat 
   export let lon 
+  export let freshGeo
+
   import adhan from 'adhan'
   import dayjs from 'dayjs'
   import TimesTable from './TimesTable.svelte'
   import Dates from './Dates.svelte'
   
+  import customParseFormat from 'dayjs/plugin/customParseFormat';
+    dayjs.extend(customParseFormat) 
+
+  
 
   let today = new Date()
   let tomorrow = new Date()
   let times = []
+  let prayerTimes = []
+  let currentTime = null
+
+  let timeFormat = "h:mm a"
+
 
 
   $: if (lat && lon) {
-    console.log("true")
+    calcTimes(lat, lon)
+  } else if (freshGeo) {
     calcTimes(lat, lon)
   }
+
   function calcTimes (lat, lon) {
     let params = adhan.CalculationMethod.MoonsightingCommittee()
     let coordinates = new adhan.Coordinates(lat, lon)
@@ -49,10 +62,47 @@
       times.push(maghrib.add(interval * i, 'millisecond'))
     }
 
+    
+    prayerTimes = times.map(time => time.format(timeFormat))
+    console.log(prayerTimes)
+
+    console.log(dayjs(prayerTimes[0], "h:mm a"))
+    currentTime = testCurrentTime()
+    console.log(currentTime)
+
   }
+
+ function testCurrentTime() {
+  let now = dayjs() 
+  // let now = dayjs(`2020-06-07T19:25:34+0000`)
+
+
+   for (let i = 6; i >= 0; i--) {
+
+    console.log(now.format(timeFormat))
+    // console.log(times[i])
+      if (now.isAfter(times[i])) {
+        // console.log("after: " + i)
+        if (i === 6) {
+          console.log('we are in a new day!')
+          return false 
+        } else { 
+          console.log(`we are in stage ${i}!`)
+          return i
+        }
+      } else {
+        console.log('we are nearing the night!')
+        if (i === 0) {
+          return false //only return after exhausting all options
+        }
+      }
+    }
+  }
+
+
 
 </script>
 
-<TimesTable times={times} />
+<TimesTable prayerTimes={prayerTimes} current={currentTime} />
 <br>
 <Dates today={today} tomorrow={tomorrow} />

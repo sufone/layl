@@ -1,59 +1,40 @@
 <script>
-	import { onMount } from 'svelte';
-  import dayjs from 'dayjs'
-  import customParseFormat from 'dayjs/plugin/customParseFormat';
+  import { onMount } from 'svelte';
 
-  export let times
+
+  export let prayerTimes
+  export let current
   
+  let mounted = false
+  let updateTimeTimer 
+ 
+  $: if (current && mounted) {
+        updateTime(current)
 
-  let timeFormat = "h:mm a"
-  let prayerTimes = times.map(time => time.format(timeFormat))
-  console.log(prayerTimes)
-
-  console.log(`from timestable: ${prayerTimes}`)
-
-  dayjs.extend(customParseFormat) 
-
-  function testCurrentTime() {for (let i = 6; i >= 0; i--) {
-    let now = dayjs() 
-    // let now = dayjs(`2020-06-07T19:22:34+0000`)
-    // console.log(now)
-    // console.log(times[i])
-      if (now.isAfter(times[i])) {
-        // console.log("after: " + i)
-        if (i === 6) {
-          console.log('we are in a new day!')
-          return false 
-        } else { 
-          console.log(`we are in stage ${i}!`)
-          return i
-        }
-      } else {
-        console.log('we are nearing the night!')
-        if (i === 0) {
-          return false //only return after exhausting all options
-        }
-      }
-    }
   }
+
+  onMount(() => {
+    mounted = true
+  })
   
-  function updateTime() {
-    let test = testCurrentTime()
-    console.log(test)
-    if (test) {
-      let chosenTime = `time-${test}`
+  function updateTime(current) {
+    console.log(current)
+    if (current) {
+      let chosenTime = `time-${current}`
       console.log(chosenTime)
       let currentTime = document.getElementsByClassName(chosenTime)
       console.log(currentTime)
       currentTime[0].classList.add("current") 
+
+      clearInterval(updateTimeTimer)
+      updateTimeTimer = window.setInterval(updateTime, 60000)
+      updateTimeTimer()
     }
   }
+  
+  // $:updateTime(current)
+  
 
-  onMount(() => {
-    updateTime()
-  })
-
-  console.log(dayjs(prayerTimes[0], "h:mm a"))
 </script>
 
 
