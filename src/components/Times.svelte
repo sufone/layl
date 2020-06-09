@@ -29,7 +29,7 @@
     testCurrentTime()
     clearInterval(updateTimeTimer)
     console.log('timer cleared')
-    updateTimeTimer = setInterval(testCurrentTime, 4000)
+    updateTimeTimer = setInterval(testCurrentTime, 60000)
   }
 
   $: if (lat && lon) {
