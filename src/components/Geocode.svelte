@@ -12,17 +12,18 @@
 
   async function geocode(lat, lon) {
     let apiKey = `zWreHvgy_et8kAWr5IK_RcuI-tohs8AgsGCWjByNnAY`
-    let geoApi = `https://revgeocode.search.hereapi.com/v1/revgeocode?at=${lat}%2C${lon}&apiKey=${apiKey}&lang=en-US` //
+    let geoApi = `https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=${lat}%2C${lon}%2C150&mode=retrieveAreas&gen=9&app_id=oye7XL09Prx5G64NrSE8&app_code=-Dw2OYlGw40jZwCC_UGvKg&addressattributes=country,city&locationattributes=address&maxresults=1&minresults=1&language=en-US`
+    let geoApiOld = `https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=${lat}%2C${lon}%2C150&mode=retrieveAddresses&gen=9&app_id=oye7XL09Prx5G64NrSE8&app_code=-Dw2OYlGw40jZwCC_UGvKg&language=en-US` //
     console.log(geoApi)
     
     fetch(geoApi).then(response => response.json())
       .then(result => {
         // let location = result.Response.View[0].Result[0].Location.Address
-        let location = result.items[0].address
+        let location = result.Response.View[0].Result[0].Location.Address
         console.dir(location)
         // street = location.street // not doing city because 1. creepy 2. unnecessary precision 3. people don't expect prayer times to differ based on location within the city.
-        city = location.city
-        country = location.countryName
+        city = location.City
+        country = location.Country
         // localStorage.setItem('street', street)
         localStorage.setItem('city', city)
         localStorage.setItem('country', country)
