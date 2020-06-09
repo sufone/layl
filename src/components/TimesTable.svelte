@@ -22,13 +22,15 @@
       let chosenTime = `time-${current}`
       console.log(chosenTime)
 
-
-      //remove existing, if any
+      //remove existing
+      let oldTimeElement = document.getElementById(`time-${current-1}`)
+      console.log(oldTimeElement); 
+      oldTimeElement.classList.remove("current");
 
       //add new
-      let currentTime = document.getElementById(chosenTime)
-      console.log(currentTime)
-      currentTime.classList.add("current") 
+      let currentTimeElement = document.getElementById(chosenTime)
+      console.log(currentTimeElement)
+      currentTimeElement.classList.add("current") 
     }
   }
   
