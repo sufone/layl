@@ -79,11 +79,8 @@
   }
 
  function testCurrentTime() {
-  let now = dayjs() 
-  // let now = dayjs(`2020-06-07T19:25:34+0000`)
-
-
-   for (let i = 6; i >= 0; i--) {
+    let now = dayjs() 
+    for (let i = 6; i >= 0; i--) {
 
     console.log(now.format(timeFormat))
     // console.log(times[i])

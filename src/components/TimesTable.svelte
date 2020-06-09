@@ -1,12 +1,10 @@
 <script>
   import { onMount } from 'svelte';
 
-
   export let prayerTimes
   export let current
   
   let mounted = false
-  
   onMount(() => {
     mounted = true
   })
@@ -15,7 +13,6 @@
     updateTime(current)
   }
 
-  
   function updateTime(current) {
     console.log("updating timer, current: " + current)
     if (current) {
@@ -32,11 +29,7 @@
       console.log(currentTimeElement)
       currentTimeElement.classList.add("current") 
     }
-  }
-  
-  // $:updateTime(current)
-  
-
+  }  
 </script>
 
 
