@@ -23,7 +23,14 @@
 
   let timeFormat = "h:mm a"
 
+  let updateTimeTimer 
 
+  function magicTimer() {
+    testCurrentTime()
+    clearInterval(updateTimeTimer)
+    console.log('timer cleared')
+    updateTimeTimer = setInterval(testCurrentTime, 4000)
+  }
 
   $: if (lat && lon) {
     calcTimes(lat, lon)
@@ -67,8 +74,7 @@
     console.log(prayerTimes)
 
     console.log(dayjs(prayerTimes[0], "h:mm a"))
-    currentTime = testCurrentTime()
-    console.log(currentTime)
+    magicTimer()
 
   }
 
@@ -88,6 +94,7 @@
           return false 
         } else { 
           console.log(`we are in stage ${i}!`)
+          currentTime = i 
           return i
         }
       } else {
@@ -96,6 +103,8 @@
           return false //only return after exhausting all options
         }
       }
+      
+    console.log('currentTime: ' + currentTime)
     }
   }
 

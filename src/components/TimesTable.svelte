@@ -6,29 +6,29 @@
   export let current
   
   let mounted = false
-  let updateTimeTimer 
- 
-  $: if (current && mounted) {
-        updateTime(current)
-
-  }
-
+  
   onMount(() => {
     mounted = true
   })
+ 
+  $: if (current && mounted) {
+    updateTime(current)
+  }
+
   
   function updateTime(current) {
-    console.log(current)
+    console.log("updating timer, current: " + current)
     if (current) {
       let chosenTime = `time-${current}`
       console.log(chosenTime)
-      let currentTime = document.getElementsByClassName(chosenTime)
-      console.log(currentTime)
-      currentTime[0].classList.add("current") 
 
-      clearInterval(updateTimeTimer)
-      updateTimeTimer = window.setInterval(updateTime, 60000)
-      updateTimeTimer()
+
+      //remove existing, if any
+
+      //add new
+      let currentTime = document.getElementById(chosenTime)
+      console.log(currentTime)
+      currentTime.classList.add("current") 
     }
   }
   
@@ -39,13 +39,13 @@
 
 
 <ul>
-  <li class="time-0">Maghrib <strong>{prayerTimes[0]}</strong></li>
-  <li class="time-1">One-sixth <strong>{prayerTimes[1]}</strong> </li>
-  <li class="time-2">One-third <strong>{prayerTimes[2]}</strong></li>
-  <li class="time-3">Half <strong>{prayerTimes[3]}</strong></li>
-  <li class="time-4">Last-third <strong>{prayerTimes[4]}</strong></li>
-  <li class="time-5">Last-sixth <strong>{prayerTimes[5]}</strong></li>
-  <li class="time-6">Fajr <strong>{prayerTimes[6]}</strong></li>
+  <li id="time-0">Maghrib <strong>{prayerTimes[0]}</strong></li>
+  <li id="time-1">One-sixth <strong>{prayerTimes[1]}</strong> </li>
+  <li id="time-2">One-third <strong>{prayerTimes[2]}</strong></li>
+  <li id="time-3">Half <strong>{prayerTimes[3]}</strong></li>
+  <li id="time-4">Last-third <strong>{prayerTimes[4]}</strong></li>
+  <li id="time-5">Last-sixth <strong>{prayerTimes[5]}</strong></li>
+  <li id="time-6">Fajr <strong>{prayerTimes[6]}</strong></li>
 </ul>
 
 <style>
@@ -73,27 +73,27 @@ li:before {
   position: absolute;
 	left: -2px;
 }
-.time-0:before {
+#time-0:before {
   content: url(/assets/moon.svg);
   width: 2em;
   height: 2em;
 }
-.time-1:before {
+#time-1:before {
 	content: "¹⁄₆";
 }
-.time-2:before {
+#time-2:before {
   content: "²⁄₆";
 }
-.time-3:before {
+#time-3:before {
   content: "³⁄₆";
 }
-.time-4:before {
+#time-4:before {
   content: "⁴⁄₆";
 }
-.time-5:before {
+#time-5:before {
   content: "⁵⁄₆";
 }
-.time-6:before {
+#time-6:before {
   content: url(/assets/sun.svg);
   width: 2em;
   height: 2em;
