@@ -51,7 +51,7 @@
 }
 ul {
 	position: relative;
-	list-style: ntime-1;
+	list-style: none;
 	margin-left: 0;
   padding-left: 1.2em;
   font-size: 1.15em;
@@ -66,12 +66,13 @@ li {
 }
 li:before {
   position: absolute;
-	left: -2px;
+	left: -5px;
 }
 #time-0:before {
-  content: url(/assets/moon.svg);
+  content: url('/assets/moon (2).svg');
   width: 2em;
   height: 2em;
+    padding-top: 8px;
 }
 #time-1:before {
 	content: "¹⁄₆";
@@ -89,9 +90,10 @@ li:before {
   content: "⁵⁄₆";
 }
 #time-6:before {
-  content: url(/assets/sun.svg);
+  content: url(/assets/sunset.svg);
   width: 2em;
   height: 2em;
+  padding-top: 6px;
 }
 
 </style>
