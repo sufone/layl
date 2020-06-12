@@ -38,22 +38,16 @@
   }
 </script>
 
+<Times lat={lat} lon={lon} freshGeo={freshGeo} country={country}/>
 
-{#if country}
-  <Times lat={lat} lon={lon} freshGeo={freshGeo}/>
 
-  
-  {#if district && city}
-    <p>{district}, {city} <br> {country}</p>
-  {:else if city}
-    <p>{city}, {country}</p>
-  {/if}
-
+{#if district && city && country}
+  <p>{district}, {city} <br> {country}</p>
+{:else if city && country}
+  <p>{city}, {country}</p>
 {:else}
-  <Times lat={lat} lon={lon} freshGeo={freshGeo}/>
   <p>Your location co-ods: {lat}, {lon}</p>
 {/if}
-
 
 <style>
 p {
