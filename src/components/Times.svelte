@@ -36,12 +36,31 @@
   function countryPrayerMethodMatcher(country) {
     console.log('country: '+ country)
     switch(country) {
+      case 'EGY':
+        return adhan.CalculationMethod.Egyptian()
+        break
+      case 'ARE':
+        return adhan.CalculationMethod.Dubai()
+        break
+      case 'QAT':
+        return adhan.CalculationMethod.Qatar()
+        break
+      case 'KWT':
+        return adhan.CalculationMethod.Kuwait()
+        break
+      case 'SGP':
+      case 'MAL':
+      case 'IDN':
+        return adhan.CalculationMethod.Singapore() //thailand?
+        break
       case "PAK":
       case "IND":
       case "BGD":
         return adhan.CalculationMethod.Karachi()
         break
-
+      case 'TUR':
+        return adhan.CalculationMethod.Turkey()
+        break
       default:
         return adhan.CalculationMethod.MoonsightingCommittee()
     }
