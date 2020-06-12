@@ -4,6 +4,7 @@
   export let lat 
   export let lon 
   export let freshGeo
+  export let country
 
   import adhan from 'adhan'
   import dayjs from 'dayjs'
@@ -32,6 +33,20 @@
     updateTimeTimer = setInterval(testCurrentTime, 60000)
   }
 
+  function countryPrayerMethodMatcher(country) {
+    console.log('country: '+ country)
+    switch(country) {
+      case "PAK":
+      case "IND":
+      case "BGD":
+        return adhan.CalculationMethod.Karachi()
+        break
+
+      default:
+        return adhan.CalculationMethod.MoonsightingCommittee()
+    }
+  }
+
   $: if (lat && lon) {
     calcTimes(lat, lon)
   } else if (freshGeo) {
@@ -39,7 +54,7 @@
   }
 
   function calcTimes (lat, lon) {
-    let params = adhan.CalculationMethod.MoonsightingCommittee()
+    let params = countryPrayerMethodMatcher(country)
     let coordinates = new adhan.Coordinates(lat, lon)
 
     let todayRef = new Date()
