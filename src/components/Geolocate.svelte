@@ -2,7 +2,6 @@
   
 
   {#if lat && lon} <!-- don't show on first visit --> 
-    <Times lat={lat} lon={lon} freshGeo={freshGeo}/>
     <Geocode lat={lat} lon={lon} freshGeo={freshGeo} />
 
     {#if !freshGeo} <!-- don't show if user just used it --> 
@@ -79,7 +78,6 @@
 </style>
 
 <script>
-  import Times from './Times.svelte'
   import Geocode from './Geocode.svelte'
   import Explanation from './Explanation.svelte'
 

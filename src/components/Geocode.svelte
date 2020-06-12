@@ -1,4 +1,6 @@
 <script>
+  import Times from './Times.svelte'
+
   export let lat
   export let lon
   export let freshGeo
@@ -36,13 +38,22 @@
   }
 </script>
 
-{#if district && city && country}
-  <p>{district}, {city} <br> {country}</p>
-{:else if city && country}
-  <p>{city}, {country}</p>
+
+{#if country}
+  <Times lat={lat} lon={lon} freshGeo={freshGeo}/>
+
+  
+  {#if district && city}
+    <p>{district}, {city} <br> {country}</p>
+  {:else if city}
+    <p>{city}, {country}</p>
+  {/if}
+
 {:else}
+  <Times lat={lat} lon={lon} freshGeo={freshGeo}/>
   <p>Your location co-ods: {lat}, {lon}</p>
 {/if}
+
 
 <style>
 p {
