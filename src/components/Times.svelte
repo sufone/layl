@@ -48,6 +48,9 @@
       case 'KWT':
         return adhan.CalculationMethod.Kuwait()
         break
+      case 'SAU':
+        return adhan.CalculationMethod.UmmAlQura()
+        break
       case 'SGP':
       case 'MAL':
       case 'IDN':
