@@ -43,13 +43,27 @@ p, blockquote {
   margin: 10px;
   }
 div {
+  min-height: 100vh;
   padding-bottom: 20px;
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 blockquote {
       border-left: 3px solid #67b6ff;
       padding-left: 20px;
       font-style: italic;
+}
+
+@media screen and (max-width: 550px) {
+		div {
+			width: 90%;
+		}	
 }
 
 </style>

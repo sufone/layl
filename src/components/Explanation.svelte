@@ -5,7 +5,7 @@
 </ol>
 
 <style>
-@media only screen and (max-width: 550px) {
+@media screen and (max-width: 550px) {
   
   ol {
 

@@ -17,6 +17,8 @@
 
 <style lang="css">
 
+
+
 	.info-container {
 		min-height: 100vh;
 		margin-left: auto;
@@ -31,4 +33,9 @@
     justify-content: center;
 	}
 	
+	@media screen and (max-width: 270px) {
+		.info-container {
+			width: 95vw;
+		}	
+}
 </style>
