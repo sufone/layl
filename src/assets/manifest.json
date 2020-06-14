@@ -1,9 +1,9 @@
 {
-  "name": "PWA/CLI",
-  "short_name": "PWA/CLI",
-  "background_color": "#3E82F7",
+  "name": "Layl",
+  "short_name": "Layl",
+  "background_color": "#212121",
   "orientation": "portrait",
-  "theme_color": "#1e88e5",
+  "theme_color": "#FF6767",
   "display": "standalone",
   "start_url": "/",
   "icons": [{
