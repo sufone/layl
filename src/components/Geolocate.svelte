@@ -5,14 +5,14 @@
     <Geocode lat={lat} lon={lon} freshGeo={freshGeo} />
 
     {#if !freshGeo} <!-- don't show if user just used it --> 
-      <button class="minor" on:click|once={geolocate}>Update location</button>
+      <button class="minor" on:click|once={() => geolocate("layl_relocation")}>Update location</button>
     {/if} 
   {:else if lowAcc}
     <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
   {:else} 
     <img class="landing" src="/assets/load.svg" alt="Telescope gazing at the stars">
     <Explanation />
-    <button class="major" on:click|once={geolocate}><img src="/assets/pin.svg" alt="GPS pin"> Share location</button>
+    <button class="major" on:click|once={() => geolocate("layl_initial_location")}><img src="/assets/pin.svg" alt="GPS pin"> Share location</button>
   {/if}
 
   
@@ -87,7 +87,9 @@
   console.log("from local: "+lat+lon)
   let freshGeo = false
 
-  function geolocate() {
+  function geolocate(trackEvent) {
+  window.metrical.trackEvent(trackEvent)
+  console.log(trackEvent)
   if ("geolocation" in navigator) {
     // lat = null // forced remount of times to force new calc, but unnecessary with reactive statement in timesfile
     // lon = null
