@@ -106,11 +106,13 @@
       localStorage.setItem('lat', lat)
       localStorage.setItem('lon', lon)
       console.log(`localstorage works: ${localStorage.getItem('lat')}`)
+      window.metrical.trackEvent("layl_geolocate_success")
       // geocode(lat, lon)
       // this.calcTimes(lat, lon) 
 
     }, showError)
   } else {
+    window.metrical.trackEvent("layl_geolocate_failure")
     alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
   }
 }
