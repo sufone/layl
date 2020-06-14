@@ -2,6 +2,9 @@
   
 
   {#if lat && lon} <!-- don't show on first visit --> 
+    <div id="image-holder">
+      <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
+    </div>
     <Geocode lat={lat} lon={lon} freshGeo={freshGeo} />
 
     {#if !freshGeo} <!-- don't show if user just used it --> 
@@ -13,6 +16,9 @@
     <div id="landing-img-holder">
       <img class="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
     </div>
+    <div id="image-holder">
+		<img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
+	</div>
     <p>Layl uses your location to calculate times </p>
 
     <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
@@ -25,12 +31,20 @@
 
 
 <style>
-p {
-  max-width:30vw;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
+
+  #image-holder {
+      text-align: center;
+    padding-top: 10px;
+  }
+	img {
+		width: 80px;
+	}
+  p {
+    max-width:30vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   #landing-img-holder {
     text-align: center;
   }

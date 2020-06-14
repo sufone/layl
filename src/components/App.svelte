@@ -1,7 +1,5 @@
 <div class="app">
-	<div id="image-holder">
-		<img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
-	</div>
+	
 	<div class="layl-container">
 		<Geolocate />
 	</div>
@@ -18,13 +16,7 @@
 </script>
 
 <style lang="css">
-#image-holder {
-		text-align: center;
-	padding-top: 10px;
-}
-	img {
-		width: 80px;
-	}
+
 	.info-container {
 		min-height: 100vh;
 		margin-left: auto;
