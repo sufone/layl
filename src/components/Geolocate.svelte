@@ -54,8 +54,7 @@
     width: 200px;
   }
 }
-
-  #image-holder {
+#image-holder {
       text-align: center;
     padding-top: 10px;
   }
@@ -116,7 +115,14 @@
     display: block;
 		margin-left: auto;
     margin-right: auto;
-	}
+  }
+  
+@media (prefers-color-scheme: dark) {
+    button.minor {
+      background: #0080ff4f;
+    } 
+
+}
 </style>
 
 <script>
