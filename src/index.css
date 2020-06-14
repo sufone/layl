@@ -14,6 +14,14 @@
 	#main-logo {
 		content: url(/assets/logo-dark.svg) 
 	}
+	a, a:visited {
+		text-decoration: underline solid #67b6ff;
+		color: #67b6ff
+	}
+	a:hover, a:focus {
+		background-color: rgba(103, 182, 255, 0.486);
+		color: rgb(204, 204, 204);
+	}
 }
 @media (prefers-color-scheme: light) {
 	body {
@@ -21,6 +29,13 @@
 	}
 	#main-logo {
 		content: url(/assets/logo.svg) 
+	}
+	a, a:visited {
+		text-decoration: underline solid #67b6ff;
+	}
+	a:hover, a:focus {
+		background-color: rgb(103,182,255,0.2);
+		color: #000;
 	}
 }
 
@@ -50,17 +65,11 @@ body {
 
 a {
 	border-radius: 4px;
-	text-decoration: underline solid #67b6ff;
 	transition-property: all;
     transition-duration: .2s;
 }
 
 a:focus, a:hover {
-	background-color: rgb(103,182,255,0.2);
-	color: #000;
 	text-decoration: none;
 }
 
-a:visited {
-	color: rgb(0,80,160);
-}
