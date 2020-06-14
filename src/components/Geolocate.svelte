@@ -19,7 +19,7 @@
     <div id="image-holder">
 		<img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
 	</div>
-    <p>Layl uses your location to calculate times </p>
+    <p>Layl uses your location to calculate divisons of the night </p>
 
     <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
         <Explanation />
