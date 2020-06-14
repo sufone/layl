@@ -10,7 +10,7 @@
   {:else if lowAcc}
     <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
   {:else} 
-    <img class="landing" src="/assets/load.svg" alt="Telescope gazing at the stars">
+    <img class="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
     <Explanation />
     <button class="major" on:click|once={() => geolocate("layl_initial_location")}><img src="/assets/pin.svg" alt="GPS pin"> Share location</button>
   {/if}
