@@ -117,9 +117,12 @@
 
  function testCurrentTime() {
     let now = dayjs() 
+    console.log(now.format(timeFormat))
+    console.log('currentTime: ' + currentTime)
+
+
     for (let i = 6; i >= 0; i--) {
 
-    console.log(now.format(timeFormat))
     // console.log(times[i])
       if (now.isAfter(times[i])) {
         // console.log("after: " + i)
@@ -132,13 +135,11 @@
           return i
         }
       } else {
-        console.log('we are nearing the night!')
         if (i === 0) {
           return false //only return after exhausting all options
         }
       }
       
-    console.log('currentTime: ' + currentTime)
     }
   }
 
