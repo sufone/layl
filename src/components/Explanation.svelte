@@ -1,8 +1,7 @@
 
-<p>Layl needs to know where you are to find the most accurate times for you 😌 </p>
 <ol>
-  <li>Your data never leaves your device</li>
-  <li>Next time, Layl will remember you and work automatically</li>
+  <li>Your data always stays on your device</li>
+  <li>Layl will work automatically next time</li>
 </ol>
 
 <style>

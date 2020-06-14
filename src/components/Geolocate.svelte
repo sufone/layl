@@ -10,9 +10,14 @@
   {:else if lowAcc}
     <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
   {:else} 
-    <img class="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
-    <Explanation />
-    <button class="major" on:click|once={() => geolocate("layl_initial_location")}><img src="/assets/pin.svg" alt="GPS pin"> Share location</button>
+    <div id="landing-img-holder">
+      <img class="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
+    </div>
+    <p>Layl uses your location to calculate times </p>
+
+    <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
+        <Explanation />
+
   {/if}
 
   
@@ -20,11 +25,20 @@
 
 
 <style>
+p {
+  max-width:30vw;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+  #landing-img-holder {
+    text-align: center;
+  }
   img.landing {
-    width: 400px
+    width: 300px
   }
   button {
-    font-size: 1.1em;
+    font-size: 1em;
     cursor: pointer;
     padding: 10px;
     margin: 20px;
@@ -64,12 +78,12 @@
     
     transition-property: all;
     transition-duration: .2s;
-    background: #FFE9E9;
+    background: #FF6767;
     border: 1.5px solid #FF6767;
     box-sizing: border-box;
 
     font-weight: bold;
-    color: #FF6767;
+    color: #fff;
 
     display: block;
 		margin-left: auto;
