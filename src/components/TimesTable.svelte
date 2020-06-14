@@ -69,10 +69,8 @@ li:before {
 	left: -5px;
 }
 #time-0:before {
-  content: url('/assets/moon (2).svg');
-  width: 2em;
-  height: 2em;
-    padding-top: 8px;
+  content: url("/assets/moon (2).svg");
+  padding-top: 8px;
 }
 #time-1:before {
 	content: "¹⁄₆";
@@ -90,10 +88,8 @@ li:before {
   content: "⁵⁄₆";
 }
 #time-6:before {
-  content: url(/assets/sunset.svg);
-  width: 2em;
-  height: 2em;
-  padding-top: 6px;
+  content: url("/assets/sun (2).svg");
+  padding-top: 8px;
 }
 
 </style>
