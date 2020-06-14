@@ -42,12 +42,16 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
-	text-decoration: none;
+	border-radius: 4px;
+	text-decoration: underline solid #67b6ff;
+	transition-property: all;
+    transition-duration: .2s;
 }
 
-a:hover {
-	text-decoration: underline;
+a:focus, a:hover {
+	background-color: rgb(103,182,255,0.2);
+	color: #000;
+	text-decoration: none;
 }
 
 a:visited {
