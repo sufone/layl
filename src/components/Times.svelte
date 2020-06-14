@@ -26,12 +26,6 @@
 
   let updateTimeTimer 
 
-  function magicTimer() {
-    testCurrentTime()
-    clearInterval(updateTimeTimer)
-    console.log('timer cleared')
-    updateTimeTimer = setInterval(testCurrentTime, 60000)
-  }
 
   function countryPrayerMethodMatcher(country) {
     console.log('country: '+ country)
@@ -115,6 +109,12 @@
 
   }
 
+function magicTimer() {
+    testCurrentTime()
+    clearInterval(updateTimeTimer)
+    console.log('timer cleared')
+    updateTimeTimer = setInterval(testCurrentTime, 60000)
+  }
  function testCurrentTime() {
     let now = dayjs() 
     console.log(now.format(timeFormat))
@@ -125,7 +125,7 @@
 
     // console.log(times[i])
       if (now.isAfter(times[i])) {
-        // console.log("after: " + i)
+        console.log("after: " + i)
         if (i === 6) {
           console.log('we are in a new day!')
           return false 
@@ -135,7 +135,7 @@
           return i
         }
       } else {
-        if (i === 0) {
+        if (i < 0) {
           return false //only return after exhausting all options
         }
       }
