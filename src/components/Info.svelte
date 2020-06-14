@@ -1,31 +1,20 @@
 
 <div>
 <blockquote>
-“So perform the regular prayers in the period from the time the sun is past its zenith till the darkness of the night, and [recite] the Qur’an at dawn— dawn recitation is always witnessed— and during the night wake up and pray, as an extra offering of your own, so that your Lord may raise you to a [highly] praised status.”
-(Surah al-Isra 17:78-79)
+“And during the night wake up and pray, as an extra offering of your own, so that your Lord may raise you to a [highly] praised status.”
+(Surah al-Isra 17:79)
 </blockquote>
 
-<p>Divine guidance calls us to sleep parts of the night, and to wake up for worship during other. Worship includes prayer, remembrance, Quran recitation, and more. Knowing the parts of the night also lets us follow the lifestyles of the prophets, may peace be upon them all.
-</p>
+<a href=""> Learn more about these blessed times and the importance of the night. </a>
 
 <p>
- Beyond voluntary worship, these parts of the night are important for duties like praying Isha on time. <a href=""> Learn more about these blessed times. </a>
-</p>
-
-<hr>
-
-<p>
-The Islamic night starts at Maghrib, right after sunset, and lasts until Fajr, which is dawn.
-</p>
-<p>
-The time of Maghrib or Fajr depends on your location. The calculation of Maghrib time is clear and simple in most places. But the calculation of Fajr relies upon different methods. The best method is different in each place, and can change with the seasons too. This app uses a well-tested calculation method, but it may be inaccurate.
+The Islamic night starts at Maghrib and lasts until Fajr. This app uses official calculation methods from around the world, but it may be inaccurate for some locations.
 </p>
 
 <p>
 
-So, please <strong>double-check the Maghrib and Fajr times</strong> given by this app—if they are correct then the other times will be correct. Also, safeguard your worship by keeping enough time before or after the times given by any app.
+So, please <strong>double-check the Maghrib and Fajr times</strong> given by this app—if they are correct then the other times will also be correct. Safeguard your worship by keeping enough time before or after the times given by any app.
 </p>
-
 <p>
 
 These warnings aren't pretty, but they're part of responsible app development. May Allah accept our worship, <em>ameen</em>.
