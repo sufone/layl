@@ -1,6 +1,6 @@
 
 <ol>
-  <li>Share location only your first time</li>
+  <li>Share location only the first time</li>
   <li>Your data stays on your device</li>
 </ol>
 
