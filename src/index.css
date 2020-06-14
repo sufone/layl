@@ -41,6 +41,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+@media only screen and (max-width: 270px) {
+	* {
+		font-size: 0.92rem;
+
+	}
+}
+
 a {
 	border-radius: 4px;
 	text-decoration: underline solid #67b6ff;

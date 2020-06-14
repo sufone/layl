@@ -14,7 +14,7 @@
     <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
   {:else} 
     <div id="landing-img-holder">
-      <img class="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
+      <img id="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
     </div>
     <div id="image-holder">
 		<img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
@@ -31,25 +31,39 @@
 
 
 <style>
-
-  #image-holder {
-      text-align: center;
-    padding-top: 10px;
-  }
-	img {
-		width: 80px;
-	}
+  
   p {
     max-width:30vw;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
+  img#landing {
+    width: 300px
+  }
+@media only screen and (max-width: 550px) {
+  img#landing {
+    width: 250px;
+  }
+  p {
+    max-width: 70vw;
+  }
+}
+@media only screen and (max-width: 270px) {
+  img#landing {
+    width: 200px;
+  }
+}
+
+  #image-holder {
+      text-align: center;
+    padding-top: 10px;
+  }
+	img#main-logo {
+		width: 80px;
+	}
   #landing-img-holder {
     text-align: center;
-  }
-  img.landing {
-    width: 300px
   }
   button {
     font-size: 1em;

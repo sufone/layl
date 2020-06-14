@@ -58,11 +58,12 @@ ul {
   line-height: 2em;
   min-width: 20vw;
 }
+li > strong {
+  padding-left: 20px;
+}
 li {
   display: flex;
   justify-content: space-between;
-  border-radius: 4px;
-  /* padding: 0 4px 0 4px; */
 }
 li:before {
   position: absolute;
@@ -70,6 +71,8 @@ li:before {
 }
 #time-0:before {
   content: url("/assets/moon.svg");
+  width: 24px;
+  height: 24px;
   padding-top: 8px;
 }
 #time-1:before {
@@ -89,7 +92,25 @@ li:before {
 }
 #time-6:before {
   content: url("/assets/sun.svg");
+  width: 24px;
+  height: 24px;
   padding-top: 6px;
 }
 
+@media only screen and (max-width: 270px) {
+  
+li > strong {
+  padding-left: 6px;
+}
+#time-0:before {
+  width: 16px;
+  height: 16px;
+  padding-top: 6px;
+}
+#time-6:before {
+  width: 16px;
+  height: 16px;
+  padding-top: 4px;
+}
+}
 </style>

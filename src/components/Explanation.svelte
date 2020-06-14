@@ -5,12 +5,19 @@
 </ol>
 
 <style>
+@media only screen and (max-width: 550px) {
+  
+  ol {
+
+  flex-direction: column;
+  align-items: center;
+  }
+}
 
 ol {
   list-style: none;
   counter-reset: my-awesome-counter;
   display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
