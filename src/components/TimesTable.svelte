@@ -35,8 +35,8 @@
 
 <ul>
   <li id="time-0">Maghrib <strong>{prayerTimes[0]}</strong></li>
-  <li id="time-1">One-sixth <strong>{prayerTimes[1]}</strong> </li>
-  <li id="time-2">One-third <strong>{prayerTimes[2]}</strong></li>
+  <li id="time-1">Second-sixth <strong>{prayerTimes[1]}</strong> </li>
+  <li id="time-2">Second-third <strong>{prayerTimes[2]}</strong></li>
   <li id="time-3">Half <strong>{prayerTimes[3]}</strong></li>
   <li id="time-4">Last-third <strong>{prayerTimes[4]}</strong></li>
   <li id="time-5">Last-sixth <strong>{prayerTimes[5]}</strong></li>
@@ -47,6 +47,7 @@
 :global(.current) {
   border-bottom: 3px dotted #FFD9D9 ;
   list-style-position: inside;
+  margin-bottom: 3px;
 
 }
 ul {
@@ -76,19 +77,19 @@ li:before {
   padding-top: 8px;
 }
 #time-1:before {
-	content: "¹⁄₆";
+	content: "1⁄₆";
 }
 #time-2:before {
-  content: "²⁄₆";
+  content: "1⁄3";
 }
 #time-3:before {
-  content: "³⁄₆";
+  content: "1⁄2";
 }
 #time-4:before {
-  content: "⁴⁄₆";
+  content: "2⁄3";
 }
 #time-5:before {
-  content: "⁵⁄₆";
+  content: "5⁄6";
 }
 #time-6:before {
   content: url("/assets/sun.svg");
