@@ -65,6 +65,8 @@ li > strong {
 li {
   display: flex;
   justify-content: space-between;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 li:before {
   position: absolute;
@@ -79,17 +81,28 @@ li:before {
 #time-1:before {
 	content: "1⁄₆";
 }
+#time-1 {
+  background-color: rgba(0, 0, 0, 0.096);
+}
 #time-2:before {
   content: "1⁄3";
 }
 #time-3:before {
   content: "1⁄2";
 }
+#time-3 {
+    background-color: rgba(0, 0, 0, 0.096);
+
+}
 #time-4:before {
   content: "2⁄3";
 }
 #time-5:before {
   content: "5⁄6";
+}
+#time-5 {
+    background-color: rgba(0, 0, 0, 0.096);
+
 }
 #time-6:before {
   content: url("/assets/sun.svg");
