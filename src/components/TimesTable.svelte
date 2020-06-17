@@ -15,7 +15,7 @@
 
   function updateTime(current) {
     console.log("updating timer, current: " + current)
-    if (current) {
+    if (Number.isInteger(current)) {
       let chosenTime = `time-${current}`
       console.log(chosenTime)
 
@@ -34,13 +34,13 @@
 
 
 <ul>
-  <li id="time-0">Maghrib <strong>{prayerTimes[0]}</strong></li>
-  <li id="time-1">Second-sixth <strong>{prayerTimes[1]}</strong> </li>
-  <li id="time-2">Second-third <strong>{prayerTimes[2]}</strong></li>
-  <li id="time-3">Half <strong>{prayerTimes[3]}</strong></li>
-  <li id="time-4">Last-third <strong>{prayerTimes[4]}</strong></li>
-  <li id="time-5">Last-sixth <strong>{prayerTimes[5]}</strong></li>
-  <li id="time-6">Fajr <strong>{prayerTimes[6]}</strong></li>
+  <li id="time-0">Maghrib: night start<strong>{prayerTimes[0]}</strong></li>
+  <li id="time-1">First-sixth ends <strong>{prayerTimes[1]}</strong> </li>
+  <li id="time-2">First-third ends <strong>{prayerTimes[2]}</strong></li>
+  <li id="time-3">Half the night <strong>{prayerTimes[3]}</strong></li>
+  <li id="time-4">Last-third starts<strong>{prayerTimes[4]}</strong></li>
+  <li id="time-5">Last-sixth starts <strong>{prayerTimes[5]}</strong></li>
+  <li id="time-6">Fajr: night end<strong>{prayerTimes[6]}</strong></li>
 </ul>
 
 <style>
@@ -84,25 +84,37 @@ li:before {
 #time-1 {
   background-color: rgba(0, 0, 0, 0.096);
 }
+#time-1 {
+    border-left: 2px solid #80a9e6;
+}
 #time-2:before {
-  content: "1⁄3";
+  content: "2⁄6";
+}
+#time-2 {
+    border-left: 2px solid #9a9ccc;
+
 }
 #time-3:before {
-  content: "1⁄2";
+  content: "3⁄6";
 }
 #time-3 {
     background-color: rgba(0, 0, 0, 0.096);
+    border-left: 2px solid #b38eb3;
 
 }
 #time-4:before {
-  content: "2⁄3";
+  content: "4⁄6";
+}
+#time-4 {
+      border-left: 2px solid #cc819a;
+
 }
 #time-5:before {
   content: "5⁄6";
 }
 #time-5 {
     background-color: rgba(0, 0, 0, 0.096);
-
+    border-left: 2px solid #e67480;
 }
 #time-6:before {
   content: url("/assets/sun.svg");
