@@ -45,10 +45,9 @@
 
 <style>
 :global(.current) {
-  border-bottom: 3px dotted #FFD9D9 ;
+  border-bottom: 3px dotted #ffafaf ;
   list-style-position: inside;
   margin-bottom: 3px;
-
 }
 ul {
 	position: relative;
