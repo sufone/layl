@@ -28,8 +28,8 @@
     </div>
       
 
-    <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
-        <Explanation />
+      <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
+          <Explanation />
 
     {/if}
   {/if}
