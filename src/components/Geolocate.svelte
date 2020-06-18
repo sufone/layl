@@ -49,23 +49,23 @@
   img#landing {
     width: 300px
   }
-@media only screen and (max-width: 550px) {
-  img#landing {
-    width: 250px;
+  @media only screen and (max-width: 550px) {
+    img#landing {
+      width: 250px;
+    }
+    p {
+      max-width: 70vw;
+    }
   }
-  p {
-    max-width: 70vw;
+  @media only screen and (max-width: 270px) {
+    img#landing {
+      width: 200px;
+    }
   }
-}
-@media only screen and (max-width: 270px) {
-  img#landing {
-    width: 200px;
-  }
-}
-#image-holder {
-      text-align: center;
-    padding-top: 10px;
-  }
+  #image-holder {
+        text-align: center;
+      padding-top: 10px;
+    }
 	img#main-logo {
 		width: 80px;
 	}
@@ -151,40 +151,40 @@
 
 
   let lowAcc
-  let lat = parseFloat(localStorage.getItem('lat')) || null
-  let lon = parseFloat(localStorage.getItem('lon')) || null
+  let lat = parseFloat(localStorage.getItem('lat'))
+  let lon = parseFloat(localStorage.getItem('lon')) 
   console.log("from local: "+lat+lon)
   let freshGeo = false
 
   function geolocate(trackEvent) {
-  window.metrical.trackEvent(trackEvent)
-  console.log(trackEvent)
-  if ("geolocation" in navigator) {
-    // lat = null // forced remount of times to force new calc, but unnecessary with reactive statement in timesfile
-    // lon = null
-    navigator.geolocation.getCurrentPosition((position) => {
-      let accuracy = position.coords.accuracy
-      if (accuracy > 300000) { //arbitrary value
-        lowAcc = true
-        return
-      }
-      lat = position.coords.latitude
-      lon = position.coords.longitude
-      freshGeo = true
-      console.log(lat, lon, accuracy);
-      localStorage.setItem('lat', lat)
-      localStorage.setItem('lon', lon)
-      console.log(`localstorage works: ${localStorage.getItem('lat')}`)
-      window.metrical.trackEvent("layl_geolocate_success")
-      // geocode(lat, lon)
-      // this.calcTimes(lat, lon) 
+    window.metrical.trackEvent(trackEvent)
+    console.log(trackEvent)
+    if ("geolocation" in navigator) {
+      // lat = null // forced remount of times to force new calc, but unnecessary with reactive statement in timesfile
+      // lon = null
+      navigator.geolocation.getCurrentPosition((position) => {
+        let accuracy = position.coords.accuracy
+        if (accuracy > 300000) { //arbitrary value
+          lowAcc = true
+          return
+        }
+        lat = position.coords.latitude
+        lon = position.coords.longitude
+        freshGeo = true
+        console.log(lat, lon, accuracy);
+        localStorage.setItem('lat', lat)
+        localStorage.setItem('lon', lon)
+        console.log(`localstorage works: ${localStorage.getItem('lat')}`)
+        window.metrical.trackEvent("layl_geolocate_success")
+        // geocode(lat, lon)
+        // this.calcTimes(lat, lon) 
 
-    }, showError)
-  } else {
-    window.metrical.trackEvent("layl_geolocate_failure")
-    alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
-  }
-}
+      }, showError)
+    } else {
+      window.metrical.trackEvent("layl_geolocate_failure")
+      alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
+    }
+  } 
 
 function showError(error) {
   switch(error.code) {
