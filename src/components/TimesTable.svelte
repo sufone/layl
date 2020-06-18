@@ -117,13 +117,13 @@ li:before {
   padding-top: 6px;
 }
 .dark-bg {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(0, 0, 0, 0.03);
 
 }
 
 @media (prefers-color-scheme: dark) {
   .dark-bg {
-    background-color: rgba(255, 255, 255, 0.048);
+    background-color: rgba(255, 255, 255, 0.04);
   }
 }
 
