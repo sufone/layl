@@ -2,36 +2,36 @@
   
 
   {#if mounted}
-  {#if lat && lon} <!-- don't show on first visit --> 
-  <div transition:fade>
-    <div id="image-holder">
+    {#if lat && lon} <!-- don't show on first visit --> 
+    <div transition:fade>
+      <div id="image-holder">
+          <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
+        </div>
+        <Geocode lat={lat} lon={lon} freshGeo={freshGeo} />
+    </div>
+      
+
+      {#if !freshGeo} <!-- don't show if user just used it --> 
+        <button transition:fade class="minor" on:click|once={() => geolocate("layl_relocation")}>Update location</button>
+      {/if} 
+    {:else if lowAcc}
+      <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
+    {:else} 
+    <div transition:fade>
+      <div id="landing-img-holder">
+          <img id="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
+        </div>
+        <div id="image-holder">
         <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
       </div>
-      <Geocode lat={lat} lon={lon} freshGeo={freshGeo} />
-  </div>
-    
-
-    {#if !freshGeo} <!-- don't show if user just used it --> 
-      <button transition:fade class="minor" on:click|once={() => geolocate("layl_relocation")}>Update location</button>
-    {/if} 
-  {:else if lowAcc}
-    <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
-  {:else if !lat && !lon} 
-  <div transition:fade>
-    <div id="landing-img-holder">
-        <img id="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
-      </div>
-      <div id="image-holder">
-      <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
+        <p>Calculate divisons of the night for your location </p>
     </div>
-      <p>Calculate divisons of the night for your location </p>
-  </div>
-    
+      
 
     <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
         <Explanation />
 
-  {/if}
+    {/if}
   {/if}
 
   
