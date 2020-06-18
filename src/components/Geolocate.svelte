@@ -1,7 +1,6 @@
 <div>
   
 
-  {#if mounted}
     {#if lat && lon} <!-- don't show on first visit --> 
     <div transition:fade>
       <div id="image-holder">
@@ -32,7 +31,6 @@
           <Explanation />
 
     {/if}
-  {/if}
 
   
 </div>
@@ -142,12 +140,7 @@
   import Geocode from './Geocode.svelte'
   import Explanation from './Explanation.svelte'
   import { fade } from 'svelte/transition';
-    import { onMount } from 'svelte';
 
-  let mounted = false
-  onMount(() => {
-    mounted = true
-  })
 
 
   let lowAcc
