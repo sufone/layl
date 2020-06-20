@@ -2,21 +2,21 @@
   import { onMount } from 'svelte';
 
   export let prayerTimes
-  export let current
+  export let currentTime
   
   let mounted = false
   onMount(() => {
     mounted = true
   })
  
-  $: if (current && mounted) {
-    updateTime(current)
+  $: if (currentTime && mounted) {
+    updateTime(currentTime)
   }
 
-  function updateTime(current) {
-    console.log("updating timer, current: " + current)
-    if (Number.isInteger(current)) {
-      let chosenTime = `time-${current}`
+  function updateTime(currentTime) {
+    console.log("updating timer, current: " + currentTime)
+    if (Number.isInteger(currentTime)) {
+      let chosenTime = `time-${currentTime}`
       console.log(chosenTime)
 
       //remove existing

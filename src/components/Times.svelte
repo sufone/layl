@@ -147,6 +147,6 @@ function magicTimer() {
 
 </script>
 
-<TimesTable prayerTimes={prayerTimes} current={currentTime} />
+<TimesTable {prayerTimes} {currentTime} />
 <br>
 <Dates {today} {tomorrow} />
