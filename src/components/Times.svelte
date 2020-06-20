@@ -149,4 +149,4 @@ function magicTimer() {
 
 <TimesTable prayerTimes={prayerTimes} current={currentTime} />
 <br>
-<Dates today={today} tomorrow={tomorrow} />
+<Dates {today} {tomorrow} />

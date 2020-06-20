@@ -41,7 +41,7 @@
   }
 </script>
 
-<Times lat={lat} lon={lon} freshGeo={freshGeo} country={country}/>
+<Times {lat} {lon} {freshGeo} {country}/>
 
 
 {#if district && city && country}

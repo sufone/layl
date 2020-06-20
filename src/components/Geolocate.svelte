@@ -6,7 +6,7 @@
       <div id="image-holder">
           <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
         </div>
-        <Geocode lat={lat} lon={lon} freshGeo={freshGeo} />
+        <Geocode {lat} {lon} {freshGeo} />
     </div>
       
 
