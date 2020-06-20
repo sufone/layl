@@ -20,9 +20,12 @@
       console.log(chosenTime)
 
       //remove existing
-      let oldTimeElement = document.getElementById(`time-${current-1}`)
-      console.log(oldTimeElement); 
-      oldTimeElement.classList.remove("current");
+      let oldTimeElements = document.getElementsByClassName("current")
+      console.log(oldTimeElements); 
+      [...oldTimeElements].forEach(elem => { //if a page is re-initalized after night is over, could produce a leftover current class on a middle element 
+        elem.classList.remove("current");
+      })
+      
 
       //add new
       let currentTimeElement = document.getElementById(chosenTime)
@@ -34,6 +37,7 @@
 
 
 <ul>
+<!-- change to a map…  -->
   <li id="time-0">Maghrib: night start<strong>{prayerTimes[0]}</strong></li>
   <li id="time-1" class="dark-bg">First-sixth ends <strong>{prayerTimes[1]}</strong> </li>
   <li id="time-2">First-third ends <strong>{prayerTimes[2]}</strong></li>
