@@ -1,5 +1,5 @@
 
-<div>
+<div id="info">
 <blockquote>
 “And during the night wake up and pray, as an extra offering of your own, so that your Lord may raise you to a [highly] praised status.”
 (Surah al-Isra 17:79)
@@ -19,7 +19,20 @@ So, please <strong>double-check the Maghrib and Fajr times</strong> given by thi
 
 These warnings aren't pretty, but they're part of responsible app development. May Allah accept our worship, <em>ameen</em>.
 </p>
+
+<div id="subscribe-form">
+<form action="https://buttondown.email/api/emails/embed-subscribe/naved-apps" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/naved-apps', 'popupwindow')" class="embeddable-buttondown-form">
+<p>Stay up to date with the latest updates</p>
+  <div id="subscribe-internal">
+    <input type="email" placeholder="💌 Email" name="email" id="bd-email" class="subscribe-field">
+    <input type="hidden" value="1" name="embed">
+    <br>
+    <input type="submit" value="Bismillah" id="subscribe-button">
+  </div>
+</form>
 </div>
+</div>
+
 
 <Footer />
 
@@ -31,7 +44,7 @@ import Footer from './Footer.svelte'
 p, blockquote {
   margin: 10px;
   }
-div {
+div#info {
   min-height: 100vh;
   padding-bottom: 20px;
   padding-top: 20px;
