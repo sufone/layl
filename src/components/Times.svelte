@@ -128,7 +128,7 @@ function magicTimer() {
         console.log("after: " + i)
         if (i === 6) {
           console.log('we are in a new day!')
-          currentTime = null
+          currentTime = 1.5
           return false 
         } else { 
           console.log(`we are in stage ${i}!`)
@@ -138,7 +138,7 @@ function magicTimer() {
       } else {
         if (i < 0) {
           console.log('check failed')
-          currentTime = null
+          currentTime = 1.5
           return false //only return after exhausting all options
         }
       }

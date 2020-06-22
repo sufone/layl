@@ -9,7 +9,7 @@
     mounted = true
   })
  
-  $: if (currentTime || mounted) {
+  $: if (mounted && currentTime) {
     updateTime(currentTime)
   }
 
