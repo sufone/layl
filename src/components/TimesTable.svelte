@@ -9,23 +9,21 @@
     mounted = true
   })
  
-  $: if (currentTime && mounted) {
+  $: if (currentTime || mounted) {
     updateTime(currentTime)
   }
 
   function updateTime(currentTime) {
     console.log("updating timer, current: " + currentTime)
+    //remove existing
+    let oldTimeElements = document.getElementsByClassName("current")
+    console.log(oldTimeElements); 
+    [...oldTimeElements].forEach(elem => { //if a page is re-initalized after night is over, could produce a leftover current class on a middle element 
+      elem.classList.remove("current");
+    })
     if (Number.isInteger(currentTime)) {
       let chosenTime = `time-${currentTime}`
       console.log(chosenTime)
-
-      //remove existing
-      let oldTimeElements = document.getElementsByClassName("current")
-      console.log(oldTimeElements); 
-      [...oldTimeElements].forEach(elem => { //if a page is re-initalized after night is over, could produce a leftover current class on a middle element 
-        elem.classList.remove("current");
-      })
-      
 
       //add new
       let currentTimeElement = document.getElementById(chosenTime)
