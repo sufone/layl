@@ -33,7 +33,7 @@
     justify-content: center;
 	}
 	
-	@media screen and (max-width: 270px) {
+	@media screen and (max-width: 300px) {
 		.info-container {
 			width: 95vw;
 		}	

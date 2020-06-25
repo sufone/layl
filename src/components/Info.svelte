@@ -63,8 +63,8 @@ blockquote {
 }
 
 @media screen and (max-width: 550px) {
-		div {
-			width: 90%;
+		div#info {
+			width: 100%;
 		}	
 }
 

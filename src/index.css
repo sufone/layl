@@ -63,10 +63,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-@media only screen and (max-width: 270px) {
+@media only screen and (max-width: 300px) {
 	* {
 		font-size: 0.92rem;
-
 	}
 }
 
