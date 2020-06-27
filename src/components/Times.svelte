@@ -23,6 +23,7 @@
   let currentTime = null
 
   let timeFormat = "h:mm a"
+  let now 
 
   let updateTimeTimer 
 
@@ -113,10 +114,10 @@ function magicTimer() {
     testCurrentTime()
     clearInterval(updateTimeTimer)
     console.log('timer cleared')
-    updateTimeTimer = setInterval(testCurrentTime, 60000)
+    updateTimeTimer = setInterval(testCurrentTime, 30000)
   }
  function testCurrentTime() {
-    let now = dayjs() 
+    now = dayjs() 
     console.log(now.format(timeFormat))
     console.log('currentTime: ' + currentTime)
 
@@ -150,6 +151,22 @@ function magicTimer() {
 
 </script>
 
+{#if currentTime}
+  <br>
+  <div>
+    <p>{dayjs(now).format("h:m a")} –  Stage {currentTime+1}/6</p>
+  </div>
+  <br>
+{/if}
+
 <TimesTable {prayerTimes} {currentTime} />
+
 <br>
 <Dates {today} {tomorrow} />
+
+<style>
+p {
+  text-align: center;
+  color: #ffafaf;
+}
+</style>
