@@ -152,9 +152,8 @@ function magicTimer() {
 </script>
 
 {#if Number.isInteger(currentTime)}
-  <br>
   <div>
-    <p>{dayjs(now).format("h:m a")} ·  Stage {currentTime+1}⁄6</p>
+    <p><span>Stage {currentTime+1}⁄6 ·  {dayjs(now).format("h:m a")}</span></p>
   </div>
   <br>
 {/if}
@@ -168,5 +167,11 @@ function magicTimer() {
 p {
   text-align: center;
   color: #ffafaf;
+  /* text-decoration: underline #ffafaf dotted; */
+  
+}
+span {
+/* border-top: 3px dotted #ffafaf; */
+
 }
 </style>

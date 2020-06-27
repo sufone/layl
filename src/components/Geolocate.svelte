@@ -65,7 +65,8 @@
       padding-top: 10px;
     }
 	img#main-logo {
-		width: 80px;
+    width: 80px;
+    margin-bottom: 5px;
 	}
   #landing-img-holder {
     text-align: center;
