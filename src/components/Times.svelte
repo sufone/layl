@@ -114,7 +114,7 @@ function magicTimer() {
     testCurrentTime()
     clearInterval(updateTimeTimer)
     console.log('timer cleared')
-    updateTimeTimer = setInterval(testCurrentTime, 30000)
+    updateTimeTimer = setInterval(testCurrentTime, 10000)
   }
  function testCurrentTime() {
     now = dayjs() 
