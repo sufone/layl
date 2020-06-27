@@ -1,5 +1,5 @@
 exports.offline = {
-  responseStrategy: 'network-first',
+  responseStrategy: 'cache-first',
   autoUpdate: true,
   ServiceWorker: {
     events: true
