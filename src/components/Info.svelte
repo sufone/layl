@@ -49,7 +49,7 @@ div#info {
   flex-direction: column;
   justify-content: center;
 
-  width: 70%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
