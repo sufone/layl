@@ -154,7 +154,7 @@ function magicTimer() {
 {#if currentTime}
   <br>
   <div>
-    <p>{dayjs(now).format("h:m a")} –  Stage {currentTime+1}/6</p>
+    <p>{dayjs(now).format("h:m a")} ·  Stage {currentTime+1}⁄6</p>
   </div>
   <br>
 {/if}
