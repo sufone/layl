@@ -54,9 +54,12 @@ div#info {
   margin-right: auto;
 }
 blockquote {
-      border-left: 3px solid #67b6ff;
-      padding-left: 20px;
-      font-style: italic;
+  /* border-left: 3px solid #67b6ff; 
+  padding-left: 20px; */
+  font-style: normal;
+  border: 4px solid rgba(172, 172, 172, 0.363);
+  padding: 10px;
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 550px) {
