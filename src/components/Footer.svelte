@@ -1,5 +1,5 @@
 <div>
-<p>Made with 💗 by Naved</p>
+<p>v2.0.9 · Made with 💗 by <a href="https://navedislam.com/apps">Naved</a></p>
 
 </div>
 
@@ -16,9 +16,11 @@ div {
   text-align: center;
 }
 
-@media screen and (max-width: 270px) {
+@media screen and (max-width: 300px) {
   div {
     position: unset;
+    text-align: center;
+    width: 100vw;
   }
 }
 </style>

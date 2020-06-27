@@ -129,7 +129,7 @@ li:before {
   }
 }
 
-@media only screen and (max-width: 270px) {
+@media only screen and (max-width: 280px) {
   
 li > strong {
   padding-left: 6px;

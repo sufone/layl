@@ -55,7 +55,7 @@
       max-width: 70vw;
     }
   }
-  @media only screen and (max-width: 270px) {
+  @media only screen and (max-width: 280px) {
     img#landing {
       width: 200px;
     }
@@ -128,7 +128,7 @@
     button.minor {
       background: #0080ff4f;
     } 
-	@media screen and (max-width: 270px) {
+	@media screen and (max-width: 280px) {
     button {
     font-size: 0.9em;
         padding: 5px;
