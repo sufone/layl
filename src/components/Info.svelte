@@ -4,9 +4,9 @@
 “And during the night wake up and pray، as an extra offering of your own، so that your Lord may raise you to a [highly] praised status.” [Surah al-Isra 79]
 </blockquote>
 
-<a href=""> Learn more about these blessed times and the importance of the night. </a>
 
-<p>Layl is a quick and simple app that tells you the divisions of the night at your location, allowing you to easily plan worship and make the most of your night.
+
+<p><a href=""> Learn more about these blessed times and the importance of the night. </a> Easily plan your worship and make the most of the night with Layl.
 </p>
 
 <p>
