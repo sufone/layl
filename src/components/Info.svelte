@@ -21,7 +21,7 @@ Please <strong>double-check the Maghrib and Fajr times</strong> listed above—a
 
 <div id="subscribe-form">
 <form action="https://buttondown.email/api/emails/embed-subscribe/naved-apps" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/naved-apps', 'popupwindow')" class="embeddable-buttondown-form">
-<p>Stay up to date with the latest updates</p>
+<p>Subscribe for email updates</p>
   <div id="subscribe-internal">
     <input type="email" placeholder="💌 Email" name="email" id="bd-email" class="subscribe-field">
     <input type="hidden" value="1" name="embed">
