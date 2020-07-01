@@ -23,7 +23,7 @@
 		min-height: 100vh;
 		margin-left: auto;
 		margin-right: auto;
-		width: 80vw;
+		width: 95vw;
 	}
 	.layl-container {
 		height: 100vh;
