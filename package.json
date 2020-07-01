@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "pwa export",
+    "export": "pwa export",
     "start": "sirv build -s",
     "watch": "pwa watch"
   },

@@ -183,7 +183,7 @@
   }
 
 function error(err) {
-console.warn(`ERROR(${err.code}): ${err.message}. Please contact me (navedcoded@gmail.com)
+alert(`ERROR(${err.code}): ${err.message} \n Please contact me (navedcoded@gmail.com)
 with this message to help solve this issue and improve Layl ❤️`);
 }
 </script>
