@@ -15,7 +15,7 @@
   async function geocode(lat, lon) {
     let geoApi = `https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=${lat}%2C${lon}%2C150&mode=retrieveAreas&gen=9&app_id=oye7XL09Prx5G64NrSE8&app_code=-Dw2OYlGw40jZwCC_UGvKg&addressattributes=country,city&locationattributes=address&maxresults=1&minresults=1&language=en-US`
     console.log(geoApi)
-    
+
     fetch(geoApi).then(response => response.json())
       .then(result => {
         let location = result.Response.View[0].Result[0].Location.Address

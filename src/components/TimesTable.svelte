@@ -3,12 +3,12 @@
 
   export let prayerTimes
   export let currentTime
-  
+
   let mounted = false
   onMount(() => {
     mounted = true
   })
- 
+
   $: if (mounted && currentTime) {
     updateTime(currentTime)
   }
@@ -17,8 +17,8 @@
     console.log("updating timer, current: " + currentTime)
     //remove existing
     let oldTimeElements = document.getElementsByClassName("current")
-    console.log(oldTimeElements); 
-    [...oldTimeElements].forEach(elem => { //if a page is re-initalized after night is over, could produce a leftover current class on a middle element 
+    console.log(oldTimeElements);
+    [...oldTimeElements].forEach(elem => { //if a page is re-initalized after night is over, could produce a leftover current class on a middle element
       elem.classList.remove("current");
     })
     if (Number.isInteger(currentTime)) {
@@ -28,9 +28,9 @@
       //add new
       let currentTimeElement = document.getElementById(chosenTime)
       console.log(currentTimeElement)
-      currentTimeElement.classList.add("current") 
+      currentTimeElement.classList.add("current")
     }
-  }  
+  }
 </script>
 
 
@@ -133,7 +133,7 @@ li:before {
 }
 
 @media only screen and (max-width: 280px) {
-  
+
 li > strong {
   padding-left: 6px;
 }

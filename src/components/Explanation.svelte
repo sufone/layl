@@ -6,7 +6,7 @@
 
 <style>
 @media screen and (max-width: 550px) {
-  
+
   ol {
 
   flex-direction: column;

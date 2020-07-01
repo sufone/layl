@@ -11,7 +11,7 @@
 
 <p>
 
-Please <strong>double-check the Maghrib and Fajr times</strong> given by this app—if they are correct then the other times will also be correct. 
+Please <strong>double-check the Maghrib and Fajr times</strong> given by this app—if they are correct then the other times will also be correct.
 </p>
 
 <p> May Allah accept our worship, <em>ameen</em>.
@@ -54,7 +54,7 @@ div#info {
   margin-right: auto;
 }
 blockquote {
-  /* border-left: 3px solid #67b6ff; 
+  /* border-left: 3px solid #67b6ff;
   padding-left: 20px; */
   font-style: normal;
   border: 4px solid rgba(172, 172, 172, 0.363);
@@ -65,7 +65,7 @@ blockquote {
 @media screen and (max-width: 550px) {
 		div#info {
 			width: 100%;
-		}	
+		}
 }
 
 </style>

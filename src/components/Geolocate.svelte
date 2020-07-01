@@ -1,21 +1,21 @@
 <div>
-  
 
-    {#if lat && lon} <!-- don't show on first visit --> 
+
+    {#if lat && lon} <!-- don't show on first visit -->
     <div transition:fade>
       <div id="image-holder">
           <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
         </div>
         <Geocode {lat} {lon} {freshGeo} />
     </div>
-      
 
-      {#if !freshGeo} <!-- don't show if user just used it --> 
+
+      {#if !freshGeo} <!-- don't show if user just used it -->
         <button transition:fade class="minor" on:click|once={() => geolocate("layl_relocation")}>Update location</button>
-      {/if} 
+      {/if}
     {:else if lowAcc}
       <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
-    {:else} 
+    {:else}
     <div transition:fade>
       <div id="landing-img-holder">
           <img id="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
@@ -25,19 +25,19 @@
       </div>
         <p>Calculate divisons of the night for your location </p>
     </div>
-      
+
 
       <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
           <Explanation />
 
     {/if}
 
-  
+
 </div>
 
 
 <style>
-  
+
   p {
     max-width:30vw;
     text-align: center;
@@ -100,7 +100,7 @@
 
     transition-property: all;
     transition-duration: .2s;
-    
+
     border-radius: 4px;
 
     display: block;
@@ -109,7 +109,7 @@
   }
 	button.major {
     /* all: unset; */
-    
+
     transition-property: all;
     transition-duration: .2s;
     background: #FF6767;
@@ -123,11 +123,11 @@
 		margin-left: auto;
     margin-right: auto;
   }
-  
+
 @media (prefers-color-scheme: dark) {
     button.minor {
       background: #0080ff4f;
-    } 
+    }
 	@media screen and (max-width: 280px) {
     button {
     font-size: 0.9em;
@@ -146,7 +146,7 @@
 
   let lowAcc
   let lat = parseFloat(localStorage.getItem('lat'))
-  let lon = parseFloat(localStorage.getItem('lon')) 
+  let lon = parseFloat(localStorage.getItem('lon'))
   console.log("from local: "+lat+lon)
   let freshGeo = false
 
@@ -171,14 +171,14 @@
         console.log(`localstorage works: ${localStorage.getItem('lat')}`)
         window.metrical.trackEvent("layl_geolocate_success")
         // geocode(lat, lon)
-        // this.calcTimes(lat, lon) 
+        // this.calcTimes(lat, lon)
 
       }, showError)
     } else {
       window.metrical.trackEvent("layl_geolocate_failure")
       alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
     }
-  } 
+  }
 
 function showError(error) {
   switch(error.code) {

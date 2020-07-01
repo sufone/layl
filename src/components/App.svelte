@@ -1,12 +1,12 @@
 <div class="app">
-	
+
 	<div class="layl-container">
 		<Geolocate />
 	</div>
 	<div class="info-container">
 		<Info />
 	</div>
-	
+
 
 </div>
 
@@ -32,10 +32,10 @@
     align-items: center;
     justify-content: center;
 	}
-	
+
 	@media screen and (max-width: 300px) {
 		.info-container {
 			width: 95vw;
-		}	
+		}
 }
 </style>
