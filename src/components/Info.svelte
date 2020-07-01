@@ -47,6 +47,10 @@ import Footer from './Footer.svelte'
 </script>
 
 <style>
+
+span {
+    font-size: 0.8rem;
+}
 p, blockquote {
   margin: 10px;
   }
@@ -66,8 +70,7 @@ blockquote {
   /* border-left: 3px solid #67b6ff;
   padding-left: 20px; */
   font-style: normal;
-  border: 4px solid rgba(172, 172, 172, 0.363);
-  padding: 10px;
+
   border-radius: 4px;
 }
 
