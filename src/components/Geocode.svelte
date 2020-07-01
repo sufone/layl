@@ -4,7 +4,6 @@
   export let lat
   export let lon
   export let freshGeo
-  let district = localStorage.getItem('district')
   let city = localStorage.getItem('city')
   let country = localStorage.getItem('country')
 
@@ -21,11 +20,9 @@
         let location = result.Response.View[0].Result[0].Location.Address
         console.dir(location)
 
-        district = location.District
         city = location.City
         country = location.Country
 
-        localStorage.setItem('district', district)
         localStorage.setItem('city', city)
         localStorage.setItem('country', country)
 
@@ -43,10 +40,7 @@
 
 <Times {lat} {lon} {freshGeo} {country}/>
 
-
-{#if district && city && country}
-  <p>{district}, {city} <br> {country}</p>
-{:else if city && country}
+{#if city && country}
   <p>{city}, {country}</p>
 {:else}
   <p>Your location co-ods: {lat}, {lon}</p>
