@@ -29,6 +29,8 @@
 
       <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
           <Explanation />
+          <br>
+          <p style="font-size: 0.8rem;">Or, learn more below 👇️</p>
 
     {/if}
 
@@ -184,5 +186,4 @@ function error(err) {
 console.warn(`ERROR(${err.code}): ${err.message}. Please contact me (navedcoded@gmail.com)
 with this message to help solve this issue and improve Layl ❤️`);
 }
-
-}</script>
+</script>
