@@ -27,15 +27,19 @@
 	}
 	.layl-container {
 		height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	@media screen and (max-width: 300px) {
 		.info-container {
 			width: 95vw;
+		}
+		.layl-container {
+			height: 95vh;
+			margin-bottom: 5vh;
 		}
 }
 </style>
