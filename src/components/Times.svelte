@@ -1,8 +1,8 @@
 
 
 <script>
-  export let lat 
-  export let lon 
+  export let lat
+  export let lon
   export let freshGeo
   export let country
 
@@ -10,11 +10,11 @@
   import dayjs from 'dayjs'
   import TimesTable from './TimesTable.svelte'
   import Dates from './Dates.svelte'
-  
-  import customParseFormat from 'dayjs/plugin/customParseFormat';
-    dayjs.extend(customParseFormat) 
 
-  
+  import customParseFormat from 'dayjs/plugin/customParseFormat';
+    dayjs.extend(customParseFormat)
+
+
 
   let today = new Date()
   let tomorrow = new Date()
@@ -23,9 +23,9 @@
   let currentTime = null
 
   let timeFormat = "h:mm a"
-  let now 
+  let now
 
-  let updateTimeTimer 
+  let updateTimeTimer
 
 
   function countryPrayerMethodMatcher(country) {
@@ -77,7 +77,7 @@
     let todayRef = new Date()
     let prayerTimesTodayTest = new adhan.PrayerTimes(coordinates, today, params)
     let fajrToday = dayjs(prayerTimesTodayTest.fajr)
-    
+
     if (dayjs().isBefore(fajrToday)) { //so islamic night is respected and relevant times are shown
       console.log("before fajr, displaying 'yesterday's' time")
       today.setDate(todayRef.getDate()-1)
@@ -96,12 +96,12 @@
 
     let interval = fajr.diff(maghrib, 'millisecond') / 6
     console.log(interval)
-    
+
     for (let i = 0; i < 7; i++) {
       times.push(maghrib.add(interval * i, 'millisecond'))
     }
 
-    
+
     prayerTimes = times.map(time => time.format(timeFormat))
     console.log(prayerTimes)
 
@@ -117,7 +117,7 @@ function magicTimer() {
     updateTimeTimer = setInterval(testCurrentTime, 10000)
   }
  function testCurrentTime() {
-    now = dayjs() 
+    now = dayjs()
     console.log(now.format(timeFormat))
     console.log('currentTime: ' + currentTime)
 
@@ -130,10 +130,10 @@ function magicTimer() {
         if (i === 6) {
           console.log('we are in a new day!')
           currentTime = 1.5
-          return false 
-        } else { 
+          return false
+        } else {
           console.log(`we are in stage ${i}!`)
-          currentTime = i 
+          currentTime = i
           return i
         }
       } else {
@@ -143,7 +143,7 @@ function magicTimer() {
           return false //only return after exhausting all options
         }
       }
-      
+
     }
   }
 
@@ -166,9 +166,14 @@ function magicTimer() {
 <style>
 p {
   text-align: center;
-  color: #ffafaf;
+  color: #ff6767;
   /* text-decoration: underline #ffafaf dotted; */
-  
+
+}
+@media (prefers-color-scheme: dark) {
+  p {
+    color: #ffafaf;
+  }
 }
 span {
 /* border-top: 3px dotted #ffafaf; */

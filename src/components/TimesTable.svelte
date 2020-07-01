@@ -47,7 +47,7 @@
 
 <style>
 :global(.current) {
-  border-bottom: 3px dotted #ffafaf ;
+  border-bottom: 3px dotted #ff6767;
   list-style-position: inside;
   margin-bottom: 3px;
 }
@@ -126,6 +126,9 @@ li:before {
 @media (prefers-color-scheme: dark) {
   .dark-bg {
     background-color: rgba(255, 255, 255, 0.04);
+  }
+  :global(.current) {
+    border-bottom: 3px dotted #ffafaf;
   }
 }
 
