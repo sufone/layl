@@ -158,7 +158,7 @@
       // lon = null
       navigator.geolocation.getCurrentPosition((position) => {
         let accuracy = position.coords.accuracy
-        if (accuracy > 300000) { //arbitrary value
+        if (accuracy > 300000) { //arbitrary value, should be a good threshold
           lowAcc = true
           return
         }
@@ -173,26 +173,16 @@
         // geocode(lat, lon)
         // this.calcTimes(lat, lon)
 
-      }, showError)
+      }, error)
     } else {
       window.metrical.trackEvent("layl_geolocate_failure")
       alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
     }
   }
 
-function showError(error) {
-  switch(error.code) {
-    case error.PERMISSION_DENIED:
-      alert("Please refresh the page and give GPS permission.")
-      break;
-    case error.POSITION_UNAVAILABLE:
-      x.innerHTML = "Location information is unavailable."
-      break;
-    case error.TIMEOUT:
-      x.innerHTML = "The request to get user location timed out."
-      break;
-    case error.UNKNOWN_ERROR:
-      x.innerHTML = "An unknown error occurred."
-      break;
-  }
+function error(err) {
+console.warn(`ERROR(${err.code}): ${err.message}. Please contact me (navedcoded@gmail.com)
+with this message to help solve this issue and improve Layl ❤️`);
+}
+
 }</script>
