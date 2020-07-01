@@ -1,19 +1,26 @@
 
 <div id="info">
 <blockquote>
-“And during the night wake up and pray، as an extra offering of your own، so that your Lord may
-raise you to a [highly] praised status.” [Surah al-Isra 79]
+<em>“And during the night wake up and pray, as an extra offering of your own, so that your Lord may
+raise you to a ⸢highly⸣ praised status.”</em> <span>[Surah al-Isra 79]</span>
 </blockquote>
 
 
 
-<p><a href=""> Learn more about these blessed times of the night</a>, and easily
- plan your worship with Layl.
-</p>
+<p>Plan it all with Layl; <a href="">the night is full of blessed times for certain actions</a>, such as:</p>
+
+<ul>
+    <li>Pray <em>Isha</em> before 1/2 the night</li>
+    <li>Rise to worship in the last 1/3</li>
+    <li></li>
+    <li>…and more!</li>
+</ul>
+
+
 
 <p>
 
-Please <strong>double-check the Maghrib and Fajr times</strong> listed above—all other times times depend on them.
+Also, please <strong>double-check the Maghrib and Fajr</strong> times—all the other times above depend on them.
 </p>
 
 <p> May Allah accept our worship, <em>ameen</em>.
