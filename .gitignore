@@ -10,3 +10,6 @@
 *.ntvs*
 *.njsproj
 *.sln
+*.svelte~
+*.json~
+*.css~
