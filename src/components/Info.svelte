@@ -9,13 +9,17 @@ raise you to a ⸢highly⸣ praised status.”</em> <span>[Surah al-Isra 79]</sp
 
 <p>Plan it all with Layl; <a href="">the night is full of blessed times for worship</a>, such as:</p>
 
+
 <ul>
+
     <li>Pray <em>Isha</em> before 1/2 the night (at the latest!)</li>
     <li>Get most of your <em>sleep</em> in the middle of the night</li>
     <li>Rise for <em>tahjjud</em> in the last 1/3</li>
     <li>Take a short nap in the last 1/6 to prepare for the day</li>
     <li>…and more!</li>
+
 </ul>
+
 
 <p>
 
@@ -51,8 +55,11 @@ span {
     font-size: 0.8rem;
 }
 p, blockquote {
-  margin: 10px;
-  }
+    margin-bottom: 15px;
+}
+ul {
+    margin: 10px;
+}
 div#info {
   min-height: 100vh;
   padding-bottom: 20px;

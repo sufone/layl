@@ -26,7 +26,8 @@
 		width: 95vw;
 	}
 	.layl-container {
-		height: 100vh;
+		margin-top: 3vh;
+		height: 97vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

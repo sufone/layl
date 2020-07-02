@@ -12,7 +12,7 @@
 		color: #dadada;
 	}
 	#main-logo {
-		content: url(/assets/logo-dark.svg) 
+		content: url(/assets/logo-dark.svg)
 	}
 	a, a:visited {
 		text-decoration: underline solid #67b6ff;
@@ -32,7 +32,7 @@
 		color: #333;
 	}
 	#main-logo {
-		content: url(/assets/logo.svg) 
+		content: url(/assets/logo.svg)
 	}
 	a, a:visited {
 		text-decoration: underline solid #67b6ff;
@@ -104,7 +104,7 @@ a:focus, a:hover {
 
 #bd-email {
 	border-radius: 4px;
-	padding: 4px;
+	padding: 6px;
 	margin-right: -4px;
 	min-width: 200px
 }
