@@ -33,7 +33,7 @@
         city = null
         country = null
         window.metrical.trackEvent("layl_geocode_failure")
-        alert(`I am very sorry: Layl cannot connect to GPS provider. Please email me (navedcoded@gmail.com) with this error code: ${err}. `)
+        alert(`I am very sorry: Layl cannot connect to GPS provider. Please try refresh the app, and email me (navedcoded@gmail.com) with this error code: ${err}. `)
       })
   }
 </script>
