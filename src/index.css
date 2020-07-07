@@ -35,6 +35,7 @@
 		content: url(/assets/logo.svg)
 	}
 	a, a:visited {
+		color: #67b6ff;
 		text-decoration: underline solid #67b6ff;
 	}
 	a:hover, a:focus {
@@ -71,7 +72,6 @@ body {
 
 a {
 	border-radius: 4px;
-	padding: 0 4px 0 4px;
 	transition-property: all;
 	transition-duration: .2s;
 }
@@ -79,7 +79,6 @@ a {
 a:focus, a:hover {
 	text-decoration: none;
 }
-
 #subscribe-form {
 	font-family: Jost,'SF Compact Display',-apple-system,BlinkMacSystemFont,"Segoe UI",'PT Sans',Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",sans-serif;
 	display: flex;
