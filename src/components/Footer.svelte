@@ -1,5 +1,5 @@
 <div>
-<p>v2.0.9 · Made with 💗 by <a href="https://navedislam.com/apps">Naved</a></p>
+<p>Beta v2.10 · Made with 💗 by <a href="https://navedislam.com/apps">Naved</a></p>
 
 </div>
 
