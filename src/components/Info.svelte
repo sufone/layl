@@ -12,10 +12,10 @@ raise you to a ⸢highly⸣ praised status.”</em> <span>[Surah al-Isra 79]</sp
 
 <ul>
 
-    <li>Pray <em>Isha</em> before 1/2 the night (at the latest!)</li>
-    <li>Get most of your <em>sleep</em> in the middle of the night</li>
-    <li>Rise for <em>tahjjud</em> in the last 1/3</li>
-    <li>Take a short nap in the last 1/6 to prepare for the day</li>
+    <li>Pray <em>ʿIshā</em> before ¹⁄₂ of the night (at the latest!)</li>
+    <li>Get most of your sleep in the middle of the night</li>
+    <li>Rise for <em>Tahjjud</em> in the last ¹⁄₃</li>
+    <li>Take a short nap in the last 1/6 before <em>Fajr</em></li>
     <li>…and more!</li>
 
 </ul>
