@@ -80,34 +80,34 @@ li:before {
   padding-top: 8px;
 }
 #time-1:before {
-	content: "1⁄₆";
+	content: "¹⁄₆";
 }
 #time-1 {
     border-left: 1.5px solid #80a9e6;
 }
 #time-2:before {
-  content: "2⁄6";
+  content: "²⁄₆";
 }
 #time-2 {
     border-left: 1.5px solid #9a9ccc;
 
 }
 #time-3:before {
-  content: "3⁄6";
+  content: "³⁄₆";
 }
 #time-3 {
     border-left: 1.5px solid #b38eb3;
 
 }
 #time-4:before {
-  content: "4⁄6";
+  content: "⁴⁄₆";
 }
 #time-4 {
       border-left: 1.5px solid #cc819a;
 
 }
 #time-5:before {
-  content: "5⁄6";
+  content: "⁵⁄₆";
 }
 #time-5 {
     border-left: 1.5px solid #e67480;
