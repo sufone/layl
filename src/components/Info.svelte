@@ -30,11 +30,18 @@ Also, please <strong>double-check the Maghrib and Fajr</strong> times—all the 
 </p>
 
 <div id="subscribe-form">
-<form action="https://buttondown.email/api/emails/embed-subscribe/naved-apps" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/naved-apps', 'popupwindow')" class="embeddable-buttondown-form">
+<form
+    action="https://buttondown.email/api/emails/embed-subscribe/naved"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.email/naved', 'popupwindow')"
+    class="embeddable-buttondown-form"
+>
 <p>Subscribe for email updates</p>
   <div id="subscribe-internal">
     <input type="email" placeholder="💌 Email" name="email" id="bd-email" class="subscribe-field">
     <input type="hidden" value="1" name="embed">
+    <input type="hidden" name="tag" value="apps" />
     <br>
     <input type="submit" value="Bismillah" id="subscribe-button">
   </div>
