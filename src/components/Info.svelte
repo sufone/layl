@@ -23,7 +23,7 @@ raise you to a ⸢highly⸣ praised status.”</em> <span>[Surah al-Isra 79]</sp
 
 <p>
 
-Also, please <strong>double-check the Maghrib and Fajr</strong> times—all the other times above depend on them.
+Also, please double-check the Maghrib and Fajr times—all the other times above depend on them.
 </p>
 
 <p> May Allah accept our worship, <em>ameen</em>.
@@ -47,10 +47,13 @@ Also, please <strong>double-check the Maghrib and Fajr</strong> times—all the 
   </div>
 </form>
 </div>
+
+<Footer />
+
 </div>
 
 
-<Footer />
+
 
 <script>
 import Footer from './Footer.svelte'
