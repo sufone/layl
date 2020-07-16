@@ -26,7 +26,7 @@ raise you to a ⸢highly⸣ praised status.”</em> <span>[Surah al-Isra 79]</sp
 Also, please double-check the Maghrib and Fajr times—all the other times above depend on them.
 </p>
 
-<p> May Allah accept our worship, <em>ameen</em>.
+<p> Allah accept our worship, <em>ameen</em>!
 </p>
 
 <div id="subscribe-form">
