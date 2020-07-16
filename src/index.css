@@ -35,8 +35,8 @@
 		content: url(/assets/logo.svg)
 	}
 	a, a:visited {
-		color: #67b6ff;
-		text-decoration: underline solid #67b6ff;
+		color: #2879C4;
+		text-decoration: underline solid #2879C4;
 	}
 	a:hover, a:focus {
 		background-color: rgb(103,182,255,0.2);
