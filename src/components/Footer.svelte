@@ -1,6 +1,5 @@
 
-<p>Beta v2.10 · Made with 💗 by <a href="https://navedislam.com/apps">Naved</a></p>
-
+<p>Beta v2.13 · Made with 💗 by <a href="https://navedislam.com/apps">Naved</a></p>
 
 
 <style>
