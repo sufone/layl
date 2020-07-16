@@ -72,7 +72,7 @@ ul {
 }
 div#info {
   min-height: 100vh;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
