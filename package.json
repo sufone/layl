@@ -3,7 +3,8 @@
   "scripts": {
     "export": "pwa export",
     "start": "sirv build -s",
-    "watch": "pwa watch"
+    "watch": "pwa watch",
+    "build": "pwa build"
   },
   "dependencies": {
     "adhan": "^4.0.0",
