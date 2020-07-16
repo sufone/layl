@@ -37,7 +37,7 @@ Also, please double-check the Maghrib and Fajr times—all the other times above
     onsubmit="window.open('https://buttondown.email/naved', 'popupwindow')"
     class="embeddable-buttondown-form"
 >
-<p>Subscribe for email updates</p>
+<p>Join for email updates and future plans!</p>
   <div id="subscribe-internal">
     <input type="email" placeholder="💌 Email" name="email" id="bd-email" class="subscribe-field">
     <input type="hidden" value="1" name="embed">
