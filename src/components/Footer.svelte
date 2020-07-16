@@ -1,18 +1,19 @@
-<div>
+
 <p>Beta v2.10 · Made with 💗 by <a href="https://navedislam.com/apps">Naved</a></p>
 
-</div>
+
 
 <style>
 
 p {
+margin-top: 6em;
   text-align: center;
   font-size: 0.8em;
 }
 div {
   position: absolute;
   bottom: 5px;
-  width: 80vw;
+
   text-align: center;
 }
 
