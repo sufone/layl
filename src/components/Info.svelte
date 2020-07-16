@@ -7,7 +7,7 @@ raise you to a ⸢highly⸣ praised status.”</em> <span>[Surah al-Isra 79]</sp
 
 
 
-<p>Plan it all with Layl. <a href="https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/">The night is full of blessed times for worship</a>, such as:</p>
+<p><a href="https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/">The night is full of blessed times for worship</a>—plan it all with Layl:</p>
 
 
 <ul>
