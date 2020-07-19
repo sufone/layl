@@ -17,21 +17,24 @@
     {:else if lowAcc}
       <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
     {:else}
-    <div transition:fade>
-      <div id="landing-img-holder">
-          <img id="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
+      <div transition:fade>
+        <div id="landing-img-holder">
+            <img id="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
+          </div>
+          <div id="image-holder">
+          <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
         </div>
-        <div id="image-holder">
-        <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
+          <p>Calculate divisons of the night for your location </p>
       </div>
-        <p>Calculate divisons of the night for your location </p>
-    </div>
 
-
-      <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
-          <Explanation />
-          <br>
-          <p style="font-size: 0.8rem;">Or, learn more below 👇️</p>
+      {#if loading}
+        <SyncLoader></SyncLoader>
+      {:else}
+        <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
+      {/if}
+      <Explanation />
+      <br>
+      <p style="font-size: 0.8rem;">Or, learn more below 👇️</p>
 
     {/if}
 
@@ -127,7 +130,7 @@
     margin-right: auto;
   }
 
-@media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
     button.minor {
       background: #0080ff4f;
     }
@@ -144,6 +147,7 @@
   import Geocode from './Geocode.svelte'
   import Explanation from './Explanation.svelte'
   import { fade } from 'svelte/transition';
+  import { SyncLoader } from 'svelte-loading-spinners'
 
 
 
@@ -152,8 +156,12 @@
   let lon = parseFloat(localStorage.getItem('lon'))
   console.log("from local: "+lat+lon)
   let freshGeo = false
+  let loading = false
 
   function geolocate(trackEvent) {
+    loading = true
+    let fetchStart = new Date()
+
     window.metrical.trackEvent(trackEvent)
     console.log(trackEvent)
     if ("geolocation" in navigator) {
@@ -176,15 +184,26 @@
         // geocode(lat, lon)
         // this.calcTimes(lat, lon)
 
+        let fetchEnd = new Date()
+        let loadTime = fetchEnd - fetchStart
+        console.log(`loadtime: ${loadTime}`)
+        setTimeout(() => {loading = false}, loadTime<900 ? 900-loadTime : 0)
+
       }, error)
     } else {
       window.metrical.trackEvent("layl_geolocate_failure")
+      loading = false
       alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
     }
+
+    
+    
   }
 
 function error(err) {
-alert(`ERROR(${err.code}): ${err.message} \n Please contact me (navedcoded@gmail.com)
-with this message to help solve this issue and improve Layl ❤️`);
+  window.metrical.trackEvent("layl_geolocate_error")
+  loading = false
+  alert(`ERROR(${err.code}): ${err.message} \n Please contact me (navedcoded@gmail.com)
+  with this message to help solve this issue and improve Layl ❤️`);
 }
 </script>
