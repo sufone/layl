@@ -43,7 +43,7 @@
 {#if city && country}
   <p>{city}, {country}</p>
 {:else}
-  <p>Your location co-ods: {lat}, {lon}</p>
+  <p>Your location co-ods: <br> {lat}, {lon}</p>
 {/if}
 
 <style>
