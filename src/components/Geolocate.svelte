@@ -12,10 +12,19 @@
 
 
       {#if !freshGeo} <!-- don't show if user just used it -->
-        <button transition:fade class="minor" on:click|once={() => geolocate("layl_relocation")}>Update location</button>
+
+        {#if loading}
+          <Loader color="#67B6FF" />
+
+        {:else}
+          <button transition:fade class="minor" on:click|once={() => geolocate("layl_relocation")}>Update location</button>
+        {/if}
+
       {/if}
+
     {:else if lowAcc}
       <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
+
     {:else}
       <div transition:fade>
         <div id="landing-img-holder">
@@ -28,7 +37,8 @@
       </div>
 
       {#if loading}
-        <SyncLoader></SyncLoader>
+        <Loader color="#ff6767" />
+
       {:else}
         <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
       {/if}
@@ -147,7 +157,7 @@
   import Geocode from './Geocode.svelte'
   import Explanation from './Explanation.svelte'
   import { fade } from 'svelte/transition';
-  import { SyncLoader } from 'svelte-loading-spinners'
+  import Loader from './Loader.svelte'
 
 
 
