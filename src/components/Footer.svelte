@@ -1,5 +1,5 @@
 
-<p>Beta v2.16 · Made with 💗 by <a href="https://navedislam.com/apps">Naved</a></p>
+<p>Beta v2.18 · Made with 💗 by <a href="https://navedislam.com/apps">Naved</a></p>
 
 <div class="github">
 <a class="github-button" href="https://github.com/mr-islam/layl-pwa" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true" aria-label="Star mr-islam/layl-pwa on GitHub">Star</a>
