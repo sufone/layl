@@ -9,7 +9,8 @@
   "dependencies": {
     "adhan": "^4.0.0",
     "dayjs": "^1.8.28",
-    "sirv-cli": "^0.4.0"
+    "sirv-cli": "^0.4.0",
+    "svelte-loading-spinners": "^0.0.19"
   },
   "devDependencies": {
     "@pwa/cli": "latest",
