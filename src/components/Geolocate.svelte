@@ -196,8 +196,8 @@
 
         let fetchEnd = new Date()
         let loadTime = fetchEnd - fetchStart
-        console.log(`loadtime: ${loadTime}`)
-        setTimeout(() => {loading = false}, loadTime<900 ? 900-loadTime : 0)
+        console.log(`loadtime: ${loadTime}, ${loadTime<1200 ? 1200-loadTime : 0}`)
+        setTimeout(() => {loading = false}, loadTime<1200 ? 1200-loadTime : 0)
 
       }, error)
     } else {
