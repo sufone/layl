@@ -44,7 +44,7 @@
       {/if}
       <Explanation />
       <br>
-      <p style="font-size: 0.8rem;">Or, learn more below 👇️</p>
+      <p style="font-size: 0.8rem;">Learn more below 👇️</p>
 
     {/if}
 
@@ -206,8 +206,8 @@
       alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
     }
 
-    
-    
+
+
   }
 
 function error(err) {
