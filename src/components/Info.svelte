@@ -7,16 +7,16 @@ raise you to a ⸢highly⸣ praised status.”</em> <span>[Surah al-Isra 79]</sp
 
 
 
-<p><a href="https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/">The night is full of blessed times for worship</a>—plan it all with Layl:</p>
+<p><a href="https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/">The night is full of blessed times for worship</a>—plan it all with Layl, like:</p>
 
 
 <ul>
 
     <li>Pray <em>ʿIshā</em> before ¹⁄₂ of the night (at the latest!)</li>
     <li>Get most of your sleep in the middle of the night</li>
-    <li>Rise for <em>Tahjjud</em> in the last ¹⁄₃</li>
+    <li>Rise for <em>Tahajjud</em> in the last ¹⁄₃</li>
     <li>Take a short nap in the last ¹⁄₆ before <em>Fajr</em></li>
-    <li>…and more!</li>
+
 
 </ul>
 
