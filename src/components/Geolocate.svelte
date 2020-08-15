@@ -5,7 +5,6 @@
     <div transition:fade>
       <div id="image-holder">
           <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
-          <span>Beta</span>
         </div>
         <Geocode {lat} {lon} {freshGeo} />
     </div>
