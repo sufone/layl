@@ -4,9 +4,9 @@
     {#if lat && lon} <!-- don't show on first visit -->
     <div transition:fade>
       <div id="image-holder">
-          <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
-        </div>
-        <Geocode {lat} {lon} {freshGeo} />
+        <a href="https://layl.app"><img id="main-logo" src="/assets/logo.svg" alt="Layl logo" ></a>
+      </div>
+      <Geocode {lat} {lon} {freshGeo} />
     </div>
 
 
