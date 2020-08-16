@@ -30,8 +30,8 @@
             <img id="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
           </div>
           <div id="image-holder">
-          <img id="main-logo" src="/assets/logo.svg" alt="Layl logo" >
-        </div>
+            <a href="https://layl.app"><img id="main-logo" src="/assets/logo.svg" alt="Layl logo" ></a>
+          </div>
           <p>Calculate divisons of the night for your location </p>
       </div>
 
