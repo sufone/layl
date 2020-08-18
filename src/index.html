@@ -55,6 +55,17 @@
 		    type="text/javascript">
 		</script>
 
+
+		<script>
+			(function() { // Scoping function to avoid globals
+				if (window.location.hostname === "navedislam.com") { //so navedislam.com/layl is accounted
+					document.write('<script async defer data-domain="navedcoded@gmail.com" src="https://stats.navedislam.com/js/index.js"><\/script>');
+				} else {
+					document.write('<script async defer data-domain="layl.app" src="https://stats.layl.app/js/index.js"><\/script>');
+				}
+			})();
+		</script>
+
 		<script async defer src="https://buttons.github.io/buttons.js"></script>
 	</body>
 </html>
