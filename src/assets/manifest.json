@@ -1,9 +1,9 @@
 {
   "name": "Layl",
   "short_name": "Layl",
-  "background_color": "#212121",
+  "background_color": "#333333",
   "orientation": "portrait",
-  "theme_color": "#212121",
+  "theme_color": "#333333",
   "display": "standalone",
   "start_url": "/",
   "icons": [
