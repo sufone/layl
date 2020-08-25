@@ -1,11 +1,13 @@
-# layl-pwa
-Layl v2
+# Layl v2
 
 Re-write of https://github.com/mr-islam/layl to fix deep bugs, enjoy a new framework, etc.
 
-
 ## Status
-Main features done, testing extra features. Design (dark theme, responsivity) and copy still to go!~
+Stable and released!
+
+## License
+
+GPL v3 for the codebase, but all rights reserved for the images and art. 
 
 ## Development
 
