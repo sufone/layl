@@ -50,7 +50,7 @@ Also, please double-check the Maghrib and Fajr times—all the other times above
 
 {#if !twa}
 <div id="image-holder">
-  <a href="https://play.google.com/store/apps/details?id=com.navedislam.layl">
+  <a href="https://play.google.com/store/apps/details?id=com.navedislam.layl" target="_blank">
     <img width="115px" style="padding-top: 2em; " src='/assets/google-play.svg' alt="google play download button" />
   </a>
 </div>
