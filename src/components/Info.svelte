@@ -48,6 +48,17 @@ Also, please double-check the Maghrib and Fajr times—all the other times above
 </form>
 </div>
 
+{#if !twa}
+<div id="image-holder">
+  <a href="https://play.google.com/store/apps/details?id=com.navedislam.layl">
+    <img width="115px" style="padding-top: 2em; " src='/assets/google-play.svg' alt="google play download button" />
+  </a>
+</div>
+{/if}
+
+
+
+
 <Footer />
 
 </div>
@@ -57,9 +68,15 @@ Also, please double-check the Maghrib and Fajr times—all the other times above
 
 <script>
 import Footer from './Footer.svelte'
+
+let twa = document.referrer.includes('android-app://com.navedislam.layl')
 </script>
 
 <style>
+
+  #image-holder {
+    text-align: center;
+  }
 
 span {
     font-size: 0.8rem;
