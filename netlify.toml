@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/.well-known/assetlinks.json"
-  to = "/assets/.well-known/assetlinks.json"
+  to = "/assets/assetlinks.json"
   status = 200
   force = true
