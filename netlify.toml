@@ -3,3 +3,9 @@
   to = "/assets/assetlinks.json"
   status = 200
   force = true
+
+[[redirects]]
+  from = "https://layl.app/layl"
+  to = "https://layl.app"
+  status = 301
+  force = true
