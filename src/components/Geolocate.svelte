@@ -171,7 +171,7 @@
     loading = true
     let fetchStart = new Date()
 
-    window.metrical.trackEvent(trackEvent)
+    //window.metrical.trackEvent(trackEvent)
     console.log(trackEvent)
     if ("geolocation" in navigator) {
       // lat = null // forced remount of times to force new calc, but unnecessary with reactive statement in timesfile
@@ -189,9 +189,9 @@
         localStorage.setItem('lat', lat)
         localStorage.setItem('lon', lon)
         console.log(`localstorage works: ${localStorage.getItem('lat')}`)
-        window.metrical.trackEvent("layl_geolocate_success")
-        // geocode(lat, lon)
-        // this.calcTimes(lat, lon)
+        //window.metrical.trackEvent("layl_geolocate_success")
+        // // geocode(lat, lon)
+        // // this.calcTimes(lat, lon)
 
         let fetchEnd = new Date()
         let loadTime = fetchEnd - fetchStart
@@ -200,7 +200,7 @@
 
       }, error)
     } else {
-      window.metrical.trackEvent("layl_geolocate_failure")
+      // window.metrical.trackEvent("layl_geolocate_failure")
       loading = false
       alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
     }
@@ -210,7 +210,7 @@
   }
 
 function error(err) {
-  window.metrical.trackEvent("layl_geolocate_error")
+  // window.metrical.trackEvent("layl_geolocate_error")
   loading = false
   alert(`ERROR(${err.code}): ${err.message} \n Please contact me (navedcoded@gmail.com)
   with this message to help solve this issue and improve Layl ❤️`);
