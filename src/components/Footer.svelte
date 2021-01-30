@@ -1,5 +1,5 @@
 
-<p><a href="https://navedislam.com/apps">Made with 💗 by Naved</a></p>
+<p><a href="https://suf.one" target="_blank">Made with 💗 by Sufone</a></p>
 
 <div class="github">
   <a class="github-button" href="https://github.com/mr-islam/layl-pwa" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="false" aria-label="Star mr-islam/layl-pwa on GitHub"> 
