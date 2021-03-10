@@ -1,4 +1,3 @@
-
 <div id="info">
 <blockquote>
 <em>“And during the night wake up and pray, as an extra offering of your own, so that your Lord may

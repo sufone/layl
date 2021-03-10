@@ -1,6 +1,5 @@
 <div>
 
-
     {#if lat && lon} <!-- don't show on first visit -->
     <div transition:fade>
       <div id="image-holder">

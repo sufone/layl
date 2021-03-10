@@ -1,5 +1,3 @@
-
-
 <script>
   export let lat
   export let lon

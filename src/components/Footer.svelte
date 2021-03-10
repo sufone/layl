@@ -1,4 +1,3 @@
-
 <p><a href="https://suf.one" target="_blank">Made with 💗 by Sufone</a></p>
 
 <div class="github">
