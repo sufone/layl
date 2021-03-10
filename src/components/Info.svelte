@@ -22,7 +22,7 @@ raise you to a ⸢highly⸣ praised status.”</em> <span>[Surah al-Isra 79]</sp
 
 <p>
 
-Also, please double-check the Maghrib and Fajr times—all the other times above depend on them.
+Also, please <strong>double-check the Maghrib and Fajr times</strong>—all the other times above depend on them.
 </p>
 
 <p> Allah, help us to worship at night and accept from us, <em>ameen</em>!
@@ -107,9 +107,15 @@ blockquote {
 }
 
 @media screen and (max-width: 550px) {
-		div#info {
-			width: 100%;
-		}
+  div#info {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  div#info {
+    font-size: 0.8em;
+  }
 }
 
 </style>

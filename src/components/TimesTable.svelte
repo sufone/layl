@@ -59,9 +59,11 @@ ul {
   font-size: 1.15em;
   line-height: 2em;
   min-width: 20vw;
+  font-weight: 600;
 }
 li > strong {
   padding-left: 20px;
+  font-weight: 800;
 }
 li {
   display: flex;
@@ -78,15 +80,18 @@ li:before {
   width: 24px;
   height: 24px;
   padding-top: 8px;
+  font-weight: 400;
 }
 #time-1:before {
 	content: "¹⁄₆";
+  font-weight: 400;
 }
 #time-1 {
   border-left: 1.5px solid #80a9e6;
 }
 #time-2:before {
   content: "²⁄₆";
+  font-weight: 400;
 }
 #time-2 {
   border-left: 1.5px solid #9a9ccc;
@@ -94,6 +99,7 @@ li:before {
 }
 #time-3:before {
   content: "³⁄₆";
+  font-weight: 400;
 }
 #time-3 {
   border-left: 1.5px solid #b38eb3;
@@ -109,6 +115,7 @@ li:before {
 }
 #time-5:before {
   content: "⁵⁄₆";
+  font-weight: 400;
 }
 #time-5 {
   border-left: 1.5px solid #e67480;
@@ -118,6 +125,7 @@ li:before {
   width: 24px;
   height: 24px;
   padding-top: 6px;
+  font-weight: 400;
 }
 .dark-bg {
   background-color: rgba(0, 0, 0, 0.03);
@@ -134,7 +142,9 @@ li:before {
 }
 
 @media only screen and (max-width: 280px) {
-
+ul {
+  font-size: 1.1em;
+}
 li > strong {
   padding-left: 6px;
 }
