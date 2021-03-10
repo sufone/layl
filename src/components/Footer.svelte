@@ -2,7 +2,7 @@
 
 <div class="github">
   <a class="github-button" href="https://github.com/sufone/layl" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="false" aria-label="Star mr-islam/layl-pwa on GitHub"> 
-    Version 2.26
+    Mar. 2021
   </a>
 </div>
 
