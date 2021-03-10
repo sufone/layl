@@ -83,34 +83,35 @@ li:before {
 	content: "¹⁄₆";
 }
 #time-1 {
-    border-left: 1.5px solid #80a9e6;
+  border-left: 1.5px solid #80a9e6;
 }
 #time-2:before {
   content: "²⁄₆";
 }
 #time-2 {
-    border-left: 1.5px solid #9a9ccc;
+  border-left: 1.5px solid #9a9ccc;
 
 }
 #time-3:before {
   content: "³⁄₆";
 }
 #time-3 {
-    border-left: 1.5px solid #b38eb3;
+  border-left: 1.5px solid #b38eb3;
 
 }
 #time-4:before {
   content: "⁴⁄₆";
+  font-weight: 400;
 }
 #time-4 {
-      border-left: 1.5px solid #cc819a;
+  border-left: 1.5px solid #cc819a;
 
 }
 #time-5:before {
   content: "⁵⁄₆";
 }
 #time-5 {
-    border-left: 1.5px solid #e67480;
+  border-left: 1.5px solid #e67480;
 }
 #time-6:before {
   content: url("/assets/sun.svg");
