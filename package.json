@@ -18,6 +18,8 @@
     "@pwa/plugin-brotli": "latest",
     "@pwa/plugin-offline": "latest",
     "@pwa/preset-svelte": "latest",
+    "patch-package": "^6.4.6",
+    "postinstall-postinstall": "^2.1.0",
     "svelte": "^3.23.0"
   },
   "browserslist": [

@@ -11,10 +11,10 @@
 
   import { _ } from 'svelte-i18n'
 
-  import customParseFormat from 'dayjs/plugin/customParseFormat';
-    dayjs.extend(customParseFormat)
-
-
+  import customParseFormat from 'dayjs/plugin/customParseFormat'
+  dayjs.extend(customParseFormat)
+  import localizedFormat from 'dayjs/plugin/localizedFormat'
+  dayjs.extend(localizedFormat)
 
   let today = new Date()
   let tomorrow = new Date()
@@ -153,7 +153,7 @@ function magicTimer() {
 
 {#if Number.isInteger(currentTime)}
   <div>
-    <p><span>{$_('table.stage')} {currentTime+1}⁄6 ·  {dayjs(now).format("h:mm a")}</span></p>
+    <p><span>{$_('table.stage')} {currentTime+1}⁄6 ·  {dayjs(now).format("LT")}</span></p>
   </div>
   <br>
 {/if}
