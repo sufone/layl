@@ -1,6 +1,8 @@
-# Layl v2
+# Layl
 
-Re-write of https://github.com/mr-islam/layl to fix deep bugs, enjoy a new framework, etc.
+See the "app" in action at https://layl.app or get it from the [Google Play Store](https://play.google.com/store/apps/details?id=com.navedislam.layl) (it's a simple TWA). 
+
+This is a re-write in Svelte of https://github.com/mr-islam/layl (which was written by a total JS/React beginner).
 
 ## Status
 Stable and released!
