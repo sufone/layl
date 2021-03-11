@@ -10,6 +10,7 @@
     "adhan": "^4.0.0",
     "dayjs": "^1.8.28",
     "sirv-cli": "^0.4.0",
+    "svelte-i18n": "^3.3.6",
     "svelte-loading-spinners": "^0.0.19"
   },
   "devDependencies": {

@@ -1,0 +1,35 @@
+{
+    "introduction": {
+        "slogan": "Calculate divisons of the night for your location",
+        "location_once": "Share location only the first time",
+        "data_device": "Your data is stored on your device",
+        "more_below": "Learn more below"
+    },
+    "info": {
+        "ayah": "And during the night wake up and pray, as an extra offering of your own, so that your Lord may raise you to a ⸢highly⸣ praised status.",
+        "ayah_citation": "Surah al-Isra 79",
+        "transition_to_list":"The night is full of blessed times for worship—plan it all with Layl, like",
+        "explanation_night_link": "https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/",
+        "advice_points": {
+            "isha":"Pray ʿIshā before ¹⁄₂ of the night (at the latest!)",
+            "sleep":"Get most of your sleep in the middle of the night",
+            "tahajjud":"Rise for Tahajjud in the last ¹⁄₃",
+            "nap":"Take a short nap in the last ¹⁄₆ before Fajr"
+        },
+        "check_times": "Also, please double-check the Maghrib and Fajr times—all the other times above depend on them.",
+        "closing_dua":"Allah, help us to worship at night and accept from us, ameen!",
+        "join_email":"Join the monthly updates email",
+        "email_placeholder":"💌 Email",
+        "subscribe_button":"Bismillah",
+        "sufone_credit":"Made with 💗 by Sufone"
+    },
+    "table": {
+        "maghrib": "Maghrib: night start",
+        "first_sixth_ends":"First-sixth ends",
+        "first_third_ends":"First-third ends",
+        "half":"Half the night",
+        "last_third_starts":"Last-third starts",
+        "last_sixth_starts":"Last-sixth starts",
+        "fajr":"Fajr: night end"
+    }
+}

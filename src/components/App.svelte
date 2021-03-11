@@ -1,18 +1,25 @@
+{#if $isLoading}
+  Please wait...
+{:else}
 <div class="app">
-
 	<div class="layl-container">
 		<Geolocate />
 	</div>
 	<div class="info-container">
 		<Info />
 	</div>
-
-
 </div>
+{/if}
+
 
 <script>
 	import Geolocate from './Geolocate.svelte'
 	import Info from './Info.svelte'
+
+	import { isLoading } from 'svelte-i18n'
+	import { startClient } from '../i18n.js';
+
+	startClient();
 </script>
 
 <style lang="css">
