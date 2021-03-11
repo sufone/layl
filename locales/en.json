@@ -1,37 +1,43 @@
 {
-    "introduction": {
-        "slogan": "Calculate divisons of the night for your location",
-        "location_once": "Share location only the first time",
-        "data_device": "Your data is stored on your device",
-        "more_below": "Learn more below",
-        "share-location-button":"Share location"
+  "info": {
+    "advice_points": {
+      "isha": "Pray ʿIshā before ¹⁄₂ of the night (at the latest!)",
+      "nap": "Take a short nap in the last ¹⁄₆ before Fajr",
+      "sleep": "Get most of your sleep in the middle of the night",
+      "tahajjud": "Rise for Tahajjud in the last ¹⁄₃"
     },
-    "info": {
-        "ayah": "And during the night wake up and pray, as an extra offering of your own, so that your Lord may raise you to a ⸢highly⸣ praised status.",
-        "ayah_citation": "Surah al-Isra 79",
-        "transition_to_list":"The night is full of blessed times for worship—plan it all with Layl, like",
-        "explanation_night_link": "https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/",
-        "advice_points": {
-            "isha":"Pray ʿIshā before ¹⁄₂ of the night (at the latest!)",
-            "sleep":"Get most of your sleep in the middle of the night",
-            "tahajjud":"Rise for Tahajjud in the last ¹⁄₃",
-            "nap":"Take a short nap in the last ¹⁄₆ before Fajr"
-        },
-        "check_times": "Also, please double-check the Maghrib and Fajr times—all the other times above depend on them.",
-        "closing_dua":"Allah, help us to worship at night and accept from us, ameen!",
-        "join_email":"Join the monthly updates email",
-        "email_placeholder":"💌 Email",
-        "subscribe_button":"Bismillah",
-        "sufone_credit":"Made with 💗 by Sufone"
-    },
-    "table": {
-        "maghrib": "Maghrib: night start",
-        "first_sixth_ends":"First-sixth ends",
-        "first_third_ends":"First-third ends",
-        "half":"Half the night",
-        "last_third_starts":"Last-third starts",
-        "last_sixth_starts":"Last-sixth starts",
-        "fajr":"Fajr: night end",
-        "update-location-button":"Update location"
-    }
+    "ayah": "“And during the night wake up and pray, as an extra offering of your own, so that your Lord may raise you to a ⸢highly⸣ praised status.”",
+    "ayah_citation": "Surah al-Isra 79",
+    "check_times": "Also, please double-check the Maghrib and Fajr times—all the other times above depend on them.",
+    "closing_dua": "Allah, help us to worship at night and accept from us, ameen!",
+    "email_placeholder": "💌 Email",
+    "explanation_night_link": "https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/",
+    "join_email": "Join the monthly updates email",
+    "subscribe_button": "Bismillah",
+    "sufone_credit": "Made with 💗 by Sufone",
+    "transition_to_list": "The night is full of blessed times for worship—plan it all with Layl, like"
+  },
+  "introduction": {
+    "data_device": "Your data is stored on your device",
+    "location_once": "Share location only the first time",
+    "more_below": "Learn more below",
+    "share-location-button": "Share location",
+    "slogan": "Calculate divisons of the night for your location"
+  },
+  "table": {
+    "co-ods": "Your location ico-ods: ",
+    "fajr": "Fajr: night end",
+    "first_sixth_ends": "First-sixth ends",
+    "first_third_ends": "First-third ends",
+    "half": "Half the night",
+    "last_sixth_starts": "Last-sixth starts",
+    "last_third_starts": "Last-third starts",
+    "maghrib": "Maghrib: night start",
+    "stage": "Stage",
+    "update-location-button": "Update location"
+  },
+  "warnings": {
+    "geocode_failed": "I am very sorry: Layl cannot connect to GPS provider. Please try refresh the app, and email me (navedcoded@gmail.com) with this error code: ",
+    "low_accuracy": "Sorry, your device sensor cannot locate you accurately. Please try later or use another device."
+  }
 }
