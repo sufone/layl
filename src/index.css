@@ -3,7 +3,7 @@
 	--white: #FFFFFF;
 	--offwhite: #F8F8FA;
 	--transition-duration: 300ms;
-	--font-list: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-list: "Nunito", Tajawal, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
