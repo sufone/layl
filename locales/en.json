@@ -3,7 +3,8 @@
         "slogan": "Calculate divisons of the night for your location",
         "location_once": "Share location only the first time",
         "data_device": "Your data is stored on your device",
-        "more_below": "Learn more below"
+        "more_below": "Learn more below",
+        "share-location-button":"Share location"
     },
     "info": {
         "ayah": "And during the night wake up and pray, as an extra offering of your own, so that your Lord may raise you to a ⸢highly⸣ praised status.",
@@ -30,6 +31,7 @@
         "half":"Half the night",
         "last_third_starts":"Last-third starts",
         "last_sixth_starts":"Last-sixth starts",
-        "fajr":"Fajr: night end"
+        "fajr":"Fajr: night end",
+        "update-location-button":"Update location"
     }
 }
