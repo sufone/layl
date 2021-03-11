@@ -1,5 +1,6 @@
 <script>
   import Times from './Times.svelte'
+  import { _ } from 'svelte-i18n'
 
   export let lat
   export let lon
@@ -33,7 +34,7 @@
         city = null
         country = null
         //window.metrical.trackEvent("layl_geocode_failure")
-        alert(`I am very sorry: Layl cannot connect to GPS provider. Please try refresh the app, and email me (navedcoded@gmail.com) with this error code: ${err}. `)
+        alert(`${$_('warnings.geocode_failed')}${err}`)
       })
   }
 </script>
@@ -43,7 +44,7 @@
 {#if city && country}
   <p>{city}, {country}</p>
 {:else}
-  <p>Your location co-ods: <br> {lat}, {lon}</p>
+  <p>{$_('table.co-ods')}<br> {lat}, {lon}</p>
 {/if}
 
 <style>

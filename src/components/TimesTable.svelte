@@ -1,4 +1,5 @@
 <script>
+  import { _ } from 'svelte-i18n'
   import { onMount } from 'svelte';
 
   export let prayerTimes
@@ -36,13 +37,13 @@
 
 <ul>
 <!-- change to a map…  -->
-  <li id="time-0">Maghrib: night start<strong>{prayerTimes[0]}</strong></li>
-  <li id="time-1" class="dark-bg">First-sixth ends <strong>{prayerTimes[1]}</strong> </li>
-  <li id="time-2">First-third ends <strong>{prayerTimes[2]}</strong></li>
-  <li id="time-3" class="dark-bg">Half the night <strong>{prayerTimes[3]}</strong></li>
-  <li id="time-4">Last-third starts<strong>{prayerTimes[4]}</strong></li>
-  <li id="time-5" class="dark-bg">Last-sixth starts <strong>{prayerTimes[5]}</strong></li>
-  <li id="time-6">Fajr: night end<strong>{prayerTimes[6]}</strong></li>
+  <li id="time-0">{$_('table.maghrib')}<strong>{prayerTimes[0]}</strong></li>
+  <li id="time-1" class="dark-bg">{$_('table.first_sixth_ends')}<strong>{prayerTimes[1]}</strong> </li>
+  <li id="time-2">{$_('table.first_third_ends')} <strong>{prayerTimes[2]}</strong></li>
+  <li id="time-3" class="dark-bg">{$_('table.half')}<strong>{prayerTimes[3]}</strong></li>
+  <li id="time-4">{$_('table.last_third_starts')}<strong>{prayerTimes[4]}</strong></li>
+  <li id="time-5" class="dark-bg">{$_('table.last_sixth_starts')}<strong>{prayerTimes[5]}</strong></li>
+  <li id="time-6">{$_('table.fajr')}<strong>{prayerTimes[6]}</strong></li>
 </ul>
 
 <style>

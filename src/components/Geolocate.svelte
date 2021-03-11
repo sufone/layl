@@ -15,13 +15,13 @@
           <Loader color="#67B6FF" />
 
         {:else}
-          <button transition:fade class="minor" on:click|once={() => geolocate("layl_relocation")}>Update location</button>
+          <button transition:fade class="minor" on:click|once={() => geolocate("layl_relocation")}>{$_('table.update-location-button')}</button>
         {/if}
 
       {/if}
 
     {:else if lowAcc}
-      <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
+      <alert>{$_('warnings.low_accuracy')}</alert>
 
     {:else}
       <div transition:fade>
@@ -31,18 +31,18 @@
           <div id="image-holder">
             <a href="https://layl.app"><img id="main-logo" src="/assets/logo.svg" alt="Layl logo" ></a>
           </div>
-          <p>Calculate divisons of the night for your location </p>
+          <p>{$_('introduction.slogan')} </p>
       </div>
 
       {#if loading}
         <Loader color="#ff6767" />
 
       {:else}
-        <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
+        <button class="major" on:click|once={() => geolocate("layl_initial_location")}>{$_('introduction.share-location-button')}</button>
       {/if}
       <Explanation />
       <br>
-      <p style="font-size: 0.8rem;">Learn more below 👇️</p>
+      <p style="font-size: 0.8rem;">{$_('introduction.more_below')} 👇</p>
 
     {/if}
 
@@ -156,8 +156,7 @@
   import Explanation from './Explanation.svelte'
   import { fade } from 'svelte/transition';
   import Loader from './Loader.svelte'
-
-
+  import { _ } from 'svelte-i18n'
 
   let lowAcc
   let lat = parseFloat(localStorage.getItem('lat'))

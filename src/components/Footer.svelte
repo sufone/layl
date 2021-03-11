@@ -1,4 +1,8 @@
-<p><a href="https://suf.one" target="_blank">Made with 💗 by Sufone</a></p>
+<script>
+  import { _ } from 'svelte-i18n'
+</script>
+
+<p><a href="https://suf.one" target="_blank">{$_('info.sufone_credit')}</a></p>
 
 <div class="github">
   <a class="github-button" href="https://github.com/sufone/layl" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="false" aria-label="Star mr-islam/layl-pwa on GitHub"> 

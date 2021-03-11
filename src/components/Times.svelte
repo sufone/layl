@@ -9,6 +9,8 @@
   import TimesTable from './TimesTable.svelte'
   import Dates from './Dates.svelte'
 
+  import { _ } from 'svelte-i18n'
+
   import customParseFormat from 'dayjs/plugin/customParseFormat';
     dayjs.extend(customParseFormat)
 
@@ -151,7 +153,7 @@ function magicTimer() {
 
 {#if Number.isInteger(currentTime)}
   <div>
-    <p><span>Stage {currentTime+1}⁄6 ·  {dayjs(now).format("h:mm a")}</span></p>
+    <p><span>{$_('table.stage')} {currentTime+1}⁄6 ·  {dayjs(now).format("h:mm a")}</span></p>
   </div>
   <br>
 {/if}

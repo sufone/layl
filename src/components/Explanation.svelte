@@ -1,6 +1,10 @@
+<script>
+  import { _ } from 'svelte-i18n'
+</script>
+
 <ol>
-  <li>Share location only the first time</li>
-  <li>Your data is stored on your device</li>
+  <li>{$_('introduction.location_once')}</li>
+  <li>{$_('introduction.data_device')}</li>
 </ol>
 
 <style>

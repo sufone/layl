@@ -1,31 +1,32 @@
+<script>
+  import { _ } from 'svelte-i18n'
+
+  import Footer from './Footer.svelte'
+
+  let twa = document.referrer.includes('android-app://com.navedislam.layl') 
+</script>
+
 <div id="info">
 <blockquote>
-<em>“And during the night wake up and pray, as an extra offering of your own, so that your Lord may
-raise you to a ⸢highly⸣ praised status.”</em> <span>[Surah al-Isra 79]</span>
+{$_('info.ayah')}<span>[{$_('info.ayah_citation')}]</span>
 </blockquote>
 
-
-
-<p><a href="https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/">The night is full of blessed times for worship</a>—plan it all with Layl, like:</p>
-
+<p><a href="https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/">{$_('info.transition_to_list')}</p>
 
 <ul>
-
-    <li>Pray <em>ʿIshā</em> before ¹⁄₂ of the night (at the latest!)</li>
-    <li>Get most of your sleep in the middle of the night</li>
-    <li>Rise for <em>Tahajjud</em> in the last ¹⁄₃</li>
-    <li>Take a short nap in the last ¹⁄₆ before <em>Fajr</em></li>
-
-
+    <li>{$_('info.advice_points.isha')}</li>
+    <li>{$_('info.advice_points.sleep')}</li>
+    <li>{$_('info.advice_points.tahajjud')}</li>
+    <li>{$_('info.advice_points.nap')}</li>
 </ul>
 
 
+<p><strong>
+  {$_('info.check_times')}
+</strong></p>
+
 <p>
-
-Also, please <strong>double-check the Maghrib and Fajr times</strong>—all the other times above depend on them.
-</p>
-
-<p> Allah, help us to worship at night and accept from us, <em>ameen</em>!
+  {$_('info.closing_dua')}
 </p>
 
 <div id="subscribe-form">
@@ -36,13 +37,13 @@ Also, please <strong>double-check the Maghrib and Fajr times</strong>—all the 
     onsubmit="window.open('https://buttondown.email/naved', 'popupwindow')"
     class="embeddable-buttondown-form"
 >
-<p>Join the monthly updates email</p>
+<p>{$_('info.join_email')}</p>
   <div id="subscribe-internal">
-    <input type="email" placeholder="💌 Email" name="email" id="bd-email" class="subscribe-field">
+    <input type="email" placeholder="{$_('info.email_placeholder')}" name="email" id="bd-email" class="subscribe-field">
     <input type="hidden" value="1" name="embed">
     <input type="hidden" name="tag" value="apps" />
     <br>
-    <input type="submit" value="Bismillah" id="subscribe-button">
+    <input type="submit" value="{$_('info.subscribe_button')}" id="subscribe-button">
   </div>
 </form>
 </div>
@@ -61,15 +62,6 @@ Also, please <strong>double-check the Maghrib and Fajr times</strong>—all the 
 <Footer />
 
 </div>
-
-
-
-
-<script>
-import Footer from './Footer.svelte'
-
-let twa = document.referrer.includes('android-app://com.navedislam.layl')
-</script>
 
 <style>
 
