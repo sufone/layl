@@ -1,8 +1,7 @@
 import { register, init, getLocaleFromNavigator } from 'svelte-i18n';
 
 register('en', () => import('../locales/en.json'));
-register('ar-eg', () => import('../locales/ar.json'));
-// not available yet
+register('ar', () => import('../locales/ar.json'));
 
 export function startClient() {
     init({
