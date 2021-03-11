@@ -4,8 +4,7 @@ See the "app" in action at https://layl.app or get it from the [Google Play Stor
 
 This is a re-write in Svelte of https://github.com/mr-islam/layl (which was written by a total JS/React beginner).
 
-## Status
-Stable and released!
+Lots of credit to Batoul Apps for their awesome project [Adhan](https://github.com/batoulapps/adhan-js), which Layl happily relies upon.
 
 ## License
 
