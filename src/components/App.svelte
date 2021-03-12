@@ -2,6 +2,9 @@
   Please wait...
 {:else}
 <div class="app">
+	<div class="language-container">
+		<LanguagePicker />
+	</div>
 	<div class="layl-container">
 		<Geolocate />
 	</div>
@@ -15,6 +18,7 @@
 <script>
 	import Geolocate from './Geolocate.svelte'
 	import Info from './Info.svelte'
+	import LanguagePicker from './LanguagePicker.svelte'
 
 	import { isLoading } from 'svelte-i18n'
 	import { startClient } from '../i18n.js';
@@ -24,7 +28,9 @@
 
 <style lang="css">
 
-
+	.language-container {
+		text-align: right;
+	}
 
 	.info-container {
 		min-height: 100vh;
