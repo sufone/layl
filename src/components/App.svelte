@@ -20,10 +20,13 @@
 	import Info from './Info.svelte'
 	import LanguagePicker from './LanguagePicker.svelte'
 
-	import { isLoading } from 'svelte-i18n'
+	import { isLoading, _ } from 'svelte-i18n'
 	import { startClient } from '../i18n.js';
-
 	startClient();
+
+	$: if (!$isLoading) {
+		document.dir = $_('direction');
+	}
 </script>
 
 <style lang="css">
