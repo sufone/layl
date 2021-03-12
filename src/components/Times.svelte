@@ -6,10 +6,12 @@
 
   import adhan from 'adhan'
   import dayjs from 'dayjs'
+  import 'dayjs/locale/ar'
+
   import TimesTable from './TimesTable.svelte'
   import Dates from './Dates.svelte'
 
-  import { _ } from 'svelte-i18n'
+  import { _, locale } from 'svelte-i18n'
 
   import customParseFormat from 'dayjs/plugin/customParseFormat'
   dayjs.extend(customParseFormat)
@@ -102,7 +104,7 @@
     }
 
 
-    prayerTimes = times.map(time => time.format(timeFormat))
+    prayerTimes = times
     console.log(prayerTimes)
 
     console.log(dayjs(prayerTimes[0], "h:mm a"))
@@ -153,7 +155,7 @@ function magicTimer() {
 
 {#if Number.isInteger(currentTime)}
   <div>
-    <p><span>{$_('table.stage')} {currentTime+1}⁄6 ·  {dayjs(now).format("LT")}</span></p>
+    <p><span>{$_('table.stage')} {currentTime+1}⁄6 ·  {dayjs(now).locale($locale).format("LT")}</span></p>
   </div>
   <br>
 {/if}

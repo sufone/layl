@@ -1,6 +1,7 @@
 <script>
-  import { _ } from 'svelte-i18n'
+  import { _, locale } from 'svelte-i18n'
   import { onMount } from 'svelte';
+import { format } from 'path';
 
   export let prayerTimes
   export let currentTime
@@ -37,13 +38,13 @@
 
 <ul>
 <!-- change to a map…  -->
-  <li id="time-0">{$_('table.maghrib')}<strong>{prayerTimes[0]}</strong></li>
-  <li id="time-1" class="dark-bg">{$_('table.first_sixth_ends')}<strong>{prayerTimes[1]}</strong> </li>
-  <li id="time-2">{$_('table.first_third_ends')} <strong>{prayerTimes[2]}</strong></li>
-  <li id="time-3" class="dark-bg">{$_('table.half')}<strong>{prayerTimes[3]}</strong></li>
-  <li id="time-4">{$_('table.last_third_starts')}<strong>{prayerTimes[4]}</strong></li>
-  <li id="time-5" class="dark-bg">{$_('table.last_sixth_starts')}<strong>{prayerTimes[5]}</strong></li>
-  <li id="time-6">{$_('table.fajr')}<strong>{prayerTimes[6]}</strong></li>
+  <li id="time-0">{$_('table.maghrib')}<strong>{prayerTimes[0].locale($locale).format("LT")}</strong></li>
+  <li id="time-1" class="dark-bg">{$_('table.first_sixth_ends')}<strong>{prayerTimes[1].locale($locale).format("LT")}</strong> </li>
+  <li id="time-2">{$_('table.first_third_ends')} <strong>{prayerTimes[2].locale($locale).format("LT")}</strong></li>
+  <li id="time-3" class="dark-bg">{$_('table.half')}<strong>{prayerTimes[3].locale($locale).format("LT")}</strong></li>
+  <li id="time-4">{$_('table.last_third_starts')}<strong>{prayerTimes[4].locale($locale).format("LT")}</strong></li>
+  <li id="time-5" class="dark-bg">{$_('table.last_sixth_starts')}<strong>{prayerTimes[5].locale($locale).format("LT")}</strong></li>
+  <li id="time-6">{$_('table.fajr')}<strong>{prayerTimes[6].locale($locale).format("LT")}</strong></li>
 </ul>
 
 <style>

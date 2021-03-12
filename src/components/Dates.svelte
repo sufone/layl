@@ -1,5 +1,8 @@
 <script>
+  import {locale} from 'svelte-i18n'
+
   import dayjs from 'dayjs'
+	import 'dayjs/locale/ar'
 
   import customParseFormat from 'dayjs/plugin/customParseFormat';
   dayjs.extend(customParseFormat)
@@ -8,7 +11,7 @@
 
 </script>
 
-<p>{dayjs(today).format("D MMM")} – {dayjs(tomorrow).format("D MMM")}</p>
+<p>{dayjs(today).locale($locale).format("D MMM")} – {dayjs(tomorrow).locale($locale).format("D MMM")}</p>
 
 <style>
 p {text-align: center;}
