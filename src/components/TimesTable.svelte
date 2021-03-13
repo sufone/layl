@@ -37,14 +37,11 @@ import { format } from 'path';
 
 
 <ul>
-<!-- change to a map…  -->
-  <li id="time-0">{$_('table.maghrib')}<strong>{prayerTimes[0].locale($locale).format("LT")}</strong></li>
-  <li id="time-1" class="dark-bg">{$_('table.first_sixth_ends')}<strong>{prayerTimes[1].locale($locale).format("LT")}</strong> </li>
-  <li id="time-2">{$_('table.first_third_ends')} <strong>{prayerTimes[2].locale($locale).format("LT")}</strong></li>
-  <li id="time-3" class="dark-bg">{$_('table.half')}<strong>{prayerTimes[3].locale($locale).format("LT")}</strong></li>
-  <li id="time-4">{$_('table.last_third_starts')}<strong>{prayerTimes[4].locale($locale).format("LT")}</strong></li>
-  <li id="time-5" class="dark-bg">{$_('table.last_sixth_starts')}<strong>{prayerTimes[5].locale($locale).format("LT")}</strong></li>
-  <li id="time-6">{$_('table.fajr')}<strong>{prayerTimes[6].locale($locale).format("LT")}</strong></li>
+  {#each prayerTimes as prayerTime, i}
+    <li id="time-{i}">{$_(`table.time_${i}`)}
+      <strong>{prayerTime.locale($locale).format("LT")}</strong>
+    </li>
+  {/each}
 </ul>
 
 <style>
@@ -129,7 +126,7 @@ li:before {
   padding-top: 6px;
   font-weight: 400;
 }
-.dark-bg {
+ul li:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.03);
 
 }

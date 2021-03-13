@@ -25,14 +25,14 @@
     "slogan": "Calculate divisons of the night for your location"
   },
   "table": {
-    "co-ods": "Your location ico-ods: ",
-    "fajr": "Fajr: night end",
-    "first_sixth_ends": "First-sixth ends",
-    "first_third_ends": "First-third ends",
-    "half": "Half the night",
-    "last_sixth_starts": "Last-sixth starts",
-    "last_third_starts": "Last-third starts",
-    "maghrib": "Maghrib: night start",
+    "co-ods": "Your location co-ods: ",
+    "time_6": "Fajr: night end",
+    "time_1": "First-sixth ends",
+    "time_2": "First-third ends",
+    "time_3": "Half the night",
+    "time_5": "Last-sixth starts",
+    "time_4": "Last-third starts",
+    "time_0": "Maghrib: night start",
     "stage": "Stage",
     "update-location-button": "Update location"
   },
