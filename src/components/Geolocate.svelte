@@ -165,13 +165,6 @@
   let freshGeo = false
   let loading = false
 
-  locale.subscribe(() => {
-    //this is a simple toggle and set to false to trigger a geocode API request and then
-    //hide the manual refresh button. Not amazing, but good enough
-    freshGeo = !freshGeo
-    freshGeo = false 
-  })
-
   function geolocate(trackEvent) {
     loading = true
     let fetchStart = new Date()

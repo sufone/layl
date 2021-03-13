@@ -9,7 +9,18 @@
   let country = localStorage.getItem('country')
   let countryName = localStorage.getItem('countryName')
 
-  $: if (freshGeo) { //runs only when geolocate is called
+  // runs only when geolocate is called
+  $: if (freshGeo) { 
+    geocode(lat, lon)
+  }
+  
+  // this is to help ignore the initial locale load, and run geocode 
+  // on subsequent language changes, up to a limit (so no spam)
+  let timesLocaleChanged = 0 
+  locale.subscribe(() => {
+    timesLocaleChanged +=1
+  })
+  $: if (1 < timesLocaleChanged < 4) {
     geocode(lat, lon)
   }
 
