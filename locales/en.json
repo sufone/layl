@@ -40,5 +40,6 @@
     "geocode_failed": "I am very sorry: Layl cannot connect to GPS provider. Please try refresh the app, and email me (navedcoded@gmail.com) with this error code: ",
     "low_accuracy": "Sorry, your device sensor cannot locate you accurately. Please try later or use another device."
   },
-  "direction": "ltr"
+  "direction": "ltr",
+  "comma": ","
 }

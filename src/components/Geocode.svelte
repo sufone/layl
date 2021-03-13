@@ -46,9 +46,9 @@
 <Times {lat} {lon} {freshGeo} {country}/>
 
 {#if city && country}
-  <p>{city}, {countryName}</p>
+  <p>{city}{$_('comma')} {countryName}</p>
 {:else}
-  <p>{$_('table.co-ods')}<br> {lat}, {lon}</p>
+  <p>{$_('table.co-ods')}<br> {lat}{$_('comma')} {lon}</p>
 {/if}
 
 <style>
