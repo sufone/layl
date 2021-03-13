@@ -156,7 +156,7 @@
   import Explanation from './Explanation.svelte'
   import { fade } from 'svelte/transition';
   import Loader from './Loader.svelte'
-  import { _ } from 'svelte-i18n'
+  import { _, locale } from 'svelte-i18n'
 
   let lowAcc
   let lat = parseFloat(localStorage.getItem('lat'))
@@ -164,6 +164,13 @@
   console.log("from local: "+lat+lon)
   let freshGeo = false
   let loading = false
+
+  locale.subscribe(() => {
+    //this is a simple toggle and set to false to trigger a geocode API request and then
+    //hide the manual refresh button. Not amazing, but good enough
+    freshGeo = !freshGeo
+    freshGeo = false 
+  })
 
   function geolocate(trackEvent) {
     loading = true
