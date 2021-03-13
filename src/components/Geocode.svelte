@@ -24,7 +24,7 @@
 
         city = location.City
         country = location.Country
-        countryName = location.AdditionalData[0].CountryName
+        countryName = location.AdditionalData[0].value
         console.log("countryname "+countryName)
 
         localStorage.setItem('city', city)
