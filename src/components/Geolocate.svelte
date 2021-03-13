@@ -42,7 +42,7 @@
       {/if}
       <Explanation />
       <br>
-      <p style="font-size: 0.8rem;">{$_('introduction.more_below')} 👇</p>
+      <p style="font-size: 0.8rem; margin-top: 10px">{$_('introduction.more_below')} 👇</p>
 
     {/if}
 
