@@ -132,7 +132,7 @@ ul li:nth-child(even) {
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark-bg {
+  ul li:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.04);
   }
   :global(.current) {

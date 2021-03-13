@@ -129,7 +129,7 @@ blockquote {
 input#bd-email:focus {
 	border: 1px solid #ff6767
 }
-button,input,textarea {
+input {
 	-webkit-appearance: none;
 	padding: 0;
 	font: inherit;
