@@ -191,6 +191,8 @@
         // // geocode(lat, lon)
         // // this.calcTimes(lat, lon)
 
+        // some fancy loading magic so things feel better. there's always a small load
+        // even when the API call is instant -- this is for psychology
         let fetchEnd = new Date()
         let loadTime = fetchEnd - fetchStart
         console.log(`loadtime: ${loadTime}, ${loadTime<1200 ? 1200-loadTime : 0}`)
@@ -202,9 +204,6 @@
       loading = false
       alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
     }
-
-
-
   }
 
 function error(err) {
