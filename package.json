@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "postinstall": "patch-package",
     "export": "pwa export",
     "start": "sirv build -s",
     "watch": "pwa watch",
