@@ -11,7 +11,7 @@
 
 <div class="select">
     <select id="language-picker" bind:value={$locale}>
-        <option value="ar">🇪🇬 العربية</option>
+        <option value="ar">🇯🇴 العربية</option>
         <option value="en-US">🇺🇸 English </option> 
         <!-- calling it en-US might be an issue, but I think it falls back to our proivded en locale so ok -->
     </select>
