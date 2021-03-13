@@ -65,9 +65,9 @@
 
 <style>
 
-  #image-holder {
-    text-align: center;
-  }
+#image-holder {
+  text-align: center;
+}
 
 span {
     font-size: 0.8rem;
@@ -97,6 +97,62 @@ blockquote {
 
   border-radius: 4px;
 }
+
+#subscribe-form {
+	font-family: var(--font-list);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: 1em
+}
+
+#subscribe-internal {
+	display: flex
+}
+#subscribe-button {
+	background-color: #ff6767;
+	color: #fafafa;
+	padding: 6px 15px;
+  border-radius: 4px;
+  margin: 0px 3px 0 3px;
+}
+#subscribe-button:hover {
+	cursor: pointer;
+}
+
+#bd-email {
+	border-radius: 4px;
+	padding: 6px;
+	min-width: 200px
+}
+
+input#bd-email:focus {
+	border: 1px solid #ff6767
+}
+button,input,textarea {
+	-webkit-appearance: none;
+	padding: 0;
+	font: inherit;
+	background: 0 0;
+	border: 0;
+	outline: 0
+}
+
+
+@media (max-width: 400px) {
+	#subscribe-internal {
+			display:block
+	}
+
+	#subscribe-button {
+			border-radius: 4px;
+			margin-top: 3px
+	}
+	#bd-email {
+		width: 100px
+	}
+}
+
 
 @media screen and (max-width: 550px) {
   div#info {
