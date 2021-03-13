@@ -20,6 +20,7 @@
       .then(result => {
         let location = result.Response.View[0].Result[0].Location.Address
         console.dir(location)
+        console.dir(result)
 
         city = location.City
         country = location.Country
