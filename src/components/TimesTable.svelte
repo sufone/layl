@@ -39,7 +39,7 @@ import { format } from 'path';
 <ul>
   {#each prayerTimes as prayerTime, i}
     <li id="time-{i}">{$_(`table.time_${i}`)}
-      <strong>{prayerTime.locale($locale).format("LT")}</strong>
+      <strong class="{$_('direction')}">{prayerTime.locale($locale).format("LT")}</strong>
     </li>
   {/each}
 </ul>
@@ -49,6 +49,12 @@ import { format } from 'path';
   border-bottom: 3px dotted #ff6767;
   list-style-position: inside;
   margin-bottom: 3px;
+}
+:global(.ltr) {
+  padding-left: 20px;
+}
+:global(.rtl) {
+  padding-right: 20px;
 }
 ul {
 	position: relative;
@@ -61,7 +67,6 @@ ul {
   font-weight: 600;
 }
 li > strong {
-  padding-left: 20px;
   font-weight: 800;
 }
 li {
@@ -143,9 +148,6 @@ ul li:nth-child(even) {
 @media only screen and (max-width: 280px) {
 ul {
   font-size: 1.1em;
-}
-li > strong {
-  padding-left: 6px;
 }
 #time-0:before {
   width: 16px;
