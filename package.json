@@ -5,7 +5,7 @@
     "export": "pwa export",
     "start": "sirv build -s",
     "watch": "pwa watch",
-    "build": "patch-package && pwa build"
+    "build": "pwa build"
   },
   "dependencies": {
     "adhan": "^4.0.0",
