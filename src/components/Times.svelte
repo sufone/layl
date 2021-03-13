@@ -99,6 +99,7 @@
     let interval = fajr.diff(maghrib, 'millisecond') / 6
     console.log(interval)
 
+    let times = [] // reset again for "update location" and prevent duplicate table
     for (let i = 0; i < 7; i++) {
       times.push(maghrib.add(interval * i, 'millisecond'))
     }
