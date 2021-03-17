@@ -8,7 +8,7 @@
 
 <div id="info">
 <blockquote>
-{$_('info.ayah')}<span>[{$_('info.ayah_citation')}]</span>
+{$_('info.ayah')} <span>[{$_('info.ayah_citation')}]</span>
 </blockquote>
 
 <p><a href="https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/">{$_('info.transition_to_list')}</p>
