@@ -209,7 +209,8 @@
 function error(err) {
   // window.metrical.trackEvent("layl_geolocate_error")
   loading = false
-  alert(`ERROR(${err.code}): ${err.message} \n Please contact me (navedcoded@gmail.com)
-  with this message to help solve this issue and improve Layl ❤️`);
+  alert(`ERROR(${err.code}): ${err.message} \n Please ensure your device GPS is on. If that doesn't work, contact me (navedcoded@gmail.com)
+  with the message above to help solve this issue and improve Layl ❤️`);
+  // asking to check device GPS because that is a common issue 
 }
 </script>
