@@ -2,9 +2,12 @@
 
     {#if lat && lon} <!-- don't show on first visit -->
     <div transition:fade>
-      <div id="image-holder">
-        <a href="https://layl.app"><img id="main-logo" src="/assets/logo.svg" alt="Layl logo" ></a>
-      </div>
+      <a href="https://layl.app">
+        <div id="image-holder">
+          <img id="main-logo" src="/assets/logo-only.svg" alt="Layl logo of sun and moon overlapping" >
+          <h1> {$_("site_title")}</h1>
+        </div>
+      </a>
       <Geocode {lat} {lon} {freshGeo} />
     </div>
 
@@ -28,8 +31,8 @@
         <div id="landing-img-holder">
             <img id="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
           </div>
-          <div id="image-holder">
-            <a href="https://layl.app"><img id="main-logo" src="/assets/logo.svg" alt="Layl logo" ></a>
+          <div id="first-landing-title-holder">
+            <h1> {$_("site_title")}</h1>
           </div>
           <p>{$_('introduction.slogan')} </p>
       </div>
@@ -51,7 +54,12 @@
 
 
 <style>
-
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    font-weight: 800;
+  }
   p {
     max-width:30vw;
     text-align: center;
@@ -59,8 +67,21 @@
     margin-right: auto;
   }
   img#landing {
-    width: 300px
+    width: 300px;
   }
+  #image-holder {
+    text-align: center;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  #first-landing-title-holder {
+    text-align: center;
+  }
+	img#main-logo {
+    width: 40px;
+    margin-bottom: -10px;
+	}
   @media only screen and (max-width: 550px) {
     img#landing {
       width: 250px;
@@ -73,15 +94,13 @@
     img#landing {
       width: 200px;
     }
-  }
-  #image-holder {
-        text-align: center;
-      padding-top: 10px;
+    img#main-logo {
+      width: 20px;
+	  }
+    h1 {
+      font-size: 1.1rem;
     }
-	img#main-logo {
-    width: 80px;
-    margin-bottom: 5px;
-	}
+  }
   #landing-img-holder {
     text-align: center;
   }

@@ -11,9 +11,6 @@
 		background-color: #212121;
 		color: #dadada;
 	}
-	#main-logo {
-		content: url(/assets/logo-dark.svg)
-	}
 	a, a:visited {
 		text-decoration: underline solid #67b6ff;
 		color: #67b6ff
@@ -30,9 +27,6 @@
 @media (prefers-color-scheme: light) {
 	body {
 		color: #333;
-	}
-	#main-logo {
-		content: url(/assets/logo.svg)
 	}
 	a, a:visited {
 		color: #2879C4;
