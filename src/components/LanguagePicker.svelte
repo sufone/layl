@@ -21,7 +21,7 @@
 <style>
     select {
         appearance: none;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(247, 247, 247);
         border:  1px solid rgb(161, 161, 161);
         border-radius: 4px;
         /* border-bottom: 1px solid rgb(88, 88, 88); */
@@ -31,5 +31,11 @@
         font-size: inherit;
         cursor: pointer;
         line-height: inherit;
+    }
+    @media (prefers-color-scheme: dark) {
+        select {
+            color: #dadada;
+            background-color: #3a3a3a;
+        }
     }
 </style>
