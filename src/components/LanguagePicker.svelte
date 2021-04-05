@@ -1,18 +1,11 @@
 <script>
-    import { locale, locales } from 'svelte-i18n'
-    import { onMount } from 'svelte';
-
-    onMount(() => {
-        console.log(locales)
-       document.getElementById('language-picker').value = $locale
-    })
-
+    import { locale } from 'svelte-i18n'
 </script>
 
 <div class="select">
     <select id="language-picker" bind:value={$locale}>
-        <option value="ar">العربية 🇯🇴</option>
-        <option value="en-US">English 🇺🇸</option> 
+        <option value="en-US">🇺🇸 English </option> 
+        <option value="ar">🇯🇴 العربية</option>
         <!-- calling it en-US might be an issue, but I think it falls back to our proivded en locale so ok -->
     </select>
 </div>
