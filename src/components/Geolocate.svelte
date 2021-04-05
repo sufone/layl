@@ -202,13 +202,14 @@
     } else {
       // window.metrical.trackEvent("layl_geolocate_failure")
       loading = false
-      alert($_("warnings.geolocation_unavailable"));
+      alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
     }
   }
 
 function error(err) {
   // window.metrical.trackEvent("layl_geolocate_error")
   loading = false
-  alert(`ERROR(${err.code}): ${err.message} \n` + $_("warnings.general_geolocate_failure"));
+  alert(`ERROR(${err.code}): ${err.message} \n Please contact me (navedcoded@gmail.com)
+  with this message to help solve this issue and improve Layl ❤️`);
 }
 </script>
