@@ -127,8 +127,7 @@ function magicTimer() {
 
     for (let i = 6; i >= 0; i--) {
 
-    // console.log(times[i])
-      if (now.isAfter(times[i])) {
+      if (now.isAfter(prayerTimes[i])) {
         console.log("after: " + i)
         if (i === 6) {
           console.log('we are in a new day!')
