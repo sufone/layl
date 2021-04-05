@@ -2,12 +2,10 @@
 
     {#if lat && lon} <!-- don't show on first visit -->
     <div transition:fade>
-      <a href="https://layl.app">
-        <div id="image-holder">
-          <img id="main-logo" src="/assets/logo-only.svg" alt="Layl logo of sun and moon overlapping" >
-          <h1> {$_("site_title")}</h1>
-        </div>
-      </a>
+      <div id="image-holder">
+        <img id="main-logo" src="/assets/logo-only.svg" alt="Layl logo of sun and moon overlapping" >
+        <h1> {$_("site_title")}</h1>
+      </div>
       <Geocode {lat} {lon} {freshGeo} />
     </div>
 
@@ -71,7 +69,6 @@
   }
   #image-holder {
     text-align: center;
-    padding-bottom: 20px;
     align-items: center;
     justify-content: center;
   }
