@@ -61,10 +61,9 @@ ul {
 	list-style: none;
 	margin-left: 0;
   padding-left: 1.2em;
-  font-size: 1.15em;
+  font-size: 1.3rem;
   line-height: 2em;
   min-width: 20vw;
-  font-weight: 600;
 }
 li > strong {
   font-weight: 800;

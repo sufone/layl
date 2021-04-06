@@ -1,5 +1,20 @@
 <script>
     import { locale } from 'svelte-i18n'
+    import {onMount} from 'svelte'
+
+    // because the some lang. fonts need a larger font-size
+    let mounted = false
+    onMount(() => {
+        mounted = true
+    })
+    $: if (mounted && $locale) { 
+        if ($locale === "ar") {
+            document.documentElement.className = "large-text"
+        } else {
+            document.documentElement.className = "default-small-text"
+        }
+    }
+        
 </script>
 
 <div class="select">

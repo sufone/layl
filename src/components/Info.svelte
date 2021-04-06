@@ -64,7 +64,9 @@
 </div>
 
 <style>
-
+#info {
+  font-size: 1.2rem;
+}
 #image-holder {
   text-align: center;
 }
