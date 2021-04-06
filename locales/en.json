@@ -2,16 +2,16 @@
   "site_title": "Layl",
   "info": {
     "advice_points": {
-      "isha": "Pray ʿIshā before ¹⁄₂ of the night (at the latest!)",
+      "isha": "Pray ʿIshā before ¹⁄₂ of the night",
       "nap": "Take a short nap in the last ¹⁄₆ before Fajr",
       "sleep": "Get most of your sleep in the middle of the night",
       "tahajjud": "Rise for Tahajjud in the last ¹⁄₃"
     },
     "ayah": "“And during the night wake up and pray, as an extra offering of your own, so that your Lord may raise you to a ⸢highly⸣ praised status.”",
     "ayah_citation": "Surah al-Isra 79",
-    "check_times": "Also, please double-check the Maghrib and Fajr times—all the other times above depend on them.",
+    "check_times": "Also, please check the Maghrib and Fajr times—all the other times above depend on them.",
     "closing_dua": "Allah, help us to worship at night and accept from us, ameen!",
-    "email_placeholder": "💌 Email",
+    "email_placeholder": "💌 Your Email",
     "explanation_night_link": "https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/",
     "join_email": "Join the monthly updates email",
     "subscribe_button": "Bismillah",
