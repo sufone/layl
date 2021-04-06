@@ -5,6 +5,7 @@
       <div id="image-holder">
         <img id="main-logo" src="/assets/logo-only.svg" alt="Layl logo of sun and moon overlapping" >
         <h1> {$_("site_title")}</h1>
+        <br>
       </div>
       <Geocode {lat} {lon} {freshGeo} />
     </div>
@@ -52,9 +53,6 @@
 
 
 <style>
-  a {
-    text-decoration: none;
-  }
   h1 {
     font-weight: 800;
   }
