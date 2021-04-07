@@ -104,7 +104,6 @@
     padding: 10px;
     margin: 20px;
     border-radius: 4px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
   button:hover {
     transform: translateY(-2px)
@@ -116,7 +115,7 @@
   button.minor {
     padding: 5px;
     margin: 10px;
-    font-size: 0.6em;
+    font-size: 0.8rem;
     /* background: none!important; */
     background: #EDF6FF;
     border: 1px solid #67B6FF;

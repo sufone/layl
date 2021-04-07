@@ -167,6 +167,7 @@ function magicTimer() {
 
 <style>
 p {
+  font-size: 1.2rem;
   text-align: center;
   color: #ff6767;
   /* text-decoration: underline #ffafaf dotted; */

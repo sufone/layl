@@ -167,5 +167,8 @@ input {
     font-size: 0.8em;
   }
 }
+div {
+  margin-top: 10px;
+}
 
 </style>
