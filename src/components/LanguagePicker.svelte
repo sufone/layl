@@ -1,5 +1,5 @@
 <script>
-    import { locale } from 'svelte-i18n'
+    import { locale, _ } from 'svelte-i18n'
     import {onMount} from 'svelte'
 
     // because the some lang. fonts need a larger font-size
@@ -16,6 +16,11 @@
     }
         
 </script>
+
+
+<svelte:head>
+	<title>{$_("page_tab_title", { default: 'Sapper project template!' })}</title>
+</svelte:head>
 
 <div class="select">
     <select id="language-picker" bind:value={$locale}>
