@@ -29,6 +29,14 @@
   {$_('info.closing_dua')}
 </p>
 
+{#if !twa}
+<div id="image-holder">
+  <a href="https://play.google.com/store/apps/details?id=com.navedislam.layl" target="_blank">
+    <img width="170px" style="padding-top: 2em; " src='/assets/google_play/{$locale}.svg' alt="google play download button" />
+  </a>
+</div>
+{/if}
+
 <div id="subscribe-form">
 <form
     action="https://buttondown.email/api/emails/embed-subscribe/naved"
@@ -47,17 +55,6 @@
   </div>
 </form>
 </div>
-
-{#if !twa}
-<div id="image-holder">
-  <a href="https://play.google.com/store/apps/details?id=com.navedislam.layl" target="_blank">
-    <img width="170px" style="padding-top: 2em; " src='/assets/google_play/{$locale}.svg' alt="google play download button" />
-  </a>
-</div>
-{/if}
-
-
-
 
 <Footer />
 
