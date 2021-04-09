@@ -1,5 +1,7 @@
 {#if $isLoading}
-  Please wait...
+<div id="image-holder">
+	<Loader color="#ff6767" />
+</div>
 {:else}
 <div class="app">
 	<div class="language-container">
@@ -19,6 +21,7 @@
 	import Geolocate from './Geolocate.svelte'
 	import Info from './Info.svelte'
 	import LanguagePicker from './LanguagePicker.svelte'
+	import Loader from './Loader.svelte'
 
 	import { isLoading, _ } from 'svelte-i18n'
 	import { startClient } from '../i18n.js';
@@ -48,6 +51,13 @@
 		align-items: center;
 		justify-content: center;
 	}
+
+	#image-holder {
+		margin-top: 100px;
+    	text-align: center;
+		align-items: center;
+		justify-content: center;
+  	}
 
 	@media screen and (max-width: 300px) {
 		.info-container {
