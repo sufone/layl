@@ -1,5 +1,5 @@
 <script>
-  import { _ } from 'svelte-i18n'
+  import { _, locale } from 'svelte-i18n'
 
   import Footer from './Footer.svelte'
 
@@ -51,7 +51,7 @@
 {#if !twa}
 <div id="image-holder">
   <a href="https://play.google.com/store/apps/details?id=com.navedislam.layl" target="_blank">
-    <img width="115px" style="padding-top: 2em; " src='/assets/google-play.svg' alt="google play download button" />
+    <img width="170px" style="padding-top: 2em; " src='/assets/google_play/{$locale}.svg' alt="google play download button" />
   </a>
 </div>
 {/if}
