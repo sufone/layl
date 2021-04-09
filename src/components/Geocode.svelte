@@ -20,7 +20,7 @@
   locale.subscribe(() => {
     timesLocaleChanged +=1
   })
-  $: if (1 < timesLocaleChanged < 4) {
+  $: if (1 < timesLocaleChanged < 6) {
     geocode(lat, lon)
   }
 
