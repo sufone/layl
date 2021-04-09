@@ -37,7 +37,7 @@
     onsubmit="window.open('https://buttondown.email/naved', 'popupwindow')"
     class="embeddable-buttondown-form"
 >
-<p>{$_('info.join_email')}</p>
+<p class="smaller-sub">{$_('info.join_email')}</p>
   <div id="subscribe-internal">
     <input type="email" placeholder="{$_('info.email_placeholder')}" name="email" id="bd-email" class="subscribe-field">
     <input type="hidden" value="1" name="embed">
@@ -64,11 +64,17 @@
 </div>
 
 <style>
+  .smaller-sub {
+    font-size: 1rem;
+  }
 #info {
   font-size: 1.2rem;
 }
 #image-holder {
   text-align: center;
+}
+ul {
+  list-style-type: circle;
 }
 
 span {
