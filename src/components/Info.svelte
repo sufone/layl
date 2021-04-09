@@ -11,7 +11,7 @@
 {$_('info.ayah')} <span>[{$_('info.ayah_citation')}]</span>
 </blockquote>
 
-<p><a href="https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/">{$_('info.transition_to_list')}</p>
+<p><a target="_blank" href="{$_("info.explanation_night_link")}">{$_('info.transition_to_list')}</p>
 
 <ul>
     <li>{$_('info.advice_points.isha')}</li>
