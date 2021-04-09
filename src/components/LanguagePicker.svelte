@@ -1,6 +1,6 @@
 <script>
     import { locale, _ } from 'svelte-i18n'
-    import {onMount} from 'svelte'
+    import { onMount } from 'svelte'
 
     // because the some lang. fonts need a larger font-size
     let mounted = false
@@ -19,14 +19,14 @@
 
 
 <svelte:head>
-	<title>{$_("page_tab_title", { default: 'Sapper project template!' })}</title>
+	<title>{$_("page_tab_title", { default: 'Layl: Calculator for tahajjud time, qiyam, worship & sleep in the Islamic night!' })}</title>
 </svelte:head>
 
 <div class="select">
     <select id="language-picker" bind:value={$locale}>
         <option value="en-US">🇺🇸 English </option> 
         <option value="ar">🇯🇴 العربية</option>
-        <!-- calling it en-US might be an issue, but I think it falls back to our proivded en locale so ok -->
+        <!-- calling it en-US might be an issue, but I think it falls back to our provided `en` locale so its ok -->
     </select>
 </div>
 
