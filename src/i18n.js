@@ -11,7 +11,7 @@ locale.subscribe((value) => {
 export function startClient() {
     init({
         fallbackLocale: 'en',
-        loadingDelay: 0,
+        loadingDelay: 200,
         formats: {},
         warnOnMissingMessages: true,
         initialLocale: localStorage.getItem('locale') || getLocaleFromNavigator()
