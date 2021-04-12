@@ -3,7 +3,8 @@
     {#if lat && lon} <!-- don't show on first visit -->
     <div transition:fade>
       <div id="image-holder">
-        <a href="https://layl.app"><img id="main-logo" src="/assets/logo.svg" alt="Layl logo" ></a>
+        <img id="main-logo" src="/assets/logo-only.svg" alt="Layl logo of sun and moon overlapping" >
+        <h1> {$_("site_title")}</h1>
       </div>
       <Geocode {lat} {lon} {freshGeo} />
     </div>
@@ -15,34 +16,34 @@
           <Loader color="#67B6FF" />
 
         {:else}
-          <button transition:fade class="minor" on:click|once={() => geolocate("layl_relocation")}>Update location</button>
+          <button transition:fade class="minor" on:click|once={() => geolocate("layl_relocation")}>{$_('table.update-location-button')}</button>
         {/if}
 
       {/if}
 
     {:else if lowAcc}
-      <alert>Sorry, your location is reported with too low accuracy. Please try again from another device.</alert>
+      <alert>{$_('warnings.low_accuracy')}</alert>
 
     {:else}
       <div transition:fade>
         <div id="landing-img-holder">
             <img id="landing" src="/assets/landing.svg" alt="Telescope gazing at the stars">
           </div>
-          <div id="image-holder">
-            <a href="https://layl.app"><img id="main-logo" src="/assets/logo.svg" alt="Layl logo" ></a>
+          <div id="first-landing-title-holder">
+            <h1> {$_("site_title")}</h1>
           </div>
-          <p>Calculate divisons of the night for your location </p>
+          <p>{$_('introduction.slogan')} </p>
       </div>
 
       {#if loading}
         <Loader color="#ff6767" />
 
       {:else}
-        <button class="major" on:click|once={() => geolocate("layl_initial_location")}> Share location</button>
+        <button class="major" on:click|once={() => geolocate("layl_initial_location")}>{$_('introduction.share-location-button')}</button>
       {/if}
       <Explanation />
       <br>
-      <p style="font-size: 0.8rem;">Learn more below 👇️</p>
+      <p style="font-size: 0.9rem; margin-top: 10px">{$_('introduction.more_below')} 👇</p>
 
     {/if}
 
@@ -51,16 +52,31 @@
 
 
 <style>
-
+  h1 {
+    font-weight: 800;
+  }
   p {
     max-width:30vw;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.2rem;
   }
   img#landing {
-    width: 300px
+    width: 300px;
   }
+  #image-holder {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  #first-landing-title-holder {
+    text-align: center;
+  }
+	img#main-logo {
+    width: 40px;
+    margin-bottom: -10px;
+	}
   @media only screen and (max-width: 550px) {
     img#landing {
       width: 250px;
@@ -73,15 +89,13 @@
     img#landing {
       width: 200px;
     }
-  }
-  #image-holder {
-        text-align: center;
-      padding-top: 10px;
+    img#main-logo {
+      width: 20px;
+	  }
+    h1 {
+      font-size: 1.1rem;
     }
-	img#main-logo {
-    width: 80px;
-    margin-bottom: 5px;
-	}
+  }
   #landing-img-holder {
     text-align: center;
   }
@@ -91,7 +105,6 @@
     padding: 10px;
     margin: 20px;
     border-radius: 4px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
   button:hover {
     transform: translateY(-2px)
@@ -103,7 +116,7 @@
   button.minor {
     padding: 5px;
     margin: 10px;
-    font-size: 0.6em;
+    font-size: 0.8rem;
     /* background: none!important; */
     background: #EDF6FF;
     border: 1px solid #67B6FF;
@@ -156,8 +169,7 @@
   import Explanation from './Explanation.svelte'
   import { fade } from 'svelte/transition';
   import Loader from './Loader.svelte'
-
-
+  import { _, locale } from 'svelte-i18n'
 
   let lowAcc
   let lat = parseFloat(localStorage.getItem('lat'))
@@ -192,6 +204,8 @@
         // // geocode(lat, lon)
         // // this.calcTimes(lat, lon)
 
+        // some fancy loading magic so things feel better. there's always a small load
+        // even when the API call is instant -- this is for psychology
         let fetchEnd = new Date()
         let loadTime = fetchEnd - fetchStart
         console.log(`loadtime: ${loadTime}, ${loadTime<1200 ? 1200-loadTime : 0}`)
@@ -201,17 +215,13 @@
     } else {
       // window.metrical.trackEvent("layl_geolocate_failure")
       loading = false
-      alert("I'm very sorry, but it looks like this web browser does not support GPS… can you please come back again with an updated browser 😌?");
+      alert($_("warnings.geolocation_unavailable"));
     }
-
-
-
   }
 
 function error(err) {
   // window.metrical.trackEvent("layl_geolocate_error")
   loading = false
-  alert(`ERROR(${err.code}): ${err.message} \n Please contact me (navedcoded@gmail.com)
-  with this message to help solve this issue and improve Layl ❤️`);
+  alert(`ERROR(${err.code}): ${err.message} \n` + $_("warnings.general_geolocate_failure"));
 }
 </script>

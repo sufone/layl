@@ -1,32 +1,41 @@
+<script>
+  import { _, locale } from 'svelte-i18n'
+
+  import Footer from './Footer.svelte'
+
+  let twa = document.referrer.includes('android-app://com.navedislam.layl') 
+</script>
+
 <div id="info">
 <blockquote>
-<em>“And during the night wake up and pray, as an extra offering of your own, so that your Lord may
-raise you to a ⸢highly⸣ praised status.”</em> <span>[Surah al-Isra 79]</span>
+{$_('info.ayah')} <span>[{$_('info.ayah_citation')}]</span>
 </blockquote>
 
-
-
-<p><a href="https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/">The night is full of blessed times for worship</a>—plan it all with Layl, like:</p>
-
+<p><a target="_blank" href="{$_("info.explanation_night_link")}">{$_('info.transition_to_list')}</p>
 
 <ul>
-
-    <li>Pray <em>ʿIshā</em> before ¹⁄₂ of the night (at the latest!)</li>
-    <li>Get most of your sleep in the middle of the night</li>
-    <li>Rise for <em>Tahajjud</em> in the last ¹⁄₃</li>
-    <li>Take a short nap in the last ¹⁄₆ before <em>Fajr</em></li>
-
-
+    <li>{$_('info.advice_points.isha')}</li>
+    <li>{$_('info.advice_points.sleep')}</li>
+    <li>{$_('info.advice_points.tahajjud')}</li>
+    <li>{$_('info.advice_points.nap')}</li>
 </ul>
 
 
+<p><strong>
+  {$_('info.check_times')}
+</strong></p>
+
 <p>
-
-Also, please <strong>double-check the Maghrib and Fajr times</strong>—all the other times above depend on them.
+  {$_('info.closing_dua')}
 </p>
 
-<p> Allah, help us to worship at night and accept from us, <em>ameen</em>!
-</p>
+{#if !twa}
+<div id="image-holder">
+  <a href="https://play.google.com/store/apps/details?id=com.navedislam.layl" target="_blank">
+    <img width="170px" style="padding-top: 2em; " src='/assets/google_play/{$locale}.svg' alt="google play download button" />
+  </a>
+</div>
+{/if}
 
 <div id="subscribe-form">
 <form
@@ -36,46 +45,34 @@ Also, please <strong>double-check the Maghrib and Fajr times</strong>—all the 
     onsubmit="window.open('https://buttondown.email/naved', 'popupwindow')"
     class="embeddable-buttondown-form"
 >
-<p>Join the monthly updates email</p>
+<p class="smaller-sub">{$_('info.join_email')}</p>
   <div id="subscribe-internal">
-    <input type="email" placeholder="💌 Email" name="email" id="bd-email" class="subscribe-field">
+    <input type="email" placeholder="{$_('info.email_placeholder')}" name="email" id="bd-email" class="subscribe-field">
     <input type="hidden" value="1" name="embed">
     <input type="hidden" name="tag" value="apps" />
     <br>
-    <input type="submit" value="Bismillah" id="subscribe-button">
+    <input type="submit" value="{$_('info.subscribe_button')}" id="subscribe-button">
   </div>
 </form>
 </div>
-
-{#if !twa}
-<div id="image-holder">
-  <a href="https://play.google.com/store/apps/details?id=com.navedislam.layl" target="_blank">
-    <img width="115px" style="padding-top: 2em; " src='/assets/google-play.svg' alt="google play download button" />
-  </a>
-</div>
-{/if}
-
-
-
 
 <Footer />
 
 </div>
 
-
-
-
-<script>
-import Footer from './Footer.svelte'
-
-let twa = document.referrer.includes('android-app://com.navedislam.layl')
-</script>
-
 <style>
-
-  #image-holder {
-    text-align: center;
+  .smaller-sub {
+    font-size: 1rem;
   }
+#info {
+  font-size: 1.2rem;
+}
+#image-holder {
+  text-align: center;
+}
+ul {
+  list-style-type: circle;
+}
 
 span {
     font-size: 0.8rem;
@@ -106,6 +103,62 @@ blockquote {
   border-radius: 4px;
 }
 
+#subscribe-form {
+	font-family: var(--font-list);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: 1em
+}
+
+#subscribe-internal {
+	display: flex
+}
+#subscribe-button {
+	background-color: #ff6767;
+	color: #fafafa;
+	padding: 6px 15px;
+  border-radius: 4px;
+  margin: 0px 3px 0 3px;
+}
+#subscribe-button:hover {
+	cursor: pointer;
+}
+
+#bd-email {
+	border-radius: 4px;
+	padding: 6px;
+	min-width: 200px
+}
+
+input#bd-email:focus {
+	border: 1px solid #ff6767
+}
+input {
+	-webkit-appearance: none;
+	padding: 0;
+	font: inherit;
+	background: 0 0;
+	border: 0;
+	outline: 0
+}
+
+
+@media (max-width: 400px) {
+	#subscribe-internal {
+			display:block
+	}
+
+	#subscribe-button {
+			border-radius: 4px;
+			margin-top: 3px
+	}
+	#bd-email {
+		width: 100px
+	}
+}
+
+
 @media screen and (max-width: 550px) {
   div#info {
     width: 95%;
@@ -116,6 +169,9 @@ blockquote {
   div#info {
     font-size: 0.8em;
   }
+}
+div {
+  margin-top: 10px;
 }
 
 </style>

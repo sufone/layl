@@ -1,13 +1,16 @@
+<script>
+  import { _ } from 'svelte-i18n'
+</script>
+
 <ol>
-  <li>Share location only the first time</li>
-  <li>Your data is stored on your device</li>
+  <li>{$_('introduction.location_once')}</li>
+  <li>{$_('introduction.data_device')}</li>
 </ol>
 
 <style>
 @media screen and (max-width: 550px) {
 
   ol {
-
   flex-direction: column;
   align-items: center;
   }
@@ -24,7 +27,7 @@ ol li {
   counter-increment: my-awesome-counter;
   display: flex;
   width: 50%;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 ol li::before {

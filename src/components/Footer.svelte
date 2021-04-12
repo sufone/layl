@@ -1,8 +1,16 @@
-<p><a href="https://suf.one" target="_blank">Made with 💗 by Sufone</a></p>
+<script>
+  import { locale, _ } from 'svelte-i18n'
+
+  let releaseDate = new Date(2021, 3, 8)
+  let dateFormat = {month: 'long',year : 'numeric'}
+
+</script>
+
+<p><a href="https://suf.one" target="_blank">{$_('info.sufone_credit')}</a></p>
 
 <div class="github">
-  <a class="github-button" href="https://github.com/sufone/layl" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="false" aria-label="Star mr-islam/layl-pwa on GitHub"> 
-    Mar. 2021
+  <a target="_blank" class="github-button" href="https://github.com/sufone/layl" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="false" aria-label="Star mr-islam/layl-pwa on GitHub"> 
+    {$_("version") + ' ' + new Intl.DateTimeFormat(`${$locale}-u-ca-islamic`, dateFormat).format(releaseDate)} 
   </a>
 </div>
 

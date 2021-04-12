@@ -1,18 +1,48 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('/assets/fonts/Nunito-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/assets/fonts/Nunito-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Kitab';
+	src: local('Kitab Regular'), local('Kitab-Regular'),
+		url('/assets/fonts/Kitab-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Kitab';
+	src: local('Kitab Bold'), local('Kitab-Bold'),
+		url('/assets/fonts/Kitab-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
 	--blue: #1E88E5;
 	--white: #FFFFFF;
 	--offwhite: #F8F8FA;
 	--transition-duration: 300ms;
-	--font-list: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-list: "Nunito", Kitab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: #212121;
 		color: #dadada;
-	}
-	#main-logo {
-		content: url(/assets/logo-dark.svg)
 	}
 	a, a:visited {
 		text-decoration: underline solid #67b6ff;
@@ -30,9 +60,6 @@
 @media (prefers-color-scheme: light) {
 	body {
 		color: #333;
-	}
-	#main-logo {
-		content: url(/assets/logo.svg)
 	}
 	a, a:visited {
 		color: #2879C4;
@@ -62,7 +89,22 @@ body {
 	position: relative;
 	font-family: var(--font-list);
 	-webkit-font-smoothing: antialiased;
+}
+:root.default-small-text {
+	font-size: 16px;
 	font-weight: 600;
+}
+:root.large-text {
+	font-size: 20px;
+	font-weight: 400;
+}
+@media screen and (max-width: 550px) {
+	:root.default-small-text {
+		font-size: 14px;
+	}
+	:root.large-text {
+		font-size: 18px;
+	}
 }
 
 @media only screen and (max-width: 300px) {
@@ -80,58 +122,7 @@ a {
 a:focus, a:hover {
 	text-decoration: none;
 }
-#subscribe-form {
-	font-family: var(--font-list);
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	margin-top: 1em
-}
 
-#subscribe-internal {
-	display: flex
-}
-
-#subscribe-button {
-	background-color: #ff6767;
-	border-radius: 0 4px 4px 0;
-	color: #fafafa;
-	padding: 6px 15px
-}
-#subscribe-button:hover {
-	cursor: pointer;
-}
-
-#bd-email {
-	border-radius: 4px;
-	padding: 6px;
-	margin-right: -4px;
-	min-width: 200px
-}
-
-input#bd-email:focus {
-	border: 1px solid #ff6767
-}
-button,input,textarea {
-	-webkit-appearance: none;
-	padding: 0;
-	font: inherit;
-	background: 0 0;
-	border: 0;
-	outline: 0
-}
-
-
-@media (max-width: 400px) {
-	#subscribe-internal {
-			display:block
-	}
-
-	#subscribe-button {
-			border-radius: 4px;
-			margin-top: 1px
-	}
-	#bd-email {
-		width: 100px
-	}
+button {
+    font-family : inherit;
 }

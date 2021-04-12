@@ -1,5 +1,7 @@
 <script>
+  import { _, locale } from 'svelte-i18n'
   import { onMount } from 'svelte';
+import { format } from 'path';
 
   export let prayerTimes
   export let currentTime
@@ -35,14 +37,11 @@
 
 
 <ul>
-<!-- change to a map…  -->
-  <li id="time-0">Maghrib: night start<strong>{prayerTimes[0]}</strong></li>
-  <li id="time-1" class="dark-bg">First-sixth ends <strong>{prayerTimes[1]}</strong> </li>
-  <li id="time-2">First-third ends <strong>{prayerTimes[2]}</strong></li>
-  <li id="time-3" class="dark-bg">Half the night <strong>{prayerTimes[3]}</strong></li>
-  <li id="time-4">Last-third starts<strong>{prayerTimes[4]}</strong></li>
-  <li id="time-5" class="dark-bg">Last-sixth starts <strong>{prayerTimes[5]}</strong></li>
-  <li id="time-6">Fajr: night end<strong>{prayerTimes[6]}</strong></li>
+  {#each prayerTimes as prayerTime, i}
+    <li id="time-{i}">{$_(`table.time_${i}`)}
+      <strong class="{$_('direction')}">{prayerTime.locale($locale).format("LT")}</strong>
+    </li>
+  {/each}
 </ul>
 
 <style>
@@ -51,18 +50,22 @@
   list-style-position: inside;
   margin-bottom: 3px;
 }
+:global(.ltr) {
+  padding-left: 20px;
+}
+:global(.rtl) {
+  padding-right: 20px;
+}
 ul {
 	position: relative;
 	list-style: none;
 	margin-left: 0;
   padding-left: 1.2em;
-  font-size: 1.15em;
+  font-size: 1.3rem;
   line-height: 2em;
   min-width: 20vw;
-  font-weight: 600;
 }
 li > strong {
-  padding-left: 20px;
   font-weight: 800;
 }
 li {
@@ -127,13 +130,13 @@ li:before {
   padding-top: 6px;
   font-weight: 400;
 }
-.dark-bg {
+ul li:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.03);
 
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark-bg {
+  ul li:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.04);
   }
   :global(.current) {
@@ -144,9 +147,6 @@ li:before {
 @media only screen and (max-width: 280px) {
 ul {
   font-size: 1.1em;
-}
-li > strong {
-  padding-left: 6px;
 }
 #time-0:before {
   width: 16px;

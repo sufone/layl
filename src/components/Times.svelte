@@ -6,13 +6,17 @@
 
   import adhan from 'adhan'
   import dayjs from 'dayjs'
+  import 'dayjs/locale/ar'
+
   import TimesTable from './TimesTable.svelte'
   import Dates from './Dates.svelte'
 
-  import customParseFormat from 'dayjs/plugin/customParseFormat';
-    dayjs.extend(customParseFormat)
+  import { _, locale } from 'svelte-i18n'
 
-
+  import customParseFormat from 'dayjs/plugin/customParseFormat'
+  dayjs.extend(customParseFormat)
+  import localizedFormat from 'dayjs/plugin/localizedFormat'
+  dayjs.extend(localizedFormat)
 
   let today = new Date()
   let tomorrow = new Date()
@@ -95,12 +99,13 @@
     let interval = fajr.diff(maghrib, 'millisecond') / 6
     console.log(interval)
 
+    let times = [] // reset again for "update location" and prevent duplicate table
     for (let i = 0; i < 7; i++) {
       times.push(maghrib.add(interval * i, 'millisecond'))
     }
 
 
-    prayerTimes = times.map(time => time.format(timeFormat))
+    prayerTimes = times
     console.log(prayerTimes)
 
     console.log(dayjs(prayerTimes[0], "h:mm a"))
@@ -122,8 +127,7 @@ function magicTimer() {
 
     for (let i = 6; i >= 0; i--) {
 
-    // console.log(times[i])
-      if (now.isAfter(times[i])) {
+      if (now.isAfter(prayerTimes[i])) {
         console.log("after: " + i)
         if (i === 6) {
           console.log('we are in a new day!')
@@ -151,7 +155,7 @@ function magicTimer() {
 
 {#if Number.isInteger(currentTime)}
   <div>
-    <p><span>Stage {currentTime+1}⁄6 ·  {dayjs(now).format("h:mm a")}</span></p>
+    <p><span>{$_('table.stage')} {currentTime+1}⁄6 ·  {dayjs(now).locale($locale).format("LT")}</span></p>
   </div>
   <br>
 {/if}
@@ -163,6 +167,7 @@ function magicTimer() {
 
 <style>
 p {
+  font-size: 1.2rem;
   text-align: center;
   color: #ff6767;
   /* text-decoration: underline #ffafaf dotted; */
