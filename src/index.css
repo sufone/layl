@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'Kitab';
 	src: local('Kitab Regular'), local('Kitab-Regular'),
-		url('/Kitab-Regular.woff') format('woff');
+		url('/assets/Kitab-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -9,7 +9,7 @@
 @font-face {
 	font-family: 'Kitab';
 	src: local('Kitab Bold'), local('Kitab-Bold'),
-		url('/Kitab-Bold.woff') format('woff');
+		url('/assets/Kitab-Bold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
