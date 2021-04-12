@@ -1,4 +1,20 @@
 @font-face {
+    font-family: 'Nunito';
+    src: url('/assets/fonts/Nunito-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/assets/fonts/Nunito-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
 	font-family: 'Kitab';
 	src: local('Kitab Regular'), local('Kitab-Regular'),
 		url('/assets/fonts/Kitab-Regular.woff') format('woff');
@@ -14,20 +30,6 @@
 	font-style: normal;
 	font-display: swap;
 }
-@font-face {
-	font-family: 'Nunito';
-	font-style: normal;
-	font-weight: normal;
-	src: local('Nunito'),
-		 url('/assets/fonts/Nunito-Regular.woff') format('woff');
-}
-@font-face {
-	font-family: 'Nunito';
-	font-style: normal;
-	font-weight: bold;
-	src: local('Nunito'),
-		 url('/assets/fonts/Nunito-700.woff') format('woff');
-}  
 
 :root {
 	--blue: #1E88E5;
