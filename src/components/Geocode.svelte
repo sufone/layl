@@ -68,5 +68,6 @@ p {
   /* width: 80%; */
   margin-left: auto;
   margin-right: auto;
+  font-size: 0.95rem;
 }
 </style>

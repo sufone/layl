@@ -14,5 +14,8 @@
 <p>{dayjs(today).locale($locale).format("D MMM")} – {dayjs(tomorrow).locale($locale).format("D MMM")}</p>
 
 <style>
-p {text-align: center;}
+p {
+  text-align: center;
+  font-size: 0.9rem;  
+}
 </style>

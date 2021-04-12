@@ -61,7 +61,7 @@ ul {
 	list-style: none;
 	margin-left: 0;
   padding-left: 1.2em;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 2em;
   min-width: 20vw;
 }
@@ -146,7 +146,7 @@ ul li:nth-child(even) {
 
 @media only screen and (max-width: 280px) {
 ul {
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 #time-0:before {
   width: 16px;
