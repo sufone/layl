@@ -10,7 +10,7 @@
 	font-family: 'Kitab';
 	src: local('Kitab Bold'), local('Kitab-Bold'),
 		url('/assets/Kitab-Bold.woff') format('woff');
-	font-weight: normal;
+	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
 }
@@ -79,7 +79,7 @@ body {
 	font-weight: 600;
 }
 :root.large-text {
-	font-size: 17px;
+	font-size: 20px;
 	font-weight: 400;
 }
 @media screen and (max-width: 550px) {
@@ -87,7 +87,7 @@ body {
 		font-size: 14px;
 	}
 	:root.large-text {
-		font-size: 15px;
+		font-size: 18px;
 	}
 }
 

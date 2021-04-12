@@ -11,7 +11,6 @@
 @media screen and (max-width: 550px) {
 
   ol {
-
   flex-direction: column;
   align-items: center;
   }
@@ -28,7 +27,7 @@ ol li {
   counter-increment: my-awesome-counter;
   display: flex;
   width: 50%;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 ol li::before {

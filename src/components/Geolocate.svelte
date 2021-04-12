@@ -43,7 +43,7 @@
       {/if}
       <Explanation />
       <br>
-      <p style="font-size: 0.8rem; margin-top: 10px">{$_('introduction.more_below')} 👇</p>
+      <p style="font-size: 0.9rem; margin-top: 10px">{$_('introduction.more_below')} 👇</p>
 
     {/if}
 
@@ -60,6 +60,7 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.2rem;
   }
   img#landing {
     width: 300px;
