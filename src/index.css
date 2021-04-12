@@ -14,27 +14,13 @@
 	font-style: normal;
 	font-display: swap;
 }
-@font-face {
-	font-family: 'Nunito';
-	font-style: normal;
-	font-weight: normal;
-	src: local('Nunito'),
-		 url('/assets/fonts/Nunito-Regular.woff') format('woff');
-}
-@font-face {
-	font-family: 'Nunito';
-	font-style: normal;
-	font-weight: bold;
-	src: local('Nunito'),
-		 url('/assets/fonts/Nunito-700.woff') format('woff');
-}  
 
 :root {
 	--blue: #1E88E5;
 	--white: #FFFFFF;
 	--offwhite: #F8F8FA;
 	--transition-duration: 300ms;
-	--font-list: Nunito, Kitab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-list: "Nunito", Kitab, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -122,5 +108,5 @@ a:focus, a:hover {
 }
 
 button {
-    font-family : Nunito;
+    font-family : inherit;
 }
