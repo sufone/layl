@@ -40,7 +40,7 @@
     "update-location-button": "Update location"
   },
   "warnings": {
-    "general_geolocate_failure": "Please contact me by email (navedcoded@gmail.com) with this message to help solve this issue and improve Layl ❤️",
+    "general_geolocate_failure": "Your browser or device is not sharing your GPS location. Please check your settings. If it still doesn't work, please contact me by email (navedcoded@gmail.com) with this message to help solve this issue and improve Layl ❤️",
     "geocode_failed": "I am very sorry: Layl cannot connect to GPS provider. Please try refresh the app, and email me (navedcoded@gmail.com) with this error code: ",
     "geolocation_unavailable": "It looks like this web browser does not support GPS location detection 😌. Can you please try an updated browser? Thank you.",
     "low_accuracy": "Sorry, your device sensor cannot locate you accurately. Please try later or use another device."
