@@ -1,0 +1,50 @@
+{
+  "site_title": "Layl",
+  "page_tab_title": "Layl: Kalkylator tahajjud tid, qiyam, böende & sovande i den islamiska natten!",
+  "version": "Verision",
+  "info": {
+    "advice_points": {
+      "isha": "Pray ʿIshā före ¹⁄₂ av natte",
+      "nap": "Ta en kort tupplur i den sista ¹⁄₆ före fajt",
+      "sleep": "Sov mest vid mitten av natten",
+      "tahajjud": "Gå up för tahajjud i den sista ¹⁄₃"
+    },
+    "ayah": "“And during the night wake up and pray, as an extra offering of your own, so that your Lord may raise you to a [highly] praised status.”",
+    "ayah_citation": "Surah al-Isra 79",
+    "check_times": "Also, please check the Maghrib and Fajr times—all the other times above depend on them.",
+    "closing_dua": "Allah, help us to worship You at night, and all other times, and accept from us, ameen!",
+    "email_placeholder": "💌 Din Email",
+    "explanation_night_link": "https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/",
+    "join_email": "Gå med i e-posten med månadliga uppdateringar",
+    "subscribe_button": "Bismillah",
+    "sufone_credit": "Gjord med ❤️ av Sufone",
+    "transition_to_list": "The night is full of blessed times for worship—plan it all with Layl, like:"
+  },
+  "introduction": {
+    "data_device": "Din data är sparad på din enhet.",
+    "location_once": "Share location only the first time",
+    "more_below": "Tryck för att veta mer",
+    "share-location-button": "Dela plats",
+    "slogan": "Räkna ut divisioner av natten för din plats."
+  },
+  "table": {
+    "co-ods": "Dina kordinater: ",
+    "time_6": "Fajr: Natten slutar",
+    "time_1": "Första-sexte del slutar",
+    "time_2": "Första-tredje del slutar",
+    "time_3": "Hälften av natten",
+    "time_5": "Sista sexte del börjar",
+    "time_4": "Sista tredje del börjar",
+    "time_0": "Maghrib: natten börjar",
+    "stage": "del",
+    "update-location-button": "Upptadera din plats"
+  },
+  "warnings": {
+    "general_geolocate_failure": "Your browser or device is not sharing your GPS location. Please check your settings. If it still doesn't work, please contact me by email (navedcoded@gmail.com) with this message to help solve this issue and improve Layl ❤️",
+    "geocode_failed": "I am very sorry: Layl cannot connect to GPS provider. Please try refresh the app, and email me (navedcoded@gmail.com) with this error code: ",
+    "geolocation_unavailable": "It looks like this web browser does not support GPS location detection 😌. Can you please try an updated browser? Thank you.",
+    "low_accuracy": "Sorry, your device sensor cannot locate you accurately. Please try later or use another device."
+  },
+  "direction": "ltr",
+  "comma": ","
+}
