@@ -9,20 +9,20 @@
       "sleep": "Sov mest vid mitten av natten",
       "tahajjud": "Gå up för tahajjud i den sista ¹⁄₃"
     },
-    "ayah": "“And during the night wake up and pray, as an extra offering of your own, so that your Lord may raise you to a [highly] praised status.”",
+    "ayah": "“Och medans i natten vakna upp och be, som en extra offrande av dig, so så din gud kan ge dig en [högre] status”",
     "ayah_citation": "Surah al-Isra 79",
-    "check_times": "Also, please check the Maghrib and Fajr times—all the other times above depend on them.",
-    "closing_dua": "Allah, help us to worship You at night, and all other times, and accept from us, ameen!",
+    "check_times": "Också, snälla dubbelkolla Maghrib och Fajr, slla andra tider beror på de.",
+    "closing_dua": "Allah, hjälp oss be till dig på natte, och alla andra tider, och att du ska acceptera det, ameen!",
     "email_placeholder": "💌 Din Email",
     "explanation_night_link": "https://seekersguidance.org/answers/general-counsel/tahajjud-prayer-description-merits/",
     "join_email": "Gå med i e-posten med månadliga uppdateringar",
     "subscribe_button": "Bismillah",
     "sufone_credit": "Gjord med ❤️ av Sufone",
-    "transition_to_list": "The night is full of blessed times for worship—plan it all with Layl, like:"
+    "transition_to_list": "Natten är fylld med välsingade tider för böende — Planer det med Layl, som:"
   },
   "introduction": {
     "data_device": "Din data är sparad på din enhet.",
-    "location_once": "Share location only the first time",
+    "location_once": "Dela din plats bara för första gången",
     "more_below": "Tryck för att veta mer",
     "share-location-button": "Dela plats",
     "slogan": "Räkna ut divisioner av natten för din plats."
@@ -40,10 +40,10 @@
     "update-location-button": "Upptadera din plats"
   },
   "warnings": {
-    "general_geolocate_failure": "Your browser or device is not sharing your GPS location. Please check your settings. If it still doesn't work, please contact me by email (navedcoded@gmail.com) with this message to help solve this issue and improve Layl ❤️",
+    "general_geolocate_failure": "Din webbläsare eller enhet kan inte dela din GPS plats. Snälla dubbelkolla dina inställningar. Om det fortfarande fungerar inte , kontakta mig med e-mail (navedcoded@gmail.com) med den här problemet för att fixa problemet och göra layl bättre❤️",
     "geocode_failed": "I am very sorry: Layl cannot connect to GPS provider. Please try refresh the app, and email me (navedcoded@gmail.com) with this error code: ",
-    "geolocation_unavailable": "It looks like this web browser does not support GPS location detection 😌. Can you please try an updated browser? Thank you.",
-    "low_accuracy": "Sorry, your device sensor cannot locate you accurately. Please try later or use another device."
+    "geolocation_unavailable": "Det ser ut som att din webbläsare ger inte GPS plats. Kan du försöka upptadera din webbläsare ? Tack.",
+    "low_accuracy": "Ursäkta!, din enhets sensor kan inte ge din position, försök med en annan enhet eller senare."
   },
   "direction": "ltr",
   "comma": ","
