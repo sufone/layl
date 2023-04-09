@@ -13,5 +13,11 @@
 		"svelte": "^3.54.0",
 		"vite": "^4.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"adhan": "^4.4.3",
+		"dayjs": "^1.11.7",
+		"svelte-i18n": "^3.6.0",
+		"svelte-loading-spinners": "^0.3.4"
+	}
 }
