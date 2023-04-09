@@ -1,0 +1,180 @@
+<script>
+  export let lat;
+  export let lon;
+  export let freshGeo;
+  export let country;
+
+  import { CalculationMethod, PrayerTimes, Coordinates } from "adhan";
+  import dayjs from "dayjs";
+  import "dayjs/locale/ar";
+
+  import TimesTable from "./TimesTable.svelte";
+  import Dates from "./Dates.svelte";
+
+  import { _, locale } from "svelte-i18n";
+
+  import customParseFormat from "dayjs/plugin/customParseFormat";
+  dayjs.extend(customParseFormat);
+  import localizedFormat from "dayjs/plugin/localizedFormat";
+  dayjs.extend(localizedFormat);
+
+  let today = new Date();
+  let tomorrow = new Date();
+  let times = [];
+  let prayerTimes = [];
+  let currentTime = null;
+
+  let timeFormat = "h:mm a";
+  let now;
+
+  let updateTimeTimer;
+
+  function countryPrayerMethodMatcher(country) {
+    console.log("country: " + country);
+    switch (country) {
+      case "EGY":
+        return CalculationMethod.Egyptian();
+        break;
+      case "ARE":
+        return CalculationMethod.Dubai();
+        break;
+      case "QAT":
+        return CalculationMethod.Qatar();
+        break;
+      case "KWT":
+        return CalculationMethod.Kuwait();
+        break;
+      case "SAU":
+        return CalculationMethod.UmmAlQura();
+        break;
+      case "SGP":
+      case "MAL":
+      case "IDN":
+        return CalculationMethod.Singapore(); //thailand?
+        break;
+      case "PAK":
+      case "IND":
+      case "BGD":
+        return CalculationMethod.Karachi();
+        break;
+      case "TUR":
+        return CalculationMethod.Turkey();
+        break;
+      default:
+        return CalculationMethod.MoonsightingCommittee();
+    }
+  }
+
+  $: if (lat && lon) {
+    calcTimes(lat, lon);
+  } else if (freshGeo) {
+    calcTimes(lat, lon);
+  }
+
+  function calcTimes(lat, lon) {
+    let params = countryPrayerMethodMatcher(country);
+    let coordinates = new Coordinates(lat, lon);
+
+    let todayRef = new Date();
+    let prayerTimesTodayTest = new PrayerTimes(coordinates, today, params);
+    let fajrToday = dayjs(prayerTimesTodayTest.fajr);
+
+    if (dayjs().isBefore(fajrToday)) {
+      //so islamic night is respected and relevant times are shown
+      console.log("before fajr, displaying 'yesterday's' time");
+      today.setDate(todayRef.getDate() - 1);
+    } else {
+      tomorrow.setDate(todayRef.getDate() + 1);
+    }
+
+    let prayerTimesToday = new PrayerTimes(coordinates, today, params);
+    let prayerTimesTomorrow = new PrayerTimes(coordinates, tomorrow, params);
+    console.log(prayerTimesTomorrow);
+
+    let maghrib = dayjs(prayerTimesToday.maghrib);
+    let fajr = dayjs(prayerTimesTomorrow.fajr);
+    console.log(maghrib);
+    console.log(fajr);
+
+    let interval = fajr.diff(maghrib, "millisecond") / 6;
+    console.log(interval);
+
+    let times = []; // reset again for "update location" and prevent duplicate table
+    for (let i = 0; i < 7; i++) {
+      times.push(maghrib.add(interval * i, "millisecond"));
+    }
+
+    prayerTimes = times;
+    console.log(prayerTimes);
+
+    console.log(dayjs(prayerTimes[0], "h:mm a"));
+    magicTimer();
+  }
+
+  function magicTimer() {
+    testCurrentTime();
+    clearInterval(updateTimeTimer);
+    console.log("timer cleared");
+    updateTimeTimer = setInterval(testCurrentTime, 10000);
+  }
+  function testCurrentTime() {
+    now = dayjs();
+    console.log(now.format(timeFormat));
+    console.log("currentTime: " + currentTime);
+
+    for (let i = 6; i >= 0; i--) {
+      if (now.isAfter(prayerTimes[i])) {
+        console.log("after: " + i);
+        if (i === 6) {
+          console.log("we are in a new day!");
+          currentTime = 1.5;
+          return false;
+        } else {
+          console.log(`we are in stage ${i}!`);
+          currentTime = i;
+          return i;
+        }
+      } else {
+        if (i < 0) {
+          console.log("check failed");
+          currentTime = 1.5;
+          return false; //only return after exhausting all options
+        }
+      }
+    }
+  }
+</script>
+
+{#if Number.isInteger(currentTime)}
+  <div>
+    <p>
+      <span
+        >{$_("table.stage")}
+        {currentTime + 1}⁄6 · {dayjs(now).locale($locale).format("LT")}</span
+      >
+    </p>
+  </div>
+  <br />
+{/if}
+
+<TimesTable {prayerTimes} {currentTime} />
+
+<br />
+<Dates {today} {tomorrow} />
+
+<style>
+  p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ff6767;
+    /* text-decoration: underline #ffafaf dotted; */
+  }
+  @media (prefers-color-scheme: dark) {
+    p {
+      color: #ffafaf;
+    }
+  }
+  span {
+    /* border-top: 3px dotted #ffafaf; */
+  }
+</style>
