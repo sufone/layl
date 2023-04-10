@@ -14,8 +14,8 @@ export default defineConfig({
     manifest: {
       name: 'Layl',
       short_name: 'Layl',
-      description: ' 🌙 Calculator for tahajjud, qiyam, and worship & sleep in an Islamic night!',
-      theme_color: '#ffffff',
+      description: '🌙 Calculator for tahajjud, qiyam, and worship & sleep in an Islamic night!',
+      theme_color: '#333333',
       icons: [
         {
           src: '/assets/icon.png',
