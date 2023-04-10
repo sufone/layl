@@ -1,33 +1,23 @@
 {
+  "name": "layl-vite-svelte",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "postinstall": "patch-package",
-    "export": "pwa export",
-    "start": "sirv build -s",
-    "watch": "pwa watch",
-    "build": "pwa build"
-  },
-  "dependencies": {
-    "adhan": "^4.0.0",
-    "dayjs": "^1.10.4",
-    "sirv-cli": "^0.4.0",
-    "svelte-i18n": "^3.3.9",
-    "svelte-loading-spinners": "^0.0.19"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@pwa/cli": "latest",
-    "@pwa/plugin-brotli": "latest",
-    "@pwa/plugin-offline": "latest",
-    "@pwa/preset-svelte": "latest",
-    "patch-package": "^6.4.6",
-    "postinstall-postinstall": "^2.1.0",
-    "svelte": "^3.23.0"
+    "@sveltejs/vite-plugin-svelte": "^2.0.3",
+    "svelte": "^3.55.1",
+    "vite": "^4.2.0",
+    "vite-plugin-pwa": "^0.14.7"
   },
-  "browserslist": [
-    ">0.25%",
-    "last 1 version",
-    "not ie_mob 11",
-    "not ie 11",
-    "not dead"
-  ]
+  "dependencies": {
+    "adhan": "^4.4.3",
+    "dayjs": "^1.11.7",
+    "svelte-i18n": "^3.6.0",
+    "svelte-loading-spinners": "^0.3.4"
+  }
 }
