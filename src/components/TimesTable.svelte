@@ -93,6 +93,7 @@
   }
   #time-1 {
     border-left: 1.5px solid #80a9e6;
+    background-color: rgba(0, 0, 0, 0.03);
   }
   #time-2:before {
     content: "²⁄₆";
@@ -100,6 +101,7 @@
   }
   #time-2 {
     border-left: 1.5px solid #9a9ccc;
+    background-color: rgba(0, 0, 0, 0.03);
   }
   #time-3:before {
     content: "³⁄₆";
@@ -114,6 +116,7 @@
   }
   #time-4 {
     border-left: 1.5px solid #cc819a;
+    background-color: rgba(0, 0, 0, 0.03);
   }
   #time-5:before {
     content: "⁵⁄₆";
@@ -121,6 +124,7 @@
   }
   #time-5 {
     border-left: 1.5px solid #e67480;
+    background-color: rgba(0, 0, 0, 0.03);
   }
   #time-6:before {
     content: url("/assets/sun.svg");
@@ -130,7 +134,6 @@
     font-weight: 400;
   }
   ul li:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.03);
   }
 
   @media (prefers-color-scheme: dark) {
