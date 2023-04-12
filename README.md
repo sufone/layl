@@ -16,6 +16,8 @@ Layl would love to support more languages. If you know a language and would like
 
 For developers, you can clone this repo and I recommend using VS Code with [this extension](https://github.com/antfu/i18n-ally). Layl uses svelte-i18n.
 
+Otherwise, please see the folder `src/locales` for original language files. Layl just uses 50 lines of text, so translating is super easy. Please do translate based on the original English text.
+
 Languages currently available:
 
 - Arabic
@@ -28,3 +30,5 @@ Languages currently available:
 Layl uses GitHub issues and projects to encourage community collaboration. 
  
 Please get in touch if some code is unclear, or if you would like to contribute so we can discuss ideas :).
+
+Development scripts are in `package.json`. Please note that the geocoding API only works from the production URL, so during development you will see coordinates.
