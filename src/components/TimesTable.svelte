@@ -133,11 +133,18 @@
     padding-top: 6px;
     font-weight: 400;
   }
-  ul li:nth-child(even) {
-  }
 
   @media (prefers-color-scheme: dark) {
-    ul li:nth-child(even) {
+    #time-1 {
+      background-color: rgba(255, 255, 255, 0.04);
+    }
+    #time-2 {
+      background-color: rgba(255, 255, 255, 0.04);
+    }
+    #time-4 {
+      background-color: rgba(255, 255, 255, 0.04);
+    }
+    #time-5 {
       background-color: rgba(255, 255, 255, 0.04);
     }
     :global(.current) {
