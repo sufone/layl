@@ -1,7 +1,8 @@
 import { register, init, getLocaleFromNavigator, locale } from 'svelte-i18n';
 
-register('en', () => import('./locales/en.json'));
 register('ar', () => import('./locales/ar.json'));
+register('en', () => import('./locales/en.json'));
+register('bd', () => import('./locales/bd.json'));
 register('sv', () => import('./locales/sv.json'));
 
 locale.subscribe((value) => {
