@@ -1,0 +1,50 @@
+{
+    "site_title": "Layl",
+    "page_tab_title": "Layl: Kalkulator untuk tahajjud, qiyam, ibadah & tidur di malam hari bagi orang Islam!",
+    "version": "Versi",
+    "info": {
+        "advice_points": {
+            "isha": "Solat isya sebelum ¹⁄₂ malam",
+            "nap": "Tidur sebentar pada ¹⁄₆ sebelum subuh",
+            "sleep": "Dapatkan sebahagian besar tidur anda di tengah malam",
+            "tahajjud": "bangun lah untuk Tahajjud pada ¹⁄₃ terakhir"
+        },
+        "ayah": "“Dan pada malam hari, bangun lah dan solatlah sebagai lebihan bagimu sendiri agar Tuhanmu mengangkat kamu ke Martabat yang terpuji”",
+        "ayah_citation": "Surah al-Isra 79",
+        "check_times": "Juga sila semak wakt Maghrib dan Subuh - semua waktu diatas bergantung padanya.",
+        "closing_dua": "Ya Allah , bantulah kami untuk beribadah kepada -Mu pada malam hari, dan semua waktu lainnya dan terimalah ibadah kami, amin!",
+        "email_placeholder": "💌 Email Anda",
+        "explanation_night_link": "https://pencari bimbingan.org/Jawapan/penasihat-am/huraian-solat tahajjud/",
+        "join_email": "Sertai emel kemaskini bulanan",
+        "subscribe_button": "Bismillah",
+        "sufone_credit": "Dibuat dengan 💗 oleh Sufone",
+        "transition_to_list": "Malam yang penuh dengan waktu yang diberkati untuk beribadah - rancang dengan Layl, seperti:"
+    },
+    "introduction": {
+        "data_device": "Data anda disimpan pada peranti anda",
+        "location_once": "Kongsi lokasi hanya untuk kali pertama",
+        "more_below": "Belajar dengan lebih lanjut dibawah",
+        "share-location-button": "Kongsi lokasi",
+        "slogan": "Kira pembahagian malam untuk lokasi anda"
+    },
+    "table": {
+        "co-ods": "co-ods lokasi anda: ",
+        "time_6": "Subuh: Akhirnya malam",
+        "time_1": "Tamatnya satu perenam malam",
+        "time_2": "Tamatnya satu pertiga malam",
+        "time_3": "Pertengahan malam",
+        "time_5": "Satu perenam dari akhir malam bermula",
+        "time_4": "Satu pertiga dari akhir malam bermula",
+        "time_0": "Maghrib: mulanya malam hari",
+        "stage": "Stage",
+        "update-location-button": "Kemaskini lokasinya"
+    },
+    "warnings": {
+        "general_geolocate_failure": "Penyemak imbas atau peranti anda tidak berkongsi lokasi GPS anda. Sila semak tetapan anda. Jika masih tidak berjaya, sila hubungi saya melalui e-mel (navedcoded@gmail.com) dengan mesej ini ia boleh membantu menyelesaikan masaalah dan dapat menambah kebaikan Layl ❤",
+        "geocode_failed": "Saya minta maaf : Layl tidak dapat menyambung kepada pembekal GPS. Sila cuba muat semula aplikasi dan e-mel saya (navedcoded@gmail.com) dengan kod ralat ini",
+        "geolocation_unavailable": "nampaknya pelayar web ini tidak menyokong pengesanan lokasi GPS 😌. Bolehkah anda cuba pelayar yang sudah dikemas kini? Terima Kasih",
+        "low_accuracy": "Maaf, penderia peranti anda tidak dapat mengesan anda dengan tepat, Sila cuba kemudian atau guanakan peranti lain."
+    },
+    "direction": "ltr",
+    "comma": ","
+}

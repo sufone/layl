@@ -4,6 +4,7 @@ register('ar', () => import('./locales/ar.json'));
 register('en', () => import('./locales/en.json'));
 register('bd', () => import('./locales/bd.json'));
 register('sv', () => import('./locales/sv.json'));
+register('ms', () => import('./locales/ms.json'));
 
 locale.subscribe((value) => {
 	if (value == null) return;
