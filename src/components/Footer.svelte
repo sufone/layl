@@ -1,7 +1,7 @@
 <script>
   import { locale, _ } from 'svelte-i18n'
 
-  let releaseDate = new Date(2023, 3, 10)
+  let releaseDate = new Date(2023, 9, 10)
   let dateFormat = {month: 'long',year : 'numeric'}
 
 </script>
