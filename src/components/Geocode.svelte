@@ -25,7 +25,13 @@
   }
 
   async function geocode(lat, lon) {
-    let geoApi = `https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=${lat}%2C${lon}%2C150&mode=retrieveAreas&gen=9&app_id=oye7XL09Prx5G64NrSE8&app_code=-Dw2OYlGw40jZwCC_UGvKg&addressattributes=country,city&locationattributes=address&maxresults=1&minresults=1&language=${$locale}`
+    let geoApi_OLD = `https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=${lat}%2C${lon}%2C150&mode=retrieveAreas&gen=9&app_id=oye7XL09Prx5G64NrSE8&app_code=-Dw2OYlGw40jZwCC_UGvKg&addressattributes=country,city&locationattributes=address&maxresults=1&minresults=1&language=${$locale}`
+    let geoApi = `https://revgeocode.search.hereapi.com/v1/revgeocode
+    ?at=${lat}%2C${lon}
+    &types=area,city
+    &lang=${$locale}
+    &limit=1
+    &apiKey={9QbyENb6bbNAiAYxoVHHNDYkPRmXYMcllMPeFKhQ2ZY}`
     console.log(geoApi)
 
     fetch(geoApi).then(response => response.json())
