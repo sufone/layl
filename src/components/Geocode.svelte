@@ -36,14 +36,21 @@
 
     fetch(geoApi).then(response => response.json())
       .then(result => {
-        let location = result.Response.View[0].Result[0].Location.Address
+        // old code for old api 
+        // let location = result.Response.View[0].Result[0].Location.Address
+        // city = location.City
+        // country = location.Country
+        // countryName = location.AdditionalData[0].value
+        // console.log("countryname "+countryName)
+
+        let firstItem = result.items[0];
+        city = firstItem.address.city;
+        country = firstItem.address.countryName;
+        countryName = firstItem.address.countryName;
+        console.log("City:", city);
+        console.log("Country:", country);
+
         console.dir(location)
-
-        city = location.City
-        country = location.Country
-        countryName = location.AdditionalData[0].value
-        console.log("countryname "+countryName)
-
         localStorage.setItem('city', city)
         localStorage.setItem('country', country)
         localStorage.setItem('countryName', countryName)
